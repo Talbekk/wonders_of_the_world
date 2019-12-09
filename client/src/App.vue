@@ -8,12 +8,14 @@
 <script>
 import WorldMap from './components/WorldMap'
 import UserForm from './components/UserForm'
+import {eventBus} from './main.js'
 
 export default {
 
   name: 'app',
   data() {
     return {
+      username: '',
       wonders: [
         {
           name: "Chichén Itzá",
@@ -40,6 +42,11 @@ export default {
   components: {
     "world-map":WorldMap,
     "user-form":UserForm
+  },
+  mounted(){
+  eventBus.$on('username',(name) => {
+    this.username = name;
+  })
   }
 }
 </script>
