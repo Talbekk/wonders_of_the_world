@@ -4,7 +4,7 @@
 
 <host :conversation='wonder.conversations[this.counter]' v-on:handleClick='handleClick'></host>
 
-<traveller v-on:handleClick='handleClick' :wonder='wonder'></traveller>
+<traveller :conversation='wonder.conversations[this.counter]'  v-on:handleClick='handleClick'></traveller>
 
 </div>
 

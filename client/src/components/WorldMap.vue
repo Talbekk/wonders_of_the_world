@@ -52,7 +52,6 @@ export default {
 <style lang="css">
 #earth_div{
   top: 0; right: 0; bottom: 0; left: 0;
-<<<<<<< HEAD
   background-color: #000; position: absolute !important;
   }
 
@@ -65,9 +64,8 @@ export default {
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50);
-  padding-top: 100px;}
-=======
-  background-color: #000; position: absolute !important;}
+  padding-top: 100px;
+}
 
 .popup-information-text{
 margin: 0px !important;
@@ -84,5 +82,4 @@ text-align: left;
   margin-bottom: 5px;
 }
 
->>>>>>> 1c998f023c5bdb1cca19dd269d37513170c41806
 </style>

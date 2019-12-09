@@ -1,6 +1,6 @@
 <template lang="html">
   <div id="traveller">
-  <p>Traveller : "Hello!"</p>
+  <p>Traveller : {{conversation.traveller}}</p>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 export default {
   name: "traveller",
   props: {
-    wonder : Object
+    conversation : Object
   },
   methods: {
     onClick: function() {
