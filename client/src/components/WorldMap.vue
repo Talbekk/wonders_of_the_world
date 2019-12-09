@@ -7,7 +7,7 @@
 export default {
     name: "world-map",
     props: {
-        data: Array
+      wonder : Object
     },
     mounted() {
         this.map();
@@ -17,13 +17,12 @@ export default {
         let earth = new WE.map('earth_div');
         WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(earth);
 
-        this.data.forEach(wonder => {
-            let marker = WE.marker([wonder.lat, wonder.long]).addTo(earth);
-            marker.bindPopup(wonder.message, 
+            let marker = WE.marker([this.wonder.lat, this.wonder.long]).addTo(earth);
+            marker.bindPopup(this.wonder.message,
                 {maxWidth: 450, closeButton: true})
-                // .openPopup();
-        });
-        earth.setView([51.505, 0], 2);
+                .openPopup();
+
+        earth.setView([51, 0], 2);
       }
     }
 }

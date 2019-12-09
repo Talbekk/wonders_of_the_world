@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <user-form v-if="!username"></user-form>
-    <wonder-selection-form v-if="username" :wonders ='wonders'></wonder-selection-form>
-    <!-- <world-map v-id:="" :data="wonders"></world-map> -->
+    <wonder-selection-form v-if="username && !selectedWonder" :wonders ='wonders'></wonder-selection-form>
+    <world-map v-if="selectedWonder" :wonder="selectedWonder"></world-map>
   </div>
 </template>
 
@@ -26,7 +26,7 @@ export default {
           long: 31.228889,
           image: "https://estaticos.muyhistoria.es/media/cache/1140x_thumb/uploads/images/gallery/5c544c2c5bafe87f2de31193/chichen-itza.jpg",
           description: "Chichen Itza[nb 1] was a large pre-Columbian city built by the Maya people of the Terminal Classic period. The archaeological site is located in Tinúm Municipality, Yucatán State, Mexico. Chichen Itza was a major focal point in the Northern Maya Lowlands from the Late Classic (c. AD 600–900) through the Terminal Classic (c. AD 800–900) and into the early portion of the Postclassic period (c. AD 900–1200). The site exhibits a multitude of architectural styles, reminiscent of styles seen in central Mexico and of the Puuc and Chenes styles of the Northern Maya lowlands.",
-          message: "<b><img src='https://estaticos.muyhistoria.es/media/cache/1140x_thumb/uploads/images/gallery/5c544c2c5bafe87f2de31193/chichen-itza.jpg' class='img-fluid'/>Cairo</b><br>Yay, you found me!"
+          message: "<b>Cairo</b><br>Yay, you found me!"
         },
         {
           name: "Test",
@@ -38,6 +38,7 @@ export default {
           height: "98 feet in height ?????",
           yearBuilt: "832 AD",
           purpose: "City",
+            message: "<b>Cairo</b><br>Yay, you found me!"
           },
       ]
     }
