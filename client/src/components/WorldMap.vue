@@ -18,8 +18,9 @@ export default {
         WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(earth);
 
             let marker = WE.marker([this.wonder.details.latitude, this.wonder.details.longitude]).addTo(earth);
-            marker.bindPopup(this.wonder.details.height,
-                {maxWidth: 450, closeButton: true})
+            marker.bindPopup(`<img src="${this.wonder.details.image}" class="img-fluid"/>
+            ${this.wonder.details.name}`,
+                {maxWidth: 300, maxHeight: 300, closeButton: true})
                 .openPopup();
 
         earth.setView([this.wonder.details.latitude, this.wonder.details.longitude], 4);
