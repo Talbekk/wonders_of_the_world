@@ -11,6 +11,7 @@
         <div class="solution-area" v-if="showSolution">
             {{solution.result}}
             <button @click="onSelectedPlay">{{solution.button}}</button>
+            <simple-button eventChannel="select-homepage" message="Go back"></simple-button>
         </div>
     </div>
 </template>
@@ -18,6 +19,7 @@
 <script>
 import GraphicQuizQuestion from './GraphicQuizQuestion';
 import GraphicQuizAnswer from './GraphicQuizAnswer';
+import SimpleButton from './SimpleButton';
 
 export default {
     name: "graphic-quiz",
@@ -42,7 +44,7 @@ export default {
     },
     methods: {
         onSelectedImage: function(result) {
-            this.correctAnswer = result;
+            this.solution.result = result;
             this.showAnswer = false;
             this.showSolution = true;
         },
@@ -58,7 +60,8 @@ export default {
     },
     components: {
         "graphic-quiz-question": GraphicQuizQuestion,
-        "graphic-quiz-answer": GraphicQuizAnswer
+        "graphic-quiz-answer": GraphicQuizAnswer,
+        "simple-button": SimpleButton
     }
 }
 </script>
