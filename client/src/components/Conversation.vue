@@ -2,9 +2,9 @@
 
 <div id="conversation">
 
-<host :conversation='wonder.conversations[this.counter]' v-on:handleClick='handleClick'></host>
+<host :conversation='wonder.conversations[this.hostCounter]' v-if="this.hostCounter<5" v-on:handleHostClick='handleHostClick'></host>
 
-<traveller :conversation='wonder.conversations[this.counter]'  v-on:handleClick='handleClick'></traveller>
+<traveller :conversation='wonder.conversations[this.travellerCounter]'  v-if="this.travellerCounter<5" v-on:handleTravellerClick='handleTravellerClick'></traveller>
 
 </div>
 
@@ -22,7 +22,9 @@ export default {
   },
   data(){
     return {
-      counter: 0
+      hostCounter: 0,
+      travellerCounter: 0
+
     }
   },
   components: {
@@ -30,9 +32,11 @@ export default {
     "traveller": Traveller
   },
   methods:{
-    handleClick: function(){
-      console.log('hi')
-      this.counter += 1;
+    handleHostClick: function(){
+      this.hostCounter += 1;
+    },
+    handleTravellerClick: function(){
+      this.travellerCounter += 1;
     }
   }
 
