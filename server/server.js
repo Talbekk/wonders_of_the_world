@@ -14,6 +14,10 @@ MongoClient.connect('mongodb://localhost:27017')
   const wondersCollection = db.collection('wonders');
   const wonderRouter = createRouter(wondersCollection);
   app.use('/api/wonders', wonderRouter);
+
+  const quizCollection = db.collection('quiz');
+  const quizRouter = createRouter(quizCollection);
+  app.use('/api/quiz', quizRouter);
 })
 .catch(console.err);
 

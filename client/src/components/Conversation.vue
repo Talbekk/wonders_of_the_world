@@ -1,20 +1,22 @@
 <template lang="html">
 
 <div id="">
-<host></host>
-<traveller></traveller>
+<host :wonder='wonder'></host>
+<traveller :wonder='wonder'></traveller>
 </div>
 
 </template>
 
 <script>
 
-import Traveller from './traveller.vue';
-import Host from './host.vue';
+import Traveller from './Traveller.vue';
+import Host from './Host.vue';
 
 export default {
   name: "conversation",
-  props: ['wonder'],
+  props: {
+    wonder : Object
+  },
     components: {
       "host": Host,
       "traveller": Traveller
