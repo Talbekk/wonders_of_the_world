@@ -1,8 +1,11 @@
 <template lang="html">
 
-<div id="">
-<host :wonder='wonder'></host>
-<traveller :wonder='wonder'></traveller>
+<div id="conversation">
+
+<host :conversation='wonder.conversations[this.counter]' v-on:handleClick='handleClick'></host>
+
+<traveller v-on:handleClick='handleClick' :wonder='wonder'></traveller>
+
 </div>
 
 </template>
@@ -17,14 +20,32 @@ export default {
   props: {
     wonder : Object
   },
-    components: {
-      "host": Host,
-      "traveller": Traveller
+  data(){
+    return {
+      counter: 0
     }
+  },
+  components: {
+    "host": Host,
+    "traveller": Traveller
+  },
+  methods:{
+    handleClick: function(){
+      console.log('hi')
+      this.counter += 1;
+    }
+  }
+
 
 }
 
 </script>
 
 <style lang="css" scoped>
+
+#conversation{
+  color: black;
+  background-color: white;
+  position: relative;}
+
 </style>

@@ -1,6 +1,8 @@
 <template lang="html">
-  <div id="host">
-    <p>{{wonder.conversations[0].host}}</p>
+  <div id="host" @click="onClick">
+    <p>Host:{{conversation.host}}</p>
+
+
   </div>
 </template>
 
@@ -8,8 +10,14 @@
 export default {
   name: "host",
   props: {
-    wonder : Object
+    conversation : Object
+  },
+  methods: {
+    onClick: function() {
+      this.$emit("handleClick");
+    }
   }
+
 }
 </script>
 

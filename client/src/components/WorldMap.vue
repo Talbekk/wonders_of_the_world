@@ -1,7 +1,14 @@
 <template>
+  <div class="">
+
     <div id="earth_div">
-      <conversation :wonder='wonder'></conversation>
     </div>
+    <div id="overlay">
+      <conversation :wonder="wonder"></conversation>
+    </div>
+
+  </div>
+
 </template>
 
 <script>
@@ -39,5 +46,17 @@ export default {
 <style lang="css">
 #earth_div{
   top: 0; right: 0; bottom: 0; left: 0;
-  background-color: #000; position: absolute !important;}
+  background-color: #000; position: absolute !important;
+  }
+
+#overlay {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  font-size: 15px;
+  color: white;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50);
+  padding-top: 100px;}
 </style>
