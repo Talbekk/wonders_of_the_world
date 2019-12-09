@@ -48,7 +48,6 @@ export default {
     "user-form":UserForm,
     "wonder-selection-form": WonderSelectionForm,
     "graphic-quiz": GraphicQuiz
-  }
 }
 </script>
 
