@@ -22,13 +22,18 @@ export default {
     },
     methods: {
         selectRandomWonder: function() {
-            this.getWonder(Math.random(0, this.wonders.length));
+            this.getWonder(this.getRandomInt(0, this.wonders.length));
         },
         getWonder: function(position) {
             this.emitSelectedWonder(this.wonders[position]);
         },
         emitSelectedWonder: function(wonder) {
             eventBus.$emit("selected-wonder", wonder);
+        },
+        getRandomInt: function(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min;
         }
     },
     components: {
