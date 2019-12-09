@@ -1,13 +1,15 @@
 <template>
   <div id="app">
-    <!-- <world-map :data="wonders"></world-map> -->
-    <user-form></user-form>
+    <user-form v-if="!username"></user-form>
+    <wonder-selection-form v-if="username" :wonders ='wonders'></wonder-selection-form>
+    <!-- <world-map v-id:="" :data="wonders"></world-map> -->
   </div>
 </template>
 
 <script>
 import WorldMap from './components/WorldMap'
 import UserForm from './components/UserForm'
+import WonderSelectionForm from './components/WonderSelectionForm'
 import {eventBus} from './main.js'
 
 export default {
@@ -15,7 +17,7 @@ export default {
   name: 'app',
   data() {
     return {
-      username: '',
+      username: null,
       wonders: [
         {
           name: "Chichén Itzá",
@@ -41,7 +43,8 @@ export default {
   },
   components: {
     "world-map":WorldMap,
-    "user-form":UserForm
+    "user-form":UserForm,
+    "wonder-selection-form": WonderSelectionForm
   },
   mounted(){
   eventBus.$on('username',(name) => {

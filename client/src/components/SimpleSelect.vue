@@ -4,7 +4,7 @@
         <select @change="onDataSelection" id="data-selection" required>
             <option value="0" disabled selected>Choose</option>
             <option v-for="(singleData, index) in data" :key="index" :value="index">{{singleData.name}}</option>
-        </select> 
+        </select>
     </div>
 </template>
 
@@ -20,12 +20,12 @@ export default {
     },
     methods: {
         onDataSelection: function(e) {
-            eventBus.$emit(eventChannel, e.target.value);
+            eventBus.$emit(this.eventChannel, e.target.value);
         }
     },
 }
 </script>
 
 <style lang="css" scoped>
-    
+
 </style>
