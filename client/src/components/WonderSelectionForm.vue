@@ -22,10 +22,13 @@ export default {
     },
     methods: {
         selectRandomWonder: function() {
-            return this.getWonder(Math.random(0, wonders.length + 1));
+            this.getWonder(Math.random(0, wonders.length + 1));
         },
         getWonder: function(position) {
-            return this.wonders[position];
+            this.emitSelectedWonder(this.wonders[position]);
+        },
+        emitSelectedWonder: function(wonder) {
+            eventBus.$emit("selected-wonder", wonder);
         }
     },
     components: {
