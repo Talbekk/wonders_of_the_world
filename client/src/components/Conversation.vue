@@ -1,8 +1,8 @@
 <template lang="html">
 
 <div id="">
-<host></host>
-<traveller></traveller>
+<host :wonder='wonder'></host>
+<traveller :wonder='wonder'></traveller>
 </div>
 
 </template>

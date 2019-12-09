@@ -1,6 +1,6 @@
 <template lang="html">
   <div id="host">
-    <p>Hi!</p>
+    <p>{{wonder.conversations[0].host}}</p>
   </div>
 </template>
 

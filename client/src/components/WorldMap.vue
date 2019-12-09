@@ -1,10 +1,11 @@
 <template>
     <div id="earth_div">
-      <conversation></conversation>
+      <conversation :wonder='wonder'></conversation>
     </div>
 </template>
 
 <script>
+
 import Conversation from './Conversation.vue';
 
 export default {
