@@ -3,7 +3,7 @@
         <label for="data-selection">{{message}}</label>
         <select @change="onDataSelection" id="data-selection" required>
             <option value="0" disabled selected>Choose</option>
-            <option v-for="(singleData, index) in data" :key="index" :value="index">{{singleData.name}}</option>
+            <option v-for="(singleData, index) in data" :key="index" :value="index">{{singleData.details.name}}</option>
         </select>
     </div>
 </template>

@@ -17,12 +17,12 @@ export default {
         let earth = new WE.map('earth_div');
         WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(earth);
 
-            let marker = WE.marker([this.wonder.lat, this.wonder.long]).addTo(earth);
-            marker.bindPopup(this.wonder.message,
+            let marker = WE.marker([this.wonder.details.latitude, this.wonder.details.longitude]).addTo(earth);
+            marker.bindPopup(this.wonder.details.height,
                 {maxWidth: 450, closeButton: true})
                 .openPopup();
 
-        earth.setView([this.wonder.lat, this.wonder.long], 4);
+        earth.setView([this.wonder.details.latitude, this.wonder.details.longitude], 4);
       }
     }
 }
