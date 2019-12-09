@@ -2,7 +2,7 @@
     <div>
         <h2>Select your wonder</h2>
         <simple-button message="Get random wonder" eventChannel="select-random-wonder"></simple-button>
-        <simple-select message="Select a wonder" eventChannel="select-wonder"></simple-select>
+        <simple-select message="Select a wonder" eventChannel="select-wonder" :data="wonders"></simple-select>
     </div>
 </template>
 
