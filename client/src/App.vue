@@ -20,6 +20,7 @@ export default {
     return {
       username: null,
       selectedWonder: null,
+      selectedDetails: null,
       wonders: []
     }
   },
@@ -34,6 +35,9 @@ export default {
   })
   eventBus.$on('selected-wonder', (wonder) => {
     this.selectedWonder = wonder
+  })
+  eventBus.$on('selected-details', (details) => {
+    this.selectedDetails = details
   })
 
   GlobeService.getWonders()

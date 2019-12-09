@@ -1,12 +1,13 @@
 <template>
     <div id="earth_div">
-      <conversation :wonder='wonder'></conversation>
+      <!-- <conversation :wonder='wonder'></conversation> -->
     </div>
 </template>
 
 <script>
 
 import Conversation from './Conversation.vue';
+import {eventBus} from '../main.js'
 
 export default {
     name: "world-map",
@@ -30,7 +31,10 @@ export default {
                 .openPopup();
 
         earth.setView([this.wonder.details.latitude + 5 , this.wonder.details.longitude + 3], 4);
-      }
+      },
+      moreDetailButton: function (){
+        eventBus.$emit('selected-details', this.wonder.details.name)
+      },
     },
     components: {
       "conversation": Conversation
