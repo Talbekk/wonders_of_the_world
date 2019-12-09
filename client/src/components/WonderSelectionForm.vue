@@ -22,7 +22,7 @@ export default {
     },
     methods: {
         selectRandomWonder: function() {
-            this.getWonder(Math.random(0, wonders.length + 1));
+            this.getWonder(Math.random(0, this.wonders.length));
         },
         getWonder: function(position) {
             this.emitSelectedWonder(this.wonders[position]);
@@ -39,5 +39,5 @@ export default {
 </script>
 
 <style lang="css" scoped>
-    
+
 </style>

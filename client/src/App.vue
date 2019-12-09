@@ -18,6 +18,7 @@ export default {
   data() {
     return {
       username: null,
+      selectedWonder: null,
       wonders: [
         {
           name: "Chichén Itzá",
@@ -28,7 +29,7 @@ export default {
           message: "<b><img src='https://estaticos.muyhistoria.es/media/cache/1140x_thumb/uploads/images/gallery/5c544c2c5bafe87f2de31193/chichen-itza.jpg' class='img-fluid'/>Cairo</b><br>Yay, you found me!"
         },
         {
-          name: "Chichén Itzá",
+          name: "Test",
           location: "Yucatan, Messico",
           longitude: -88.567519,
           latitude: 20.685635,
@@ -49,6 +50,9 @@ export default {
   mounted(){
   eventBus.$on('username',(name) => {
     this.username = name;
+  })
+  eventBus.$on('selected-wonder', (wonder) => {
+    this.selectedWonder = wonder
   })
   }
 }
