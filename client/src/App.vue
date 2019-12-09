@@ -11,6 +11,7 @@ import WorldMap from './components/WorldMap'
 import UserForm from './components/UserForm'
 import WonderSelectionForm from './components/WonderSelectionForm'
 import {eventBus} from './main.js'
+import GlobeService from './services/GlobeService.js'
 
 export default {
 
@@ -35,10 +36,8 @@ export default {
     this.selectedWonder = wonder
   })
 
-  fetch('http://localhost:3000/api/wonders/')
-  .then(res => res.json())
-  .then(data => this.wonders = data)
-
+  GlobeService.getWonders()
+  .then(data => this.wonders = data);
   }
 }
 </script>
