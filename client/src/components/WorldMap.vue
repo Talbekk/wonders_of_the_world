@@ -22,8 +22,14 @@ export default {
                 {maxWidth: 450, closeButton: true})
                 .openPopup();
 
-        earth.setView([51, 0], 2);
+        earth.setView([this.wonder.lat, this.wonder.long], 4);
       }
     }
 }
 </script>
+
+<style lang="css">
+#earth_div{
+  top: 0; right: 0; bottom: 0; left: 0;
+  background-color: #000; position: absolute !important;}
+</style>
