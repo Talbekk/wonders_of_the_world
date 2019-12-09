@@ -1,17 +1,41 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <world-map :data="wonders"></world-map>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import WorldMap from './components/WorldMap.vue'
 
 export default {
   name: 'app',
+  data() {
+    return {
+      wonders: [
+        {
+          name: "Chichén Itzá",
+          lat: 30.058056, 
+          long: 31.228889,
+          image: "https://estaticos.muyhistoria.es/media/cache/1140x_thumb/uploads/images/gallery/5c544c2c5bafe87f2de31193/chichen-itza.jpg",
+          description: "Chichen Itza[nb 1] was a large pre-Columbian city built by the Maya people of the Terminal Classic period. The archaeological site is located in Tinúm Municipality, Yucatán State, Mexico. Chichen Itza was a major focal point in the Northern Maya Lowlands from the Late Classic (c. AD 600–900) through the Terminal Classic (c. AD 800–900) and into the early portion of the Postclassic period (c. AD 900–1200). The site exhibits a multitude of architectural styles, reminiscent of styles seen in central Mexico and of the Puuc and Chenes styles of the Northern Maya lowlands.",
+          message: "<b><img src='https://estaticos.muyhistoria.es/media/cache/1140x_thumb/uploads/images/gallery/5c544c2c5bafe87f2de31193/chichen-itza.jpg' class='img-fluid'/>Cairo</b><br>Yay, you found me!"
+        },
+        {
+          name: "Chichén Itzá",
+          location: "Yucatan, Messico",
+          longitude: -88.567519,
+          latitude: 20.685635,
+          image: "https://estaticos.muyhistoria.es/media/cache/1140x_thumb/uploads/images/gallery/5c544c2c5bafe87f2de31193/chichen-itza.jpg",
+          description: "Chichen Itza[nb 1] was a large pre-Columbian city built by the Maya people of the Terminal Classic period. The archaeological site is located in Tinúm Municipality, Yucatán State, Mexico. Chichen Itza was a major focal point in the Northern Maya Lowlands from the Late Classic (c. AD 600–900) through the Terminal Classic (c. AD 800–900) and into the early portion of the Postclassic period (c. AD 900–1200). The site exhibits a multitude of architectural styles, reminiscent of styles seen in central Mexico and of the Puuc and Chenes styles of the Northern Maya lowlands.",
+          height: "98 feet in height ?????",
+          yearBuilt: "832 AD",
+          purpose: "City",
+          },
+      ]
+    }
+  },
   components: {
-    HelloWorld
+    "world-map":WorldMap
   }
 }
 </script>
