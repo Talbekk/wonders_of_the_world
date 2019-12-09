@@ -1,9 +1,12 @@
 <template>
     <div id="earth_div">
+      <conversation></conversation>
     </div>
 </template>
 
 <script>
+import Conversation from './Conversation.vue';
+
 export default {
     name: "world-map",
     props: {
@@ -25,6 +28,9 @@ export default {
 
         earth.setView([this.wonder.details.latitude, this.wonder.details.longitude], 4);
       }
+    },
+    components: {
+      "conversation": Conversation
     }
 }
 </script>

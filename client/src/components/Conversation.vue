@@ -9,12 +9,14 @@
 
 <script>
 
-import Traveller from './traveller.vue';
-import Host from './host.vue';
+import Traveller from './Traveller.vue';
+import Host from './Host.vue';
 
 export default {
   name: "conversation",
-  props: ['wonder'],
+  props: {
+    wonder : Object
+  },
     components: {
       "host": Host,
       "traveller": Traveller
