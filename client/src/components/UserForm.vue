@@ -1,7 +1,7 @@
 <template lang="html">
-  <form class="user-name" action="index.html" method="post">
+  <form class="user-name">
       <label for="username">Name:</label>
-      <input id="username" type="text" name="username" value="">
+      <input id="username" type="text" v-model="name" name="username">
       <input id="submit" type="submit" name="" value="Submit">
   </form>
 </template>
