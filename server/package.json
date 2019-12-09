@@ -4,12 +4,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server:dev": "nodemon server.js"
+    "server:dev": "nodemon server.js",
+    "start": "node server.js",
+    "seeds": "mongo < db/seeds.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
@@ -18,5 +19,6 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.1"
-  }
+  },
+  "description": ""
 }

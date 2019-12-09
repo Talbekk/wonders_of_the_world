@@ -19,7 +19,7 @@ router.get('/', (req, res) => {
 
 router.get('/:id',(req, res) => {
   const id = req.params.id;
-  collection.findOne({ _id: ObjectId(id)});
+  collection.findOne({ _id: ObjectId(id)})
   .then((wonder) => res.json(wonder))
   .catch((err) => {
     console.error(err);
