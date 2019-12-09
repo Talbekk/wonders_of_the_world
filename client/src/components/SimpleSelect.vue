@@ -1,8 +1,9 @@
 <template>
     <div>
-       <select @change="onWonderSelection" required>
-        <option value="0" disabled selected>Choose a wonder</option>
-        <option v-for="(singleData, index) in data" :key="index" :value="index">{{singleData.name}}</option>
+        <label for="data-selection">{{message}}</label>
+        <select @change="onDataSelection" id="data-selection" required>
+            <option value="0" disabled selected>Choose</option>
+            <option v-for="(singleData, index) in data" :key="index" :value="index">{{singleData.name}}</option>
         </select> 
     </div>
 </template>
@@ -13,11 +14,12 @@ import { eventBus } from "../main";
 export default {
     name: "simple-select",
     props: {
+        message: String,
         eventChannel: String,
         data: Array
     },
     methods: {
-        onWonderSelection: function(e) {
+        onDataSelection: function(e) {
             eventBus.$emit(eventChannel, e.target.value);
         }
     },
