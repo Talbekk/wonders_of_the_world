@@ -25,7 +25,7 @@ export default {
       selectedDetails: null,
       wonders: [],
       questions: [],
-      quiz: true
+      quiz: false
     }
   },
   mounted(){
@@ -35,10 +35,11 @@ export default {
     eventBus.$on('selected-wonder', (wonder) => {
       this.selectedWonder = wonder
     })
-
+    eventBus.$on('selected-details', (details) => {
+      this.selectedDetails = details
+    })
     GlobeService.getWonders()
     .then(data => this.wonders = data);
-
     GlobeService.getQuiz()
     .then(data => this.questions = data);
   },
@@ -47,20 +48,6 @@ export default {
     "user-form":UserForm,
     "wonder-selection-form": WonderSelectionForm,
     "graphic-quiz": GraphicQuiz
-  },
-  mounted(){
-  eventBus.$on('username',(name) => {
-    this.username = name;
-  })
-  eventBus.$on('selected-wonder', (wonder) => {
-    this.selectedWonder = wonder
-  })
-  eventBus.$on('selected-details', (details) => {
-    this.selectedDetails = details
-  })
-
-  GlobeService.getWonders()
-  .then(data => this.wonders = data);
   }
 }
 </script>
