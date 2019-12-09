@@ -1,5 +1,5 @@
 <template lang="html">
-  <div id="traveller">
+  <div id="traveller" @click="onClick">
   <p>Traveller : {{conversation.traveller}}</p>
   </div>
 </template>
@@ -12,7 +12,7 @@ export default {
   },
   methods: {
     onClick: function() {
-      this.$emit("handleClick");
+      this.$emit("handleTravellerClick");
     }
   }
 }

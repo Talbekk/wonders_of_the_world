@@ -1,6 +1,6 @@
 <template lang="html">
   <div id="host" @click="onClick">
-    <p>Host:{{conversation.host}}</p>
+    <p>Host: {{conversation.host}}</p>
 
 
   </div>
@@ -14,8 +14,9 @@ export default {
   },
   methods: {
     onClick: function() {
-      this.$emit("handleClick");
+      this.$emit("handleHostClick");
     }
+
   }
 
 }
