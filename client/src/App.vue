@@ -48,7 +48,7 @@ export default {
     "wonder-selection-form": WonderSelectionForm,
     "graphic-quiz": GraphicQuiz
   },
-<<<<<<< HEAD
+
   mounted(){
   eventBus.$on('username',(name) => {
     this.username = name;
@@ -63,8 +63,6 @@ export default {
   GlobeService.getWonders()
   .then(data => this.wonders = data);
   }
-=======
->>>>>>> 242cdd74bcd8938921bc8b85acda9f84bbdaae0f
 }
 </script>
 
