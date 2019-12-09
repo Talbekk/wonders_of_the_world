@@ -1,11 +1,13 @@
 <template>
-    <div class="question-area">
-        <graphic-quiz-question :question="questions[currentQuestionIndex].question"></graphic-quiz-question>
-        <graphic-quiz-answer
-        v-for="(answer, index) in questions[currentQuestionIndex].answers" :key="index"
-        @onSelectedImage="onSelectedImage"
-        :answer="answer">
-        </graphic-quiz-answer>
+    <div class="question-area" v-if="currentQuestion">
+        <graphic-quiz-question :question="currentQuestion.question"></graphic-quiz-question>
+        <div class="answer-area">
+            <graphic-quiz-answer
+            v-for="(answer, index) in currentQuestion.answers" :key="index"
+            @onSelectedImage="onSelectedImage"
+            :answer="answer">
+            </graphic-quiz-answer>
+        </div>
     </div>
 </template>
 
@@ -17,7 +19,14 @@ export default {
     name: "graphic-quiz",
     data() {
         return {
-            currentQuestionIndex: 0
+            currentQuestionIndex: 0,
+            showAnswer: true,
+            showSolution: false,
+        }
+    },
+    computed: {
+        currentQuestion: function() {
+            return this.questions[this.currentQuestionIndex];
         }
     },
     props: {
@@ -34,3 +43,9 @@ export default {
     }
 }
 </script>
+
+<style lang="css">
+    .answer-area {
+        display: flex;
+    }
+</style>

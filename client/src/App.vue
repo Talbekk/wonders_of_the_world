@@ -3,15 +3,17 @@
     <user-form v-if="!username"></user-form>
     <wonder-selection-form v-if="username && !selectedWonder" :wonders ='wonders'></wonder-selection-form>
     <world-map v-if="selectedWonder" :wonder="selectedWonder"></world-map>
+    <graphic-quiz :questions="questions" v-if="quiz"></graphic-quiz>
   </div>
 </template>
 
 <script>
-import WorldMap from './components/WorldMap'
-import UserForm from './components/UserForm'
-import WonderSelectionForm from './components/WonderSelectionForm'
-import {eventBus} from './main.js'
-import GlobeService from './services/GlobeService.js'
+import WorldMap from './components/WorldMap';
+import UserForm from './components/UserForm';
+import WonderSelectionForm from './components/WonderSelectionForm';
+import {eventBus} from './main.js';
+import GlobeService from './services/GlobeService.js';
+import GraphicQuiz from "./components/GraphicQuiz";
 
 export default {
 
@@ -21,14 +23,32 @@ export default {
       username: null,
       selectedWonder: null,
       selectedDetails: null,
-      wonders: []
+      wonders: [],
+      questions: [],
+      quiz: true
     }
+  },
+  mounted(){
+    eventBus.$on('username',(name) => {
+      this.username = name;
+    })
+    eventBus.$on('selected-wonder', (wonder) => {
+      this.selectedWonder = wonder
+    })
+
+    GlobeService.getWonders()
+    .then(data => this.wonders = data);
+
+    GlobeService.getQuiz()
+    .then(data => this.questions = data);
   },
   components: {
     "world-map":WorldMap,
     "user-form":UserForm,
-    "wonder-selection-form": WonderSelectionForm
+    "wonder-selection-form": WonderSelectionForm,
+    "graphic-quiz": GraphicQuiz
   },
+<<<<<<< HEAD
   mounted(){
   eventBus.$on('username',(name) => {
     this.username = name;
@@ -43,6 +63,8 @@ export default {
   GlobeService.getWonders()
   .then(data => this.wonders = data);
   }
+=======
+>>>>>>> 242cdd74bcd8938921bc8b85acda9f84bbdaae0f
 }
 </script>
 
