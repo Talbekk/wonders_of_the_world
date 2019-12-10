@@ -3,21 +3,12 @@
     <!-- <world-map :wonders='wonders'></world-map> -->
     <!-- <div id="form-overlay"> -->
     <user-form v-if="!username"></user-form>
-<<<<<<< HEAD
-    <wonder-selection-form v-if="username && !selectedWonder && !quiz" :wonders ='wonders'></wonder-selection-form>
-    <wonder-page v-if="selectedWonder" :wonders="[selectedWonder]"></wonder-page>
-    <button v-if="username && !selectedWonder && !quiz" @click="onPlayQuizClick">Test your knownledge</button>
-    <graphic-quiz :questions="questions" v-if="username && quiz"></graphic-quiz>
-    <!-- </div> -->
-    </div>
-=======
     <wonder-selection-form v-if="homepage" :wonders ='wonders'></wonder-selection-form>
-    <wonder-page v-if="map" :wonder="selectedWonder"></wonder-page>
+    <wonder-page v-if="map" :wonders="[selectedWonder]"></wonder-page>
     <button  v-if="homepage" @click="onPlayQuizClick">Test your knownledge</button>
     <graphic-quiz :questions="questions" v-if="quiz"></graphic-quiz>
     <more-detail :wonder="selectedWonder" v-if="details"></more-detail>
   </div>
->>>>>>> 9f101227b8e78d367786104da8d18c8410827ab0
 </template>
 
 <script>
