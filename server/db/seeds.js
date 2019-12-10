@@ -4,7 +4,6 @@ db.dropDatabase();
 db.wonders.insertMany([
 {
   details: {
-<<<<<<< HEAD
 
   name: "The Colosseum",
   location: "Rome, Italy",
@@ -54,8 +53,6 @@ conversations: [
 },
 {
   details: {
-=======
->>>>>>> 24f40b23d1146f544ab0351a33095de0fdb9d82f
     name: "The Colosseum",
     location: "Rome, Italy",
     longitude: 41.8902,
