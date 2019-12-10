@@ -26,7 +26,7 @@ export default {
           <p class="popup-information-text"> Name: ${wonder.details.name}</p>
           <p class="popup-information-text"> Location: ${wonder.details.location}</p>
           <p class="popup-information-text"> Year Built: ${wonder.details.yearBuilt}<p>`,
-          {maxWidth: 300, maxHeight: 300, closeButton: true})
+          {maxWidth: 300, maxHeight: 200, closeButton: true})
           .closePopup();
 
         earth.setView([50 , 0], 2);
@@ -50,4 +50,10 @@ export default {
   top: 0; right: 0; bottom: 0; left: 0;
   background-color: #000; position: absolute !important;
   }
+
+.img-fluid {
+  max-width: 25em;
+  max-height: 25em;
+  padding: 2em;
+}
 </style>
