@@ -26,7 +26,8 @@ export default {
     },
     methods: {
         map: function() {
-        let earth = new WE.map('earth_div');
+        let options = {sky: true,};
+        let earth = new WE.map('earth_div', options);
         WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(earth);
 
             let marker = WE.marker([this.wonder.details.latitude, this.wonder.details.longitude]).addTo(earth);
@@ -83,6 +84,7 @@ text-align: left;
 }
 
 .we-pm-icon{
+
 }
 
 </style>
