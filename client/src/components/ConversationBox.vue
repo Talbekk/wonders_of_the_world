@@ -1,6 +1,6 @@
 <template>
-    <div :class="position">
-        <p>{{message}}</p>
+    <div :class="position" >
+        <p :class="speech">{{message}}</p>
     </div>
 </template>
 
@@ -9,7 +9,8 @@ export default {
     name: "conversation-box",
     props: {
         message: String,
-        position: String
+        position: String,
+        speech:String
     }
 }
 </script>
@@ -22,10 +23,64 @@ export default {
         position:absolute;
         bottom:0;
         right:0;
+        font-size: 20px;
+        width: 400px;
+        height: 100px;
+        padding: 50px;
     }
+    /* speech bubble */
+  .right_speech_bubble {
+  	position: relative;
+  	background: white;
+  	border-radius: .4em;
+  }
+
+  .right_speech_bubble:after {
+    content: '';
+  	position: absolute;
+  	bottom: 0;
+  	left: 50%;
+  	width: 0;
+  	height: 0;
+  	border: 1.219em solid transparent;
+  	border-top-color: white;
+  	border-bottom: 0;
+  	border-left: 0;
+  	margin-left: -0.609em;
+  	margin-bottom: -1.219em;
+    }
+
     .left {
         position:absolute;
         bottom:0;
         left:0;
+        font-size: 20px;
+        width: 400px;
+        height: 100px;
+        padding: 50px;
+
     }
+
+    .left_speech_bubble {
+      position: relative;
+      background: white;
+      border-radius: .4em;
+    }
+
+    .left_speech_bubble:after {
+      content: '';
+    	position: absolute;
+    	bottom: 0;
+    	left: 50%;
+    	width: 0;
+    	height: 0;
+    	border: 0.625em solid transparent;
+    	border-top-color: white;
+    	border-bottom: 0;
+    	border-right: 0;
+      margin-left: -0.312em;
+      margin-bottom: -0.625em;
+      }
+
+
 </style>

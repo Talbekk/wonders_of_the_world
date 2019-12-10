@@ -1,6 +1,6 @@
 <template>
-    <div>
-        {{question}}
+    <div class="question">
+        <h2>{{question}}</h2>
     </div>
 </template>
 
@@ -14,5 +14,7 @@ export default {
 </script>
 
 <style lang="css" scoped>
-    
+    .question {
+        margin: 50px 20px 10px 20px;
+    }
 </style>

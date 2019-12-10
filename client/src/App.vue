@@ -3,12 +3,21 @@
     <!-- <world-map :wonders='wonders'></world-map> -->
     <!-- <div id="form-overlay"> -->
     <user-form v-if="!username"></user-form>
+<<<<<<< HEAD
     <wonder-selection-form v-if="username && !selectedWonder && !quiz" :wonders ='wonders'></wonder-selection-form>
     <wonder-page v-if="selectedWonder" :wonders="[selectedWonder]"></wonder-page>
     <button v-if="username && !selectedWonder && !quiz" @click="onPlayQuizClick">Test your knownledge</button>
     <graphic-quiz :questions="questions" v-if="username && quiz"></graphic-quiz>
     <!-- </div> -->
     </div>
+=======
+    <wonder-selection-form v-if="homepage" :wonders ='wonders'></wonder-selection-form>
+    <wonder-page v-if="map" :wonder="selectedWonder"></wonder-page>
+    <button  v-if="homepage" @click="onPlayQuizClick">Test your knownledge</button>
+    <graphic-quiz :questions="questions" v-if="quiz"></graphic-quiz>
+    <more-detail :wonder="selectedWonder" v-if="details"></more-detail>
+  </div>
+>>>>>>> 9f101227b8e78d367786104da8d18c8410827ab0
 </template>
 
 <script>
@@ -19,6 +28,7 @@ import WonderSelectionForm from './components/WonderSelectionForm';
 import {eventBus} from './main.js';
 import GlobeService from './services/GlobeService.js';
 import GraphicQuiz from "./components/GraphicQuiz";
+import MoreDetail from "./components/MoreDetail";
 
 export default {
 
@@ -27,20 +37,28 @@ export default {
     return {
       username: null,
       selectedWonder: null,
-      selectedDetails: null,
       wonders: [],
       questions: [],
-      quiz: false
+      homepage: false,
+      quiz: false,
+      details: false,
+      map: false
     }
   },
   mounted(){
     eventBus.$on('username',(name) => {
       this.username = name;
+      this.quiz = false;
+      this.homepage = true;
+      this.map = false;
+      this.details = false;
     })
     eventBus.$on('selected-wonder', (wonder) => {
-      this.selectedWonder = null;
-      this.selectedDetails = null;
       this.selectedWonder = wonder;
+      this.quiz = false;
+      this.homepage = false;
+      this.map = true;
+      this.details = false;
     })
 
     GlobeService.getWonders()
@@ -51,11 +69,24 @@ export default {
 
     eventBus.$on('select-homepage', (wonder) => {
       this.quiz = false;
+      this.homepage = true;
+      this.map = false;
+      this.details = false;
+    })
+
+    eventBus.$on('select-details', (wonder) => {
+      this.quiz = false;
+      this.homepage = false;
+      this.map = false;
+      this.details = true;
     })
   },
   methods: {
     onPlayQuizClick: function() {
       this.quiz = true;
+      this.homepage = false;
+      this.map = false;
+      this.details = false;
     }
   },
   components: {
@@ -63,7 +94,8 @@ export default {
     "user-form":UserForm,
     "wonder-selection-form": WonderSelectionForm,
     "graphic-quiz": GraphicQuiz,
-    "wonder-page": WonderPage
+    "wonder-page": WonderPage,
+    "more-detail": MoreDetail
   }
 }
 </script>
