@@ -1,14 +1,12 @@
 <template>
   <div id="app">
-    <world-map v-if="username" :wonders='wonders'></world-map>
+    <world-map v-if="homepage" :wonders='wonders'></world-map>
     <user-form v-if="!username"></user-form>
-    <div v-if="username" id="form-overlay">
-    <wonder-selection-form v-if="homepage" :wonders ='wonders'></wonder-selection-form>
+    <wonder-selection-form id="right-form" v-if="homepage" :wonders ='wonders'></wonder-selection-form>
     <wonder-page v-if="map" :wonders="[selectedWonder]"></wonder-page>
-    <button  v-if="homepage" @click="onPlayQuizClick">Test your knowledge</button>
+    <button id="left-form" v-if="homepage" @click="onPlayQuizClick">Test your knowledge</button>
     <graphic-quiz :questions="questions" v-if="quiz"></graphic-quiz>
     <more-detail :wonder="selectedWonder" v-if="details"></more-detail>
-  </div>
   </div>
 </template>
 
@@ -101,7 +99,8 @@ export default {
   color: #2c3e50;
   height: 700px;
 }
-#form-overlay {
+
+#right-form {
   position: relative;
   top: 20%;
   left: 80%;
@@ -119,5 +118,26 @@ export default {
   border: 2px solid #669999;
   border-radius: 30%;
 }
+
+#left-form {
+  position: relative;
+  top: 20%;
+  right: 20%;
+  font-size: 15px;
+  color: white;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50);
+  padding-top: 100px;
+  color: black;
+  background-color: white;
+  margin: 1em;
+  padding: 2em;
+  max-width: 20%;
+  border: 2px solid #669999;
+  border-radius: 30%;
+}
+
+
 
 </style>
