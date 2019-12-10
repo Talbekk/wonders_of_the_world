@@ -23,7 +23,7 @@ conversations: [
     host: "Welcome to Egypt! The home of the great pyramids of Giza. My name is Anubis.",
     hotstImage: "./conversations/host.png",
     traveller: "Hi Anubis!",
-    travellerImage: "./conversations/traveller.png"
+    travellerImage: "conversation/traveller.png"
   },
   {
     host: "As you can see the pyramids are huge, they are over 450ft tall.",
