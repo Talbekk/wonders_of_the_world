@@ -33,7 +33,6 @@ export default {
   top: 50%;
   left: 50%;
   font-size: 15px;
-  color: white;
   /* color: white; */
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
