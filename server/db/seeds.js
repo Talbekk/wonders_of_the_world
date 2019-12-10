@@ -20,23 +20,33 @@ db.wonders.insertMany([
 conversations: [
   {
     host: "Welcome to Egypt! The home of the great pyramids of Giza. My name is Anubis.",
-    traveller: "Hi Anubis!"
+    hotstImage: "./conversations/host.png",
+    traveller: "Hi Anubis!",
+    travellerImage: "./conversations/traveller.png"
   },
   {
     host: "As you can see the pyramids are huge, they are over 450ft tall.",
-    traveller: "Wow! Why are they so tall?"
+    hotstImage: "./conversations/host.png",
+    traveller: "Wow! Why are they so tall?",
+    travellerImage: "./conversations/traveller.png"
   },
    {
      host: "The pyramids were built 3,800 years ago. They were created to allow the kings of Egypt to succeed in the afterlife.",
-     traveller: "Awesome, what's inside the pyramid?"
+     hotstImage: "./conversations/host.png",
+     traveller: "Awesome, what's inside the pyramid?",
+     travellerImage: "./conversations/traveller_heart_eye.png"
    },
    {
      host: "Treasures and items for Pharaoh's to use in the afterlife.",
-     traveller: "Wowza, the afterlife in Egypt must have been really interesting!"
+     hotstImage: "./conversations/host.png",
+     traveller: "Wowza, the afterlife in Egypt must have been really interesting!",
+     travellerImage: "./conversations/traveller.png"
    },
    {
      host: "Have fun on your journey!",
-     traveller: "See you later!"
+     hotstImage: "./conversations/host_smile.png",
+     traveller: "See you later!",
+     travellerImage: "./conversations/traveller.png"
    }
 ]
 },
