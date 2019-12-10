@@ -7,6 +7,8 @@
     <button id="left-form" v-if="homepage" @click="onPlayQuizClick">Test your knowledge</button>
     <graphic-quiz :questions="questions" v-if="quiz"></graphic-quiz>
     <more-detail :wonder="selectedWonder" v-if="details"></more-detail>
+    <conversation-box v-if="homepage" :message="hostMessage" position="right" speech="right_speech_bubble" 
+    image="conversation/host.png" :username="username" id="homepage-box"></conversation-box>
   </div>
 </template>
 
@@ -19,6 +21,7 @@ import {eventBus} from './main.js';
 import GlobeService from './services/GlobeService.js';
 import GraphicQuiz from "./components/GraphicQuiz";
 import MoreDetail from "./components/MoreDetail";
+import ConversationBox from "./components/ConversationBox";
 
 export default {
 
@@ -33,6 +36,11 @@ export default {
       quiz: false,
       details: false,
       map: false
+    }
+  },
+  computed: {
+    hostMessage: function() {
+      return `Hello ${this.username}, welcome to wonder of the worlds, what do you prefer to do?`
     }
   },
   mounted(){
@@ -79,7 +87,8 @@ export default {
     "wonder-selection-form": WonderSelectionForm,
     "graphic-quiz": GraphicQuiz,
     "wonder-page": WonderPage,
-    "more-detail": MoreDetail
+    "more-detail": MoreDetail,
+    "conversation-box": ConversationBox,
   }
 }
 </script>
@@ -91,7 +100,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  height: 700px;
+  height: 650px;
 }
 
 #right-form {
@@ -132,6 +141,11 @@ export default {
   border-radius: 30%;
 }
 
+#homepage-box {
+  bottom: 200px !important;
+}
 
-
+#homepage-box img {
+  padding-top: 30px !important;
+}
 </style>
