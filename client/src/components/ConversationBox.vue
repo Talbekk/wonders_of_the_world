@@ -33,9 +33,9 @@ export default {
         bottom:0;
         right:0;
         font-size: 20px;
-        width: 400px;
-        height: 100px;
-        padding: 50px;
+        width: 300px;
+        /* height: 100px; */
+        /* padding: 50px; */
     }
     /* speech bubble */
   .right_speech_bubble {
@@ -43,7 +43,6 @@ export default {
   	background: white;
   	border-radius: .4em;
   }
-
   .right_speech_bubble:after {
     content: '';
   	position: absolute;
@@ -58,24 +57,20 @@ export default {
   	margin-left: -0.609em;
   	margin-bottom: -1.219em;
     }
-
     .left {
         position:absolute;
         bottom:0;
         left:0;
         font-size: 20px;
-        width: 400px;
-        height: 100px;
-        padding: 50px;
-
+        width: 300px;
+        /* height: 100px; */
+        /* padding: 50px; */
     }
-
     .left_speech_bubble {
       position: relative;
       background: white;
       border-radius: .4em;
     }
-
     .left_speech_bubble:after {
       content: '';
     	position: absolute;
@@ -94,10 +89,8 @@ export default {
       height: auto;
       width: 50%;
       display: inline;
-      padding-top: 90px;
+      padding-top: 30px;
       bottom: 0;
       position: sticky;
-
     }
-
 </style>

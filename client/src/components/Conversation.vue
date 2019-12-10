@@ -6,8 +6,8 @@
     </div>
       <!-- <div id="conversation-closure" class="conversation-popup" v-if="!conversation && conversationIndex > 0"> -->
       <!-- <p>What do you prefer to do now?</p> -->
-      <simple-button v-if="!conversation && conversationIndex > 0" id="left-button" message="See more details" eventChannel="select-details"></simple-button>
-      <simple-button v-if="!conversation && conversationIndex > 0" id="right-button" message="X" eventChannel="select-homepage"></simple-button>
+      <simple-button v-if="!conversation && conversationIndex > 0" id="right-button" message="See more details" eventChannel="select-details"></simple-button>
+      <simple-button v-if="!conversation && conversationIndex > 0" id="left-button" message="X" eventChannel="select-homepage"></simple-button>
   </div>
 </template>
 
@@ -15,7 +15,6 @@
 import { eventBus } from "../main";
 import ConversationBox from "./ConversationBox";
 import SimpleButton from "./SimpleButton";
-
 export default {
   name: "conversation",
   props: {
@@ -42,32 +41,31 @@ export default {
     "simple-button": SimpleButton
   }
 }
-
 </script>
 
 <style lang="css" scoped>
-
 #conversation{
   /* color: black;
   background-color: white; */
   /* position: relative;} */
 }
-
-
 #left-button {
-  position: relative;
-  bottom: 280px;
-  left: 580px;
+  position: absolute;
+  /* bottom: 280px; */
+  /* left: 580px; */
+  top: 0px;
+  left: 0px;
   margin: 1em;
   padding: 2em;
   border: 2px solid #669999;
   border-radius: 30%;
 }
-
 #right-button {
-  position: relative;
-  bottom: 280px;
-  right: 700px;
+  position: absolute;
+  /* bottom: 280px; */
+  /* right: 700px; */
+  top: 0px;
+  right: 0px;
   margin: 1em;
   padding: 2em;
   border: 2px solid #669999;
