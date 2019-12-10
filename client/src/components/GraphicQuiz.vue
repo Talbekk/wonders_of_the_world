@@ -9,7 +9,7 @@
             </graphic-quiz-answer>
         </div>
         <div class="solution-area" v-if="showSolution">
-            {{solution.result}}
+            <p>{{ solution.result | resultMessage }}</p>
             <button @click="onSelectedPlay">{{solution.button}}</button>
             <simple-button eventChannel="select-homepage" message="Go back"></simple-button>
         </div>
@@ -58,6 +58,11 @@ export default {
             this.showSolution = false;
         }
     },
+    filters: {
+        resultMessage: function(value) {
+            return value ? "NICELY DONE! YOU ARE RIGHT" : "ALMOST THERE!"
+        }
+    },
     components: {
         "graphic-quiz-question": GraphicQuizQuestion,
         "graphic-quiz-answer": GraphicQuizAnswer,
@@ -66,8 +71,17 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
     .answer-area {
         display: flex;
+        margin: 20px 20px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .solution-area {
+        margin: 100px;
+    }
+    button {
+        margin: 5px;
     }
 </style>

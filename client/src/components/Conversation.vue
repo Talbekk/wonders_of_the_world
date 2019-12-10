@@ -1,20 +1,14 @@
 <template lang="html">
-<<<<<<< HEAD
-  <div id="conversation" @click="onConversationClick" v-if="conversation">
-    <conversation-box :message="conversation.host" position="left" speech="right_speech_bubble"></conversation-box>
-    <conversation-box :message="conversation.traveller" position="right" speech="left_speech_bubble"></conversation-box>
-=======
   <div id="conversation">
     <div id="conversation-box" @click="onConversationClick" v-if="conversation">
-      <conversation-box :message="conversation.host" position="left"></conversation-box>
-      <conversation-box :message="conversation.traveller" position="right"></conversation-box>
+      <conversation-box :message="conversation.host" position="left" speech="right_speech_bubble"></conversation-box>
+      <conversation-box :message="conversation.traveller" position="right" speech="left_speech_bubble"></conversation-box>
     </div>
     <div id="conversation-closure" class="conversation-popup" v-if="!conversation && conversationIndex > 0">
       <p>What do you prefer to do now?</p>
       <simple-button message="See more details" eventChannel="select-details"></simple-button>
       <simple-button message="Go to homepage" eventChannel="select-homepage"></simple-button>
     </div>
->>>>>>> 1d91df241f3cdc0e45471fb15f72abb0d94789ec
   </div>
 </template>
 

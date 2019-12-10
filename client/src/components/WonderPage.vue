@@ -1,10 +1,10 @@
 <template lang="html">
 <div id="main-container">
   <div>
-    <world-map :wonder='wonder'></world-map>
+    <world-map :wonders='wonders'></world-map>
   </div>
   <div id="overlay">
-    <conversation :wonder="wonder"></conversation>
+    <conversation :wonder="wonders[0]"></conversation>
   </div>
 </div>
 </template>
@@ -16,7 +16,7 @@ import WorldMap from './WorldMap.vue';
 export default {
   name: "wonder-page",
   props: {
-    wonder : Object
+    wonders : Array
   },
   components: {
     'conversation': Conversation,
@@ -26,11 +26,6 @@ export default {
 </script>
 
 <style lang="css" scoped>
-
-#earth_div{
-  top: 0; right: 0; bottom: 0; left: 0;
-  background-color: #000; position: absolute !important;
-}
 
 #overlay {
   position: relative;
