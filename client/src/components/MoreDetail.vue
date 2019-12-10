@@ -7,7 +7,9 @@
       <div class="col">
         <img  class="detail-image" :src="wonder.details.image">
         <p>Height: {{wonder.details.height}}</p>
-        <p>location: {{wonder.details.location}}</p>
+        <p>Location: {{wonder.details.location}}</p>
+        <p>Year Built: {{wonder.details.yearBuilt}}</p>
+        <p>Purpose: {{wonder.details.purpose}}</p>
       </div>
       <div class="col">
       <p>{{wonder.details.description}}</p>
