@@ -38,17 +38,11 @@ export default {
   mounted(){
     eventBus.$on('username',(name) => {
       this.username = name;
-      this.quiz = false;
-      this.homepage = true;
-      this.map = false;
-      this.details = false;
+      this.enableSection("homepage");
     })
     eventBus.$on('selected-wonder', (wonder) => {
       this.selectedWonder = wonder;
-      this.quiz = false;
-      this.homepage = false;
-      this.map = true;
-      this.details = false;
+      this.enableSection("map");
     })
 
     GlobeService.getWonders()
@@ -58,25 +52,25 @@ export default {
     .then(data => this.questions = data);
 
     eventBus.$on('select-homepage', (wonder) => {
-      this.quiz = false;
-      this.homepage = true;
-      this.map = false;
-      this.details = false;
+      this.enableSection("homepage");
     })
 
     eventBus.$on('select-details', (wonder) => {
-      this.quiz = false;
-      this.homepage = false;
-      this.map = false;
-      this.details = true;
+      this.enableSection("details");
     })
   },
   methods: {
     onPlayQuizClick: function() {
-      this.quiz = true;
+      this.enableSection("quiz")
+    },
+    enableSection: function(variableName) {
       this.homepage = false;
+      this.quiz = false;
       this.map = false;
       this.details = false;
+      if (this.$data.hasOwnProperty(variableName)) {
+          this.$data[variableName] = true;
+      }
     }
   },
   components: {

@@ -11,7 +11,7 @@
     <div class="row">
       <div class="col">
         <img  class="detail-image" :src="wonder.details.image">
-        <p>Height: {{wonder.details.height}}</p>
+        <p class="first-elm">Height: {{wonder.details.height}}</p>
         <p>Location: {{wonder.details.location}}</p>
         <p>Year Built: {{wonder.details.yearBuilt}}</p>
         <p>Purpose: {{wonder.details.purpose}}</p>
@@ -22,8 +22,8 @@
       <p>{{wonder.details.description3}}</p>
     </div>
   </div>
-  <div class="row">
-    
+  <div  id="last-image" class="row">
+    <img class="gallery-image" v-for='(image, index) in wonder.details.imageGallery' :key="index" :src="image">
   </div>
 </div>
 </template>
@@ -59,5 +59,17 @@ export default {
 
 .home-button{
   margin-top: 10px;
+}
+
+.gallery-image{
+  max-width: 25%;
+}
+
+.first-elm{
+  margin-top: 30px;
+}
+
+#last-image img:last-child {
+  margin-bottom: 50px;
 }
 </style>

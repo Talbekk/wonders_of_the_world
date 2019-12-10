@@ -2,9 +2,9 @@
   <div id="conversation">
 
     <div id="conversation-box" @click="onConversationClick" v-if="conversation">
-      <conversation-box :message="conversation.host" position="right" speech="right_speech_bubble" image="./conversation/host.png"></conversation-box>
+      <conversation-box :message="conversation.host" position="right" speech="right_speech_bubble" :image=" conversation.hostImage"></conversation-box>
 
-      <conversation-box :message="conversation.traveller" position="left" speech="left_speech_bubble" image="./conversation/traveller.png"></conversation-box>
+      <conversation-box :message="conversation.traveller" position="left" speech="left_speech_bubble" :image="conversation.travellerImage"></conversation-box>
     </div>
       <!-- <div id="conversation-closure" class="conversation-popup" v-if="!conversation && conversationIndex > 0"> -->
       <!-- <p>What do you prefer to do now?</p> -->
