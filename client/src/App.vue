@@ -35,11 +35,9 @@ export default {
       this.username = name;
     })
     eventBus.$on('selected-wonder', (wonder) => {
-      this.selectedWonder = null;
-      this.selectedDetails = null;
       this.selectedWonder = wonder;
     })
-
+    
     GlobeService.getWonders()
     .then(data => this.wonders = data);
 
@@ -47,6 +45,14 @@ export default {
     .then(data => this.questions = data);
 
     eventBus.$on('select-homepage', (wonder) => {
+      this.selectedWonder = null;
+      this.selectedDetails = null;
+      this.quiz = false;
+    })
+
+    eventBus.$on('select-details', (wonder) => {
+      this.selectedDetails = this.selectedDetails;
+      this.selectedWonder = null;
       this.quiz = false;
     })
   },
