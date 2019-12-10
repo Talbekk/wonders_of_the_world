@@ -57,6 +57,17 @@ export default {
 }
 
 .popup-information-text {
-
+  font-weight: bold;
+  align-items: center;
+  font-size: 11.5px;
+  margin: 3px !important;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+.we-pp-content{
+  margin: 5px;
+  margin-bottom: 0px;
 }
 </style>
