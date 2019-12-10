@@ -17,7 +17,7 @@ export default {
     },
     methods: {
         map: function() {
-        let options = {sky: true,};
+        let options = {sky: true};
         let earth = new WE.map('earth_div', options);
         WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(earth);
           this.wonders.forEach( (wonder) => {
@@ -26,13 +26,13 @@ export default {
           <p class="popup-information-text"> Name: ${wonder.details.name}</p>
           <p class="popup-information-text"> Location: ${wonder.details.location}</p>
           <p class="popup-information-text"> Year Built: ${wonder.details.yearBuilt}<p>`,
-          {maxWidth: 300, maxHeight: 200, closeButton: true})
+          {maxWidth: 175, maxHeight: 175, closeButton: true})
           .closePopup();
 
         earth.setView([50 , 0], 2);
 
         if (this.wonders.length === 1) {
-          earth.setView([wonder.details.latitude + 5 , wonder.details.longitude + 3], 3);
+          earth.setView([wonder.details.latitude + 20 , wonder.details.longitude + 3], 2.5);
           marker.openPopup();
         }
         })
@@ -54,6 +54,9 @@ export default {
 .img-fluid {
   max-width: 25em;
   max-height: 25em;
-  padding: 2em;
+}
+
+.popup-information-text {
+
 }
 </style>
