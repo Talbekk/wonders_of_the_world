@@ -1,7 +1,12 @@
 <template lang="html">
   <div class="container">
     <div class="row">
-      <h1 class="details-head">{{wonder.details.name}}</h1>
+      <div class="col">
+        <h1 class="details-head">{{wonder.details.name}}</h1>
+      </div>
+      <div class="col">
+        <simple-button  class="home-button" eventChannel="select-homepage" message="Home"></simple-button>
+      </div>
     </div>
     <div class="row">
       <div class="col">
@@ -21,11 +26,22 @@
 </template>
 
 <script>
+import SimpleButton from './SimpleButton';
+
 export default {
+
   name: "More-Detail",
   props: {
     wonder : Object
   },
+  methods: {
+      onButtonClick: function() {
+          eventBus.$emit(this.eventChannel);
+      }
+  },
+  components: {
+      "simple-button": SimpleButton
+  }
 }
 </script>
 
@@ -36,5 +52,9 @@ export default {
 
 .details-head{
  justify-content: center;
+}
+
+.home-button{
+  margin-top: 10px;
 }
 </style>
