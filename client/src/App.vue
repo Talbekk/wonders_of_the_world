@@ -16,6 +16,7 @@ import WonderSelectionForm from './components/WonderSelectionForm';
 import {eventBus} from './main.js';
 import GlobeService from './services/GlobeService.js';
 import GraphicQuiz from "./components/GraphicQuiz";
+import MoreDetail from "./components/MoreDetail";
 
 export default {
 
