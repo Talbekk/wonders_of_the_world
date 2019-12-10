@@ -1,16 +1,13 @@
 <template>
   <div id="app">
-    <!-- <world-map :wonders='wonders'></world-map> -->
-    <!-- <div id="form-overlay"> -->
+    <world-map v-if="homepage" :wonders='wonders'></world-map>
     <user-form v-if="!username"></user-form>
-    <wonder-selection-form v-if="homepage" :wonders ='wonders'></wonder-selection-form>
+    <wonder-selection-form id="right-form" v-if="homepage" :wonders ='wonders'></wonder-selection-form>
     <wonder-page v-if="map" :wonders="[selectedWonder]"></wonder-page>
-    <button v-if="homepage" @click="onPlayQuizClick">Test your knownledge</button>
+    <button id="left-form" v-if="homepage" @click="onPlayQuizClick">Test your knowledge</button>
     <graphic-quiz :questions="questions" v-if="quiz"></graphic-quiz>
     <more-detail :wonder="selectedWonder" v-if="details"></more-detail>
-    <!-- </div> -->
-    </div>
-
+  </div>
 </template>
 
 <script>
@@ -103,24 +100,44 @@ export default {
   height: 700px;
 }
 
-#form-overlay {
-  position: fixed; /* Sit on top of the page content */
-  display: none; /* Hidden by default */
-  width: 50%; /* Full width (cover the whole page) */
-  height: 20%; /* Full height (cover the whole page) */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 50px;
+#right-form {
+  position: relative;
+  top: 20%;
+  left: 80%;
+  font-size: 15px;
   color: white;
+  -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50);
+  padding-top: 100px;
+  color: black;
+  background-color: white;
+  margin: 1em;
+  padding: 2em;
+  max-width: 20%;
+  border: 2px solid #669999;
+  border-radius: 30%;
 }
+
+#left-form {
+  position: relative;
+  top: 20%;
+  right: 20%;
+  font-size: 15px;
+  color: white;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50);
+  padding-top: 100px;
+  color: black;
+  background-color: white;
+  margin: 1em;
+  padding: 2em;
+  max-width: 20%;
+  border: 2px solid #669999;
+  border-radius: 30%;
+}
+
+
+
 </style>
