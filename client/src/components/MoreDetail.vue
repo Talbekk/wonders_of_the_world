@@ -23,7 +23,7 @@
     </div>
   </div>
   <div class="row">
-    
+    <img v-for='(image, index) in wonder.details.imageGallery' :key="index" :src="image">
   </div>
 </div>
 </template>
