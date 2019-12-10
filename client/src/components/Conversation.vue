@@ -1,8 +1,8 @@
 <template lang="html">
   <div id="conversation">
     <div id="conversation-box" @click="onConversationClick" v-if="conversation">
-      <conversation-box :message="conversation.host" position="left"></conversation-box>
-      <conversation-box :message="conversation.traveller" position="right"></conversation-box>
+      <conversation-box :message="conversation.host" position="left" speech="right_speech_bubble"></conversation-box>
+      <conversation-box :message="conversation.traveller" position="right" speech="left_speech_bubble"></conversation-box>
     </div>
     <div id="conversation-closure" class="conversation-popup" v-if="!conversation && conversationIndex > 0">
       <p>What do you prefer to do now?</p>

@@ -1,6 +1,6 @@
 <template>
     <div class="answer">
-        <img :src="answer.image" class="img-fluid" alt="" @click="onImageClicked">
+        <img :src="answer.image" class="rounded" alt="" @click="onImageClicked">
     </div>
 </template>
 
@@ -20,6 +20,13 @@ export default {
 
 <style lang="css" scoped>
     .answer {
-        widows: 200px;
+        margin: 30px;
+        width: 250px;
+        height: 250px;
+    }
+    img {
+        object-fit: cover;
+        width: 250px;
+        height: 250px;
     }
 </style>
