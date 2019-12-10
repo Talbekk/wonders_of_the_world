@@ -43,7 +43,6 @@ export default {
   	background: white;
   	border-radius: .4em;
   }
-
   .right_speech_bubble:after {
     content: '';
   	position: absolute;
@@ -58,7 +57,6 @@ export default {
   	margin-left: -0.609em;
   	margin-bottom: -1.219em;
     }
-
     .left {
         position:absolute;
         bottom:0;
@@ -67,15 +65,12 @@ export default {
         width: 300px;
         /* height: 100px; */
         /* padding: 50px; */
-
     }
-
     .left_speech_bubble {
       position: relative;
       background: white;
       border-radius: .4em;
     }
-
     .left_speech_bubble:after {
       content: '';
     	position: absolute;
@@ -97,7 +92,5 @@ export default {
       padding-top: 30px;
       bottom: 0;
       position: sticky;
-
     }
-
 </style>

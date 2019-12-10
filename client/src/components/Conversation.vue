@@ -15,7 +15,6 @@
 import { eventBus } from "../main";
 import ConversationBox from "./ConversationBox";
 import SimpleButton from "./SimpleButton";
-
 export default {
   name: "conversation",
   props: {
@@ -42,18 +41,14 @@ export default {
     "simple-button": SimpleButton
   }
 }
-
 </script>
 
 <style lang="css" scoped>
-
 #conversation{
   /* color: black;
   background-color: white; */
   /* position: relative;} */
 }
-
-
 #left-button {
   position: absolute;
   /* bottom: 280px; */
@@ -65,7 +60,6 @@ export default {
   border: 2px solid #669999;
   border-radius: 30%;
 }
-
 #right-button {
   position: absolute;
   /* bottom: 280px; */

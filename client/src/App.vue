@@ -7,7 +7,7 @@
     <button id="left-form" v-if="homepage" @click="onPlayQuizClick">Test your knowledge</button>
     <graphic-quiz :questions="questions" v-if="quiz"></graphic-quiz>
     <more-detail :wonder="selectedWonder" v-if="details"></more-detail>
-    <conversation-box v-if="homepage" :message="hostMessage" position="right" speech="right_speech_bubble" 
+    <conversation-box v-if="homepage" :message="hostMessage" position="right" speech="right_speech_bubble"
     image="conversation/host.png" :username="username" id="homepage-box"></conversation-box>
   </div>
 </template>
@@ -22,9 +22,7 @@ import GlobeService from './services/GlobeService.js';
 import GraphicQuiz from "./components/GraphicQuiz";
 import MoreDetail from "./components/MoreDetail";
 import ConversationBox from "./components/ConversationBox";
-
 export default {
-
   name: 'app',
   data() {
     return {
@@ -52,17 +50,13 @@ export default {
       this.selectedWonder = wonder;
       this.enableSection("map");
     })
-
     GlobeService.getWonders()
     .then(data => this.wonders = data);
-
     GlobeService.getQuiz()
     .then(data => this.questions = data);
-
     eventBus.$on('select-homepage', (wonder) => {
       this.enableSection("homepage");
     })
-
     eventBus.$on('select-details', (wonder) => {
       this.enableSection("details");
     })
@@ -102,7 +96,6 @@ export default {
   color: #2c3e50;
   height: 650px;
 }
-
 #right-form {
   position: relative;
   top: 20%;
@@ -121,11 +114,10 @@ export default {
   border: 2px solid #669999;
   border-radius: 30%;
 }
-
 #left-form {
   position: relative;
   top: 20%;
-  right: 20%;
+  right: 25%;
   font-size: 15px;
   color: white;
   -webkit-transform: translate(-50%,-50%);
@@ -140,7 +132,6 @@ export default {
   border: 2px solid #669999;
   border-radius: 30%;
 }
-
 #homepage-box img {
   padding-top: 30px !important;
 }
