@@ -117,7 +117,7 @@ export default {
 #left-form {
   position: relative;
   top: 20%;
-  right: 20%;
+  right: 25%;
   font-size: 15px;
   color: white;
   -webkit-transform: translate(-50%,-50%);
