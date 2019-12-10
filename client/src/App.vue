@@ -2,7 +2,7 @@
   <div id="app">
     <user-form v-if="!username"></user-form>
     <wonder-selection-form v-if="username && !selectedWonder && !quiz" :wonders ='wonders'></wonder-selection-form>
-    <world-map v-if="selectedWonder" :wonder="selectedWonder"></world-map>
+    <wonder-page v-if="selectedWonder" :wonder="selectedWonder"></wonder-page>
     <button  v-if="username && !selectedWonder && !quiz" @click="onPlayQuizClick">Test your knownledge</button>
     <graphic-quiz :questions="questions" v-if="username && quiz"></graphic-quiz>
   </div>
@@ -10,6 +10,7 @@
 
 <script>
 import WorldMap from './components/WorldMap';
+import WonderPage from './components/WonderPage';
 import UserForm from './components/UserForm';
 import WonderSelectionForm from './components/WonderSelectionForm';
 import {eventBus} from './main.js';
@@ -58,7 +59,8 @@ export default {
     "world-map":WorldMap,
     "user-form":UserForm,
     "wonder-selection-form": WonderSelectionForm,
-    "graphic-quiz": GraphicQuiz
+    "graphic-quiz": GraphicQuiz,
+    "wonder-page": WonderPage
   }
 }
 </script>
