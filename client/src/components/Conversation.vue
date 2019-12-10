@@ -1,19 +1,12 @@
 <template lang="html">
-
-<div id="conversation">
-
-<host :conversation='wonder.conversations[this.hostCounter]' v-if="this.hostCounter<5" v-on:handleHostClick='handleHostClick'></host>
-
-<traveller :conversation='wonder.conversations[this.travellerCounter]'  v-if="this.travellerCounter<5" v-on:handleTravellerClick='handleTravellerClick'></traveller>
-
-</div>
-
+  <div id="conversation" @click="onConversationClick" v-if="conversation">
+    <conversation-box :message="conversation.host" position="left"></conversation-box>
+    <conversation-box :message="conversation.traveller" position="right"></conversation-box>
+  </div>
 </template>
 
 <script>
-
-import Traveller from './Traveller.vue';
-import Host from './Host.vue';
+import ConversationBox from "./ConversationBox";
 
 export default {
   name: "conversation",
@@ -22,25 +15,22 @@ export default {
   },
   data(){
     return {
-      hostCounter: 0,
-      travellerCounter: 0
-
+      conversationIndex: 0
     }
   },
-  components: {
-    "host": Host,
-    "traveller": Traveller
+  computed: {
+    conversation: function() {
+      return this.wonder.conversations[this.conversationIndex];
+    }
   },
   methods:{
-    handleHostClick: function(){
-      this.hostCounter += 1;
+    onConversationClick: function() {
+      this.conversationIndex++;
     },
-    handleTravellerClick: function(){
-      this.travellerCounter += 1;
-    }
+  },
+  components: {
+    "conversation-box": ConversationBox
   }
-
-
 }
 
 </script>
@@ -50,6 +40,6 @@ export default {
 #conversation{
   color: black;
   background-color: white;
-  position: relative;}
-
+  /* position: relative;} */
+}
 </style>

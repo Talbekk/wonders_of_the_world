@@ -27,7 +27,7 @@ export default {
       selectedDetails: null,
       wonders: [],
       questions: [],
-      quiz: false,
+      quiz: true
     }
   },
   mounted(){
@@ -37,23 +37,12 @@ export default {
     eventBus.$on('selected-wonder', (wonder) => {
       this.selectedWonder = wonder
     })
-    eventBus.$on('selected-details', (details) => {
-      this.selectedDetails = details
-    })
-    eventBus.$on('select-homepage', () => {
-      this.quiz = false;
-      this.selectedWonder = null;
-      this.selectedDetails = null;
-    })
+
     GlobeService.getWonders()
     .then(data => this.wonders = data);
+
     GlobeService.getQuiz()
     .then(data => this.questions = data);
-  },
-  methods: {
-    onPlayQuizClick: function() {
-      this.quiz = true;
-    }
   },
   components: {
     "world-map":WorldMap,
