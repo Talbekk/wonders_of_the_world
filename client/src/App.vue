@@ -1,10 +1,9 @@
 <template>
   <div id="app">
     <user-form v-if="!username"></user-form>
-    <wonder-selection-form v-if="username && !selectedWonder && !quiz" :wonders ='wonders'></wonder-selection-form>
+    <wonder-selection-form v-if="username && !selectedWonder" :wonders ='wonders'></wonder-selection-form>
     <world-map v-if="selectedWonder" :wonder="selectedWonder"></world-map>
-    <button  v-if="username && !selectedWonder && !quiz" @click="onPlayQuizClick">Test your knownledge</button>
-    <graphic-quiz :questions="questions" v-if="username && quiz"></graphic-quiz>
+    <graphic-quiz :questions="questions" v-if="quiz"></graphic-quiz>
   </div>
 </template>
 
@@ -26,7 +25,7 @@ export default {
       selectedDetails: null,
       wonders: [],
       questions: [],
-      quiz: false,
+      quiz: true
     }
   },
   mounted(){
@@ -36,30 +35,19 @@ export default {
     eventBus.$on('selected-wonder', (wonder) => {
       this.selectedWonder = wonder
     })
-    eventBus.$on('selected-details', (details) => {
-      this.selectedDetails = details
-    })
-    eventBus.$on('select-homepage', () => {
-      this.quiz = false;
-      this.selectedWonder = null;
-      this.selectedDetails = null;
-    })
+
     GlobeService.getWonders()
     .then(data => this.wonders = data);
+
     GlobeService.getQuiz()
     .then(data => this.questions = data);
-  },
-  methods: {
-    onPlayQuizClick: function() {
-      this.quiz = true;
-    }
   },
   components: {
     "world-map":WorldMap,
     "user-form":UserForm,
     "wonder-selection-form": WonderSelectionForm,
     "graphic-quiz": GraphicQuiz
-  }
+  },
 }
 </script>
 

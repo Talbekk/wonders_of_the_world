@@ -83,7 +83,6 @@ text-align: left;
 }
 
 .we-pm-icon{
-  background-image: url('https://codeclan.com/wp-content/uploads/2019/10/Eugene.jpg');
 }
 
 </style>
