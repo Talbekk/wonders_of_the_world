@@ -1,7 +1,7 @@
 <template lang="html">
   <div id="conversation" @click="onConversationClick" v-if="conversation">
-    <conversation-box :message="conversation.host" position="left"></conversation-box>
-    <conversation-box :message="conversation.traveller" position="right"></conversation-box>
+    <conversation-box :message="conversation.host" position="left" speech="right_speech_bubble"></conversation-box>
+    <conversation-box :message="conversation.traveller" position="right" speech="left_speech_bubble"></conversation-box>
   </div>
 </template>
 
