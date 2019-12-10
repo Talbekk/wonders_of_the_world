@@ -141,10 +141,6 @@ export default {
   border-radius: 30%;
 }
 
-#homepage-box {
-  bottom: 200px !important;
-}
-
 #homepage-box img {
   padding-top: 30px !important;
 }
