@@ -1,7 +1,7 @@
 <template>
     <div :class="position" >
         <p :class="speech">{{message}}</p>
-        <img v-bind:src="image" />
+        <img :src="image" />
 
     </div>
 </template>
@@ -14,7 +14,7 @@ export default {
         position: String,
         speech:String,
         image: String
-    },
+    }
 }
 </script>
 
@@ -84,6 +84,14 @@ export default {
       margin-left: -0.312em;
       margin-bottom: -0.625em;
       }
+    img {
+      height: auto;
+      width: 50%;
+      display: inline;
+      padding-top: 90px;
+      bottom: 0;
+      position: sticky;
 
+    }
 
 </style>
