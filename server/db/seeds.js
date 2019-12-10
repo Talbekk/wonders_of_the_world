@@ -21,33 +21,33 @@ db.wonders.insertMany([
 conversations: [
   {
     host: "Welcome to Egypt! The home of the great pyramids of Giza. My name is Anubis.",
-    hotstImage: "./conversations/host.png",
+    hotstImage: "conversation/host.png",
     traveller: "Hi Anubis!",
     travellerImage: "conversation/traveller.png"
   },
   {
     host: "As you can see the pyramids are huge, they are over 450ft tall.",
-    hotstImage: "./conversations/host.png",
+    hotstImage: "conversation/host.png",
     traveller: "Wow! Why are they so tall?",
-    travellerImage: "./conversations/traveller.png"
+    travellerImage: "conversation/traveller.png"
   },
    {
      host: "The pyramids were built 3,800 years ago. They were created to allow the kings of Egypt to succeed in the afterlife.",
-     hotstImage: "./conversations/host.png",
+     hotstImage: "conversation/host.png",
      traveller: "Awesome, what's inside the pyramid?",
-     travellerImage: "./conversations/traveller_heart_eye.png"
+     travellerImage: "conversation/traveller_heart_eye.png"
    },
    {
      host: "Treasures and items for Pharaoh's to use in the afterlife.",
-     hotstImage: "./conversations/host.png",
+     hotstImage: "conversation/host.png",
      traveller: "Wowza, the afterlife in Egypt must have been really interesting!",
-     travellerImage: "./conversations/traveller.png"
+     travellerImage: "conversation/traveller.png"
    },
    {
      host: "Have fun on your journey!",
-     hotstImage: "./conversations/host_smile.png",
+     hotstImage: "conversation/host_smile.png",
      traveller: "See you later!",
-     travellerImage: "./conversations/traveller.png"
+     travellerImage: "conversation/traveller.png"
    }
 ]
 },
@@ -201,7 +201,7 @@ conversations: [
     location: "Peru",
     longitude: 72.5450,
     latitude: 13.1631,
-    image: "",
+    image: "https://static.dezeen.com/uploads/2019/06/machu-pichu-airport-peru-barclay-crousse-dezeen-hero.jpg",
     imageGallery: ["https://www.fodors.com/wp-content/uploads/2018/09/HERo_MachuPicchu101_Hero_4_MachuPicchu101_WhereCanIGetBestPhoto_dreamstime_xxl_110067560_2_1.jpg","https://i.ytimg.com/vi/lNIEZ61PyG0/maxresdefault.jpg","https://www.nationalgeographic.com/content/dam/travel/2017-digital/family-travel/machu-picchu-family-travel.jpg"],
     height: "2430m",
     yearBuilt: "1450",
