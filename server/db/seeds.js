@@ -103,8 +103,8 @@ conversations: [
   details: {
     name: "Christ the Redeemer",
     location: "Rio de Janeiro, Brazil",
-    longitude: -22.951944,
-    latitude: -43.210556,
+    longitude: -42.2436,
+    latitude: -22.2212,
     image: "https://upload.wikimedia.org/wikipedia/commons/8/87/Cristo_Redentor_-_Rio_de_Janeiro%2C_Brasil.jpg",
     imageGallery: ["https://www.stpetertravel.com/travels/7072_big.jpg","https://media.tacdn.com/media/attractions-splice-spp-674x446/07/12/29/8f.jpg","https://www.checkoutsam.com/wp-content/uploads/2018/02/coliseum-seats-levels.jpg  "],
     height: "30m",
