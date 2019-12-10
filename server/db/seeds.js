@@ -68,33 +68,33 @@ db.wonders.insertMany([
   conversations: [
     {
       host: "Welcome to Brazil! The home of the Christ the Redeemer. My name is Julio.",
-      hostImage: "./conversations/host.png",
+      hostImage: "conversation/host.png",
       traveller: "Hi Julio!",
-      travellerImage: "./conversations/traveller.png"
+      travellerImage: "conversation/traveller.png"
     },
     {
       host: "As you can see the Christ the Redeemer is huge, they are over 450ft tall.",
-      hostImage: "./conversations/host.png",
+      hostImage: "conversation/host.png",
       traveller: "Wow! Why are they so tall?",
-      travellerImage: "./conversations/traveller.png"
+      travellerImage: "conversation/traveller.png"
     },
     {
       host: "The pyramids were built 3,800 years ago. They were created to allow the kings of Egypt to succeed in the afterlife.",
-      hostImage: "./conversations/host.png",
+      hostImage: "conversation/host.png",
       traveller: "Awesome, what's inside the pyramid?",
-      travellerImage: "./conversations/traveller_heart_eye.png"
+      travellerImage: "conversation/traveller_heart_eye.png"
     },
     {
       host: "Treasures and items for Pharaoh's to use in the afterlife.",
-      hostImage: "./conversations/host.png",
+      hostImage: "conversation/host.png",
       traveller: "Wowza, the afterlife in Egypt must have been really interesting!",
-      travellerImage: "./conversations/traveller.png"
+      travellerImage: "conversation/traveller.png"
     },
     {
       host: "Have fun on your journey!",
-      hostImage: "./conversations/host_smile.png",
+      hostImage: "conversation/host_smile.png",
       traveller: "See you later!",
-      travellerImage: "./conversations/traveller.png"
+      travellerImage: "conversation/traveller.png"
     }
   ]
 },
