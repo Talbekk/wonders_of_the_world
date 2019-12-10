@@ -27,7 +27,7 @@ export default {
       selectedDetails: null,
       wonders: [],
       questions: [],
-      quiz: true
+      quiz: false
     }
   },
   mounted(){
@@ -35,7 +35,9 @@ export default {
       this.username = name;
     })
     eventBus.$on('selected-wonder', (wonder) => {
-      this.selectedWonder = wonder
+      this.selectedWonder = null;
+      this.selectedDetails = null;
+      this.selectedWonder = wonder;
     })
 
     GlobeService.getWonders()
@@ -43,6 +45,15 @@ export default {
 
     GlobeService.getQuiz()
     .then(data => this.questions = data);
+
+    eventBus.$on('select-homepage', (wonder) => {
+      this.quiz = false;
+    })
+  },
+  methods: {
+    onPlayQuizClick: function() {
+      this.quiz = true;
+    }
   },
   components: {
     "world-map":WorldMap,
