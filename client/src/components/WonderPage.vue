@@ -4,7 +4,7 @@
     <world-map :wonders='wonders'></world-map>
   </div>
   <div id="overlay">
-    <conversation :wonder="wonders[0]"></conversation>
+    <conversation :wonder="wonders[0]" :username="username"></conversation>
   </div>
 </div>
 </template>
@@ -16,7 +16,8 @@ import WorldMap from './WorldMap.vue';
 export default {
   name: "wonder-page",
   props: {
-    wonders : Array
+    wonders : Array,
+    username: String
   },
   components: {
     'conversation': Conversation,

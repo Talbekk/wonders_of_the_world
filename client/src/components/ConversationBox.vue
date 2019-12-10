@@ -1,6 +1,6 @@
 <template>
     <div :class="position" >
-        <p :class="speech">{{message}}</p>
+        <p :class="speech">{{msg}}</p>
         <img :src="image" />
 
     </div>
@@ -13,8 +13,14 @@ export default {
         message: String,
         position: String,
         speech:String,
-        image: String
-    }
+        image: String,
+        username: String
+    },
+    computed: {
+        msg: function() {
+            return this.message.replace("$USERNAME", this.username);
+        }
+    },
 }
 </script>
 

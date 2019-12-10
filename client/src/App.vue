@@ -3,7 +3,7 @@
     <world-map v-if="homepage" :wonders='wonders'></world-map>
     <user-form v-if="!username"></user-form>
     <wonder-selection-form id="right-form" v-if="homepage" :wonders ='wonders'></wonder-selection-form>
-    <wonder-page v-if="map" :wonders="[selectedWonder]"></wonder-page>
+    <wonder-page v-if="map" :wonders="[selectedWonder]" :username="username"></wonder-page>
     <button id="left-form" v-if="homepage" @click="onPlayQuizClick">Test your knowledge</button>
     <graphic-quiz :questions="questions" v-if="quiz"></graphic-quiz>
     <more-detail :wonder="selectedWonder" v-if="details"></more-detail>
