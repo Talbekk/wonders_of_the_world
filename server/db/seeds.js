@@ -7,8 +7,8 @@ db.wonders.insertMany([
 
   name: "The Colosseum",
   location: "Rome, Italy",
-  longitude: 41.8902,
-  latitude: 12.4922,
+  longitude: 12.4964,
+  latitude: 41.9028,
   image: "https://aws-tiqets-cdn.imgix.net/images/content/b3a66adfc33a4c1f9d8480800ee981c9.jpg?auto=format&fit=crop&ixlib=python-1.1.2&q=25&s=4abba25e2d648ad83e1a22d7f34af5a4&w=400&h=320&dpr=2.625",
   imageGallery: ["https://www.stpetertravel.com/travels/7072_big.jpg","https://media.tacdn.com/media/attractions-splice-spp-674x446/07/12/29/8f.jpg","https://www.checkoutsam.com/wp-content/uploads/2018/02/coliseum-seats-levels.jpg","http://www.canyon-news.com/wp-content/uploads/2015/03/Colosseum_in_Rome_Italy_-_April_2007.jpg","http://www.astarlifts.com/aureo-df/files/image.php?width=800&height=400&cropratio=2:1&image=/public/sites/astarlifts/pages/files/68542728/297/IMAGE1/coliseo.jpg"],
   height: "48m",
@@ -55,8 +55,8 @@ conversations: [
   details: {
     name: "Petra",
     location: "Ma'an Governorate, Jordan",
-    longitude: 30.3285,
-    latitude: 35.4444,
+    longitude: 35.444832,
+    latitude: 30.328960,
     image: "https://lonelyplanetimages.imgix.net/a/g/hi/t/2bf1faac5c1e26d5cb94128cf762517a-petra.jpg",
     imageGallery: ["https://img.etimg.com/thumb/msid-63249335,width-643,imgsize-63886,resizemode-4/jordans-petra-a-keeper-of-secrets.jpg","https://www.fodors.com/wp-content/uploads/2018/08/Hero-Petra-101-dreamstime_xl_45315552.jpg","https://s3.amazonaws.com/images.gearjunkie.com/uploads/2019/01/Five-adventures-in-jordan-PETRA.jpg"],
     height: "23m",
@@ -199,8 +199,8 @@ conversations: [
   details: {
     name: "Machu Picchu",
     location: "Peru",
-    longitude: 72.5450,
-    latitude: 13.1631,
+    longitude: -72.545128,
+    latitude: -13.163068,
     image: "https://static.dezeen.com/uploads/2019/06/machu-pichu-airport-peru-barclay-crousse-dezeen-hero.jpg",
     imageGallery: ["https://www.fodors.com/wp-content/uploads/2018/09/HERo_MachuPicchu101_Hero_4_MachuPicchu101_WhereCanIGetBestPhoto_dreamstime_xxl_110067560_2_1.jpg","https://i.ytimg.com/vi/lNIEZ61PyG0/maxresdefault.jpg","https://www.nationalgeographic.com/content/dam/travel/2017-digital/family-travel/machu-picchu-family-travel.jpg"],
     height: "2430m",
