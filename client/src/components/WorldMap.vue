@@ -32,7 +32,7 @@ export default {
         earth.setView([50 , 0], 2);
 
         if (this.wonders.length === 1) {
-          earth.setView([wonder.details.latitude + 5 , wonder.details.longitude + 3], 4);
+          earth.setView([wonder.details.latitude + 5 , wonder.details.longitude + 3], 3);
           marker.openPopup();
         }
         })
