@@ -1,10 +1,11 @@
 <template>
   <div id="app">
     <user-form v-if="!username"></user-form>
-    <wonder-selection-form v-if="username && !selectedWonder && !quiz" :wonders ='wonders'></wonder-selection-form>
-    <wonder-page v-if="selectedWonder" :wonder="selectedWonder"></wonder-page>
-    <button  v-if="username && !selectedWonder && !quiz" @click="onPlayQuizClick">Test your knownledge</button>
-    <graphic-quiz :questions="questions" v-if="username && quiz"></graphic-quiz>
+    <wonder-selection-form v-if="homepage" :wonders ='wonders'></wonder-selection-form>
+    <wonder-page v-if="map" :wonder="selectedWonder"></wonder-page>
+    <button  v-if="homepage" @click="onPlayQuizClick">Test your knownledge</button>
+    <graphic-quiz :questions="questions" v-if="quiz"></graphic-quiz>
+    <more-detail :wonder="selectedWonder" v-if="details"></more-detail>
   </div>
 </template>
 
@@ -25,20 +26,30 @@ export default {
     return {
       username: null,
       selectedWonder: null,
-      selectedDetails: null,
       wonders: [],
       questions: [],
-      quiz: false
+      homepage: false,
+      quiz: false,
+      details: false,
+      map: false
     }
   },
   mounted(){
     eventBus.$on('username',(name) => {
       this.username = name;
+      this.quiz = false;
+      this.homepage = true;
+      this.map = false;
+      this.details = false;
     })
     eventBus.$on('selected-wonder', (wonder) => {
       this.selectedWonder = wonder;
+      this.quiz = false;
+      this.homepage = false;
+      this.map = true;
+      this.details = false;
     })
-    
+
     GlobeService.getWonders()
     .then(data => this.wonders = data);
 
@@ -46,20 +57,25 @@ export default {
     .then(data => this.questions = data);
 
     eventBus.$on('select-homepage', (wonder) => {
-      this.selectedWonder = null;
-      this.selectedDetails = null;
       this.quiz = false;
+      this.homepage = true;
+      this.map = false;
+      this.details = false;
     })
 
     eventBus.$on('select-details', (wonder) => {
-      this.selectedDetails = this.selectedDetails;
-      this.selectedWonder = null;
       this.quiz = false;
+      this.homepage = false;
+      this.map = false;
+      this.details = true;
     })
   },
   methods: {
     onPlayQuizClick: function() {
       this.quiz = true;
+      this.homepage = false;
+      this.map = false;
+      this.details = false;
     }
   },
   components: {
@@ -67,7 +83,8 @@ export default {
     "user-form":UserForm,
     "wonder-selection-form": WonderSelectionForm,
     "graphic-quiz": GraphicQuiz,
-    "wonder-page": WonderPage
+    "wonder-page": WonderPage,
+    "more-detail": MoreDetail
   }
 }
 </script>
