@@ -1,6 +1,8 @@
 <template>
     <div :class="position" >
         <p :class="speech">{{message}}</p>
+        <img v-bind:src="image" />
+
     </div>
 </template>
 
@@ -10,8 +12,9 @@ export default {
     props: {
         message: String,
         position: String,
-        speech:String
-    }
+        speech:String,
+        image: String
+    },
 }
 </script>
 

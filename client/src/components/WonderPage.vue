@@ -28,7 +28,8 @@ export default {
 <style lang="css" scoped>
 
 #overlay {
-  position: relative;
+  position: absolute;
+  bottom: 0;
   top: 50%;
   left: 50%;
   font-size: 15px;
