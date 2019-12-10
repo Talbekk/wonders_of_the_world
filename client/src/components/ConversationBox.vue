@@ -33,9 +33,9 @@ export default {
         bottom:0;
         right:0;
         font-size: 20px;
-        width: 400px;
-        height: 100px;
-        padding: 50px;
+        width: 300px;
+        /* height: 100px; */
+        /* padding: 50px; */
     }
     /* speech bubble */
   .right_speech_bubble {
@@ -64,9 +64,9 @@ export default {
         bottom:0;
         left:0;
         font-size: 20px;
-        width: 400px;
-        height: 100px;
-        padding: 50px;
+        width: 300px;
+        /* height: 100px; */
+        /* padding: 50px; */
 
     }
 
@@ -94,7 +94,7 @@ export default {
       height: auto;
       width: 50%;
       display: inline;
-      padding-top: 90px;
+      padding-top: 30px;
       bottom: 0;
       position: sticky;
 

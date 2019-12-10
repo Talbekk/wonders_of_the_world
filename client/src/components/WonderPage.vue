@@ -28,18 +28,18 @@ export default {
 
 <style lang="css" scoped>
 
-#overlay {
+/* #overlay {
   position: absolute;
   bottom: 0;
   top: 50%;
   left: 50%;
   font-size: 15px;
   /* color: white; */
-  -webkit-transform: translate(-50%,-50%);
+  /* -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50);
   padding-top: 100px;
-}
+} */
 
 .popup-information-text {
 margin: 0px !important;
