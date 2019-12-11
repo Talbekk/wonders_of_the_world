@@ -4,7 +4,7 @@
     <user-form v-if="!username"></user-form>
     <wonder-selection-form id="right-form" v-if="homepage" :wonders ='wonders'></wonder-selection-form>
     <wonder-page v-if="map" :wonders="[selectedWonder]" :username="username"></wonder-page>
-    <button id="left-form" v-if="homepage" @click="onPlayQuizClick">Test your knowledge</button>
+    <button id="quiz" v-if="homepage" @click="onPlayQuizClick">Test your knowledge</button>
     <graphic-quiz :questions="questions" v-if="quiz"></graphic-quiz>
     <more-detail :wonder="selectedWonder" v-if="details"></more-detail>
     <conversation-box v-if="homepage" :message="hostMessage" position="right" speech="right_speech_bubble"
@@ -94,43 +94,50 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  height: 650px;
   background-image: url("https://image.freepik.com/free-vector/travel-pattern-with-elements-dash-lines_23-2148039482.jpg");
 }
+
+#right-form:hover{
+  left: 85%;
+}
+
 #right-form {
+  transition: 0.3s ease-in-out;
   position: relative;
   top: 20%;
-  left: 80%;
+  left: 115%;
   font-size: 15px;
   color: white;
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50);
-  padding-top: 100px;
+  padding: 20px;
+  padding-left: 40px;
   color: black;
   background-color: white;
-  margin: 1em;
-  padding: 2em;
-  max-width: 20%;
-  border: 2px solid #669999;
-  border-radius: 30%;
+  max-width: 40%;
+  margin-top: 11em;
 }
-#left-form {
+
+#quiz:hover{
+  left: 50%;
   position: relative;
-  top: 20%;
-  right: 25%;
+}
+#quiz {
+  transition: 0.3s ease-in-out;
+  position: relative;
+  top: 60%;
+  left: 63%;
   font-size: 15px;
-  color: white;
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50);
-  padding-top: 100px;
-  color: black;
+  padding: 20px;
+  padding-right: 50px;
+  padding-left: 50px;
   background-color: white;
-  margin: 1em;
-  padding: 2em;
-  max-width: 20%;
-  border: 2px solid #669999;
-  border-radius: 30%;
+  max-width: 40%;
 }
+
+
 </style>

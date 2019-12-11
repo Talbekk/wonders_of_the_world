@@ -11,8 +11,8 @@
         <div class="solution-area" v-if="showSolution">
             <p>{{ solution.result | resultMessage }}</p>
             <img :src="solution.result | resultImage"></img>
-            <button @click="onSelectedPlay">{{solution.button}}</button>
             <simple-button eventChannel="select-homepage" message="Go back"></simple-button>
+            <button @click="onSelectedPlay">{{solution.button}}</button>
         </div>
     </div>
 </template>
@@ -30,7 +30,7 @@ export default {
             showAnswer: true,
             showSolution: false,
             solution: {
-                button: "Play Again",
+                button: "Next",
                 result: false
             }
         }
@@ -61,7 +61,7 @@ export default {
     },
     filters: {
         resultMessage: function(value) {
-            return value ? "NICELY DONE! YOU ARE RIGHT" : "ALMOST THERE!"
+            return value ? "Nicely done! You are right" : "Almost there!"
 
         },
         resultImage: function(value){
