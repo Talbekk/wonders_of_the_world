@@ -38,11 +38,6 @@ export default {
       map: false
     }
   },
-  computed: {
-    hostMessage: function() {
-      return `Hello ${this.username}, welcome to wonder of the worlds, what do you prefer to do?`
-    }
-  },
   mounted(){
     eventBus.$on('username',(name) => {
       this.username = name;

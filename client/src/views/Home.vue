@@ -4,7 +4,7 @@
     <!-- <user-form v-if="!username"></user-form> -->
     <wonder-selection-form id="right-form" :wonders ='wonders'></wonder-selection-form>
     <!-- <wonder-page v-if="map" :wonders="[selectedWonder]" :username="username"></wonder-page> -->
-    <button id="left-form" @click="onPlayQuizClick">Test your knowledge</button>
+    <!-- <button id="left-form" @click="onPlayQuizClick">Test your knowledge</button> -->
     <!-- <graphic-quiz :questions="questions" v-if="quiz"></graphic-quiz> -->
     <!-- <more-detail :wonder="selectedWonder" v-if="details"></more-detail> -->
     <conversation-box :message="hostMessage" position="right" speech="right_speech_bubble"
@@ -25,6 +25,10 @@ import WonderSelectionForm from '../components/WonderSelectionForm';
 
 export default {
   name: 'home',
+  props: {
+      wonders: Array,
+      username: String
+  },
   components: {
     "world-map": WorldMap,
     "user-form": UserForm,
@@ -33,6 +37,11 @@ export default {
     "wonder-page": WonderPage,
     "more-detail": MoreDetail,
     "conversation-box": ConversationBox
+  },
+  computed: {
+    hostMessage: function() {
+      return `Hello ${this.username}, welcome to wonder of the worlds, what do you prefer to do?`
+    }
   }
 }
 </script>
