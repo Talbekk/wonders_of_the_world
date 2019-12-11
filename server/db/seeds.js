@@ -20,33 +20,33 @@ db.wonders.insertMany([
 },
 conversations: [
   {
-    host: "Hello $USERNAME, welcome to Egypt! The home of the great pyramids of Giza. My name is Anubis.",
+    host: "Bonjourno $USERNAME, welcome to Italia! The home of the Colosseum. My name is Paolo.",
     hotstImage: "conversation/host.png",
-    traveller: "Hi Anubis!",
+    traveller: "Hi Paolo!",
     travellerImage: "conversation/traveller.png"
   },
   {
-    host: "As you can see the pyramids are huge, they are over 450ft tall.",
+    host: "Do you see how the building doesn't look finished? That's because an earthquake damaged a lot of the top",
     hotstImage: "conversation/host.png",
-    traveller: "Wow! Why are they so tall?",
+    traveller: "Wow! It still looks so cool! How old is it?",
     travellerImage: "conversation/traveller.png"
   },
    {
-     host: "The pyramids were built 3,800 years ago. They were created to allow the kings of Egypt to succeed in the afterlife.",
+     host: "The Colosseum was built by the Romans in 80 A.D, almost 2000 years ago.",
      hotstImage: "conversation/host.png",
-     traveller: "Awesome, what's inside the pyramid?",
+     traveller: "Incredible, what was it used for?",
      travellerImage: "conversation/traveller_heart_eye.png"
    },
    {
-     host: "Treasures and items for Pharaoh's to use in the afterlife.",
+     host: "Many things, but it is famous for being used for gladiator fights",
      hotstImage: "conversation/host.png",
-     traveller: "Wowza, the afterlife in Egypt must have been really interesting!",
+     traveller: "Cool, the Romans must have been very smart!",
      travellerImage: "conversation/traveller.png"
    },
    {
-     host: "Have fun on your journey!",
+     host: "Enjoy the rest of your trip! Ciao!",
      hotstImage: "conversation/host_smile.png",
-     traveller: "See you later!",
+     traveller: "Catch you later!",
      travellerImage: "conversation/traveller.png"
    }
 ]
