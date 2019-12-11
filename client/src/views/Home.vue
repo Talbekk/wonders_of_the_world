@@ -3,10 +3,6 @@
     <world-map :wonders='wonders'></world-map>
     <!-- <user-form v-if="!username"></user-form> -->
     <wonder-selection-form id="right-form" :wonders ='wonders'></wonder-selection-form>
-    <!-- <wonder-page v-if="map" :wonders="[selectedWonder]" :username="username"></wonder-page> -->
-    <!-- <button id="left-form" @click="onPlayQuizClick">Test your knowledge</button> -->
-    <!-- <graphic-quiz :questions="questions" v-if="quiz"></graphic-quiz> -->
-    <!-- <more-detail :wonder="selectedWonder" v-if="details"></more-detail> -->
     <conversation-box :message="hostMessage" position="right" speech="right_speech_bubble"
     image="conversation/host.png" :username="username" id="homepage-box"></conversation-box>
   </div>
@@ -17,7 +13,7 @@
 import Wonder from './Wonder';
 import GlobeService from '../services/GlobeService.js';
 import GraphicQuiz from "../components/GraphicQuiz";
-import MoreDetail from "../components/MoreDetail";
+// import MoreDetail from "../components/MoreDetail";
 import ConversationBox from "../components/ConversationBox";
 import WorldMap from '../components/WorldMap';
 import WonderPage from '../components/WonderPage';
@@ -37,7 +33,6 @@ export default {
     "wonder-selection-form": WonderSelectionForm,
     "graphic-quiz": GraphicQuiz,
     "wonder-page": WonderPage,
-    "more-detail": MoreDetail,
     "conversation-box": ConversationBox,
     "app": App,
     "wonder": Wonder

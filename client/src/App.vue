@@ -16,7 +16,7 @@
 <script>
 import GlobeService from './services/GlobeService.js';
 import GraphicQuiz from "./components/GraphicQuiz";
-import MoreDetail from "./components/MoreDetail";
+// import MoreDetail from "../components/MoreDetail";
 import ConversationBox from "./components/ConversationBox";
 import WorldMap from './components/WorldMap';
 import WonderPage from './components/WonderPage';
@@ -45,7 +45,7 @@ export default {
     })
     eventBus.$on('selected-wonder', (wonder) => {
       this.selectedWonder = wonder;
-      this.enableSection("map");
+      this.$router.push({name:'wonder'})
     })
     GlobeService.getWonders()
     .then(data => this.wonders = data);
