@@ -9,18 +9,12 @@
             </graphic-quiz-answer>
         </div>
         <div class="solution-area" v-if="showSolution">
-<<<<<<< HEAD
-          <p>{{ solution.result | resultMessage }}</p>
-          <button @click="onSelectedPlay">{{solution.button}}</button>
-          <router-link :to="{name: 'home'}">
-            <button>Home!</button>
-          </router-link>
-=======
             <p>{{ solution.result | resultMessage }}</p>
             <img :src="solution.result | resultImage"></img>
             <button @click="onSelectedPlay">{{solution.button}}</button>
-            <simple-button eventChannel="select-homepage" message="Go back"></simple-button>
->>>>>>> master
+            <router-link :to="{name: 'home'}">
+              <button>Home!</button>
+            </router-link>
         </div>
     </div>
 </template>
@@ -120,13 +114,10 @@ export default {
     	position:relative;
     	top:1px;
     }
-<<<<<<< HEAD
-=======
     img {
       display: flex;
       margin: auto;
     }
 
 
->>>>>>> master
 </style>
