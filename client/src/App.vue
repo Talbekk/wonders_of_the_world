@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <world-map v-if="homepage" :wonders='wonders'></world-map>
+    <router-view :wonders='wonders' :selectedWonder='selectedWonder' :questions="questions"/>
+    <!-- <world-map v-if="homepage" :wonders='wonders'></world-map>
     <user-form v-if="!username"></user-form>
     <wonder-selection-form id="right-form" v-if="homepage" :wonders ='wonders'></wonder-selection-form>
     <wonder-page v-if="map" :wonders="[selectedWonder]" :username="username"></wonder-page>
@@ -8,20 +9,21 @@
     <graphic-quiz :questions="questions" v-if="quiz"></graphic-quiz>
     <more-detail :wonder="selectedWonder" v-if="details"></more-detail>
     <conversation-box v-if="homepage" :message="hostMessage" position="right" speech="right_speech_bubble"
-    image="conversation/host.png" :username="username" id="homepage-box"></conversation-box>
+    image="conversation/host.png" :username="username" id="homepage-box"></conversation-box> -->
   </div>
 </template>
 
 <script>
+import GlobeService from './services/GlobeService.js';
+import GraphicQuiz from "./components/GraphicQuiz";
+// import MoreDetail from "../components/MoreDetail";
+import ConversationBox from "./components/ConversationBox";
 import WorldMap from './components/WorldMap';
 import WonderPage from './components/WonderPage';
 import UserForm from './components/UserForm';
 import WonderSelectionForm from './components/WonderSelectionForm';
 import {eventBus} from './main.js';
-import GlobeService from './services/GlobeService.js';
-import GraphicQuiz from "./components/GraphicQuiz";
-import MoreDetail from "./components/MoreDetail";
-import ConversationBox from "./components/ConversationBox";
+
 export default {
   name: 'app',
   data() {
@@ -36,11 +38,6 @@ export default {
       map: false
     }
   },
-  computed: {
-    hostMessage: function() {
-      return `Hello ${this.username}, welcome to wonder of the worlds, what do you prefer to do?`
-    }
-  },
   mounted(){
     eventBus.$on('username',(name) => {
       this.username = name;
@@ -48,7 +45,7 @@ export default {
     })
     eventBus.$on('selected-wonder', (wonder) => {
       this.selectedWonder = wonder;
-      this.enableSection("map");
+      this.$router.push({name:'wonder'})
     })
     GlobeService.getWonders()
     .then(data => this.wonders = data);
@@ -74,16 +71,16 @@ export default {
           this.$data[variableName] = true;
       }
     }
-  },
-  components: {
-    "world-map":WorldMap,
-    "user-form":UserForm,
-    "wonder-selection-form": WonderSelectionForm,
-    "graphic-quiz": GraphicQuiz,
-    "wonder-page": WonderPage,
-    "more-detail": MoreDetail,
-    "conversation-box": ConversationBox,
   }
+  // components: {
+  //   "world-map":WorldMap,
+  //   "user-form":UserForm,
+  //   "wonder-selection-form": WonderSelectionForm,
+  //   "graphic-quiz": GraphicQuiz,
+  //   "wonder-page": WonderPage,
+  //   "more-detail": MoreDetail,
+  //   "conversation-box": ConversationBox,
+  // }
 }
 </script>
 
@@ -102,10 +99,16 @@ export default {
 }
 
 #right-form {
+<<<<<<< HEAD
   transition: 0.3s ease-in-out;
   position: relative;
   top: 20%;
   left: 115%;
+=======
+  position: absolute;
+  top: 20%;
+  left: 85%;
+>>>>>>> 3b69c84b4976de2392e295ce513bccd311fdbd1e
   font-size: 15px;
   color: white;
   -webkit-transform: translate(-50%,-50%);

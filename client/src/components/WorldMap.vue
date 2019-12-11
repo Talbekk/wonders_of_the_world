@@ -4,6 +4,17 @@
 </template>
 
 <script>
+<<<<<<< HEAD
+
+import {eventBus} from '../main.js';
+import GlobeService from '../services/GlobeService.js';
+
+export default {
+    name: "world-map",
+    data() { return {
+      newWonders: []
+    }
+=======
 import {eventBus} from '../main.js';
 
 export default {
@@ -22,20 +33,47 @@ export default {
       return {
       earth: null
       }
+>>>>>>> master
     },
     props: {
       wonders : Array,
     },
+<<<<<<< HEAD
+    components: {
+      "globe-service": GlobeService
+    },
+    watch: {
+      wonders: function(x, y) {
+        if (x.length > 0) {
+          this.map();
+        }
+      }
+    },
+    mounted() {
+      if (this.wonders.length > 0) {
+        this.map();
+      }
+=======
     beforeDestroy() {
       this.earth = null;
+>>>>>>> master
     },
     methods: {
         map: function() {
         let options = {sky: true};
+<<<<<<< HEAD
+        let earth = new WE.map('earth_div', options);
+        WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(earth);
+        console.log("yo");
+        this.wonders.forEach( (wonder) => {
+            console.log("hi");
+           let marker = WE.marker([wonder.details.latitude, wonder.details.longitude]).addTo(earth);
+=======
         this.earth = new WE.map('earth_div', options);
         WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(this.earth);
           this.wonders.forEach( (wonder) => {
            let marker = WE.marker([wonder.details.latitude, wonder.details.longitude]).addTo(this.earth);
+>>>>>>> master
           marker.bindPopup(`<img src="${wonder.details.image}" class="img-fluid"/>
           <p class="popup-information-text"> Name: ${wonder.details.name}</p>
           <p class="popup-information-text"> Location: ${wonder.details.location}</p>
