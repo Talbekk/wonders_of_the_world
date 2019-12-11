@@ -302,39 +302,39 @@ conversations: [
     height: "98m",
     yearBuilt: "832 AD",
     purpose: "City",
-    description: "hichén Itzá is a large Mayan city famous for a large, pyramid temple built by the Maya civilization. It is on the Yucatán Peninsula, about 120 km to the east of Mérida. The temple, called Castillo, is about 1 km in diameter. There are many temples and pyramids at Chichen Itza",
+    description: "Chichén Itzá is a large Mayan city famous for a large, pyramid temple built by the Maya civilization. It is on the Yucatán Peninsula, about 120 km to the east of Mérida. The temple, called Castillo, is about 1 km in diameter. There are many temples and pyramids at Chichen Itza",
     description2: "Tourists, or visitors, were once able to climb some of the pyramids, but it was quite challenging because the steps are very steep and small. Climbing is no longer permitted.",
     description3: "This is the largest pyramid at Chichen Itza, and dedicated to Kukulkan, the Plumed Serpent. Every year on the fall and spring equinox the sun hits the side of the building making a show of light and shadow which looks like a snake along the steps of the building.",
   },
   conversations: [
     {
-      host: "Welcome to Brazil! The home of the Christ the Redeemer. My name is Julio.",
+      host: "Hola! Welcome to Mexico! The home of the Chichen Itza. My name is Eduardo.",
       hostImage: "conversation/host.png",
-      traveller: "Hi Julio!",
+      traveller: "Hi Eduardo!",
       travellerImage: "conversation/traveller.png"
     },
     {
-      host: "As you can see the Christ the Redeemer is huge, they are over 450ft tall.",
+      host: "The Egyptians weren't the only ones who built pyramids.",
       hostImage: "conversation/host.png",
-      traveller: "Wow! Why are they so tall?",
+      traveller: "Oh my, it's so hot here!",
       travellerImage: "conversation/traveller.png"
     },
     {
-      host: "The pyramids were built 3,800 years ago. They were created to allow the kings of Egypt to succeed in the afterlife.",
+      host: "The Mayans built this tall buildings for ",
       hostImage: "conversation/host.png",
-      traveller: "Awesome, what's inside the pyramid?",
+      traveller: "Nice, can I climb it?",
       travellerImage: "conversation/traveller_heart_eye.png"
     },
     {
-      host: "Treasures and items for Pharaoh's to use in the afterlife.",
+      host: "I'm sorry but no, the steps are very steep and small so climbing is very hard.",
       hostImage: "conversation/host.png",
-      traveller: "Wowza, the afterlife in Egypt must have been really interesting!",
+      traveller: "Aww, it's still so cool!",
       travellerImage: "conversation/traveller.png"
     },
     {
-      host: "Have fun on your journey!",
+      host: "Hasta la vista!",
       hostImage: "conversation/host_smile.png",
-      traveller: "See you later!",
+      traveller: "Ciao!",
       travellerImage: "conversation/traveller.png"
     }
   ]
