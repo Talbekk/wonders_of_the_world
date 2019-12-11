@@ -92,6 +92,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   height: 650px;
+  background-image: url("https://image.freepik.com/free-vector/travel-pattern-with-elements-dash-lines_23-2148039482.jpg");
 }
 #right-form {
   position: absolute;
@@ -128,8 +129,5 @@ export default {
   max-width: 20%;
   border: 2px solid #669999;
   border-radius: 30%;
-}
-#homepage-box img {
-  padding-top: 30px !important;
 }
 </style>

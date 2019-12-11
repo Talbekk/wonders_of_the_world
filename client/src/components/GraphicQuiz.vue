@@ -1,6 +1,6 @@
 <template>
     <div class="question-area" v-if="currentQuestion">
-        <graphic-quiz-question :question="currentQuestion.question"></graphic-quiz-question>
+      <graphic-quiz-question :question="currentQuestion.question"></graphic-quiz-question>
         <div class="answer-area" v-if="showAnswer">
             <graphic-quiz-answer
             v-for="(answer, index) in currentQuestion.answers" :key="index"
@@ -9,11 +9,18 @@
             </graphic-quiz-answer>
         </div>
         <div class="solution-area" v-if="showSolution">
+<<<<<<< HEAD
           <p>{{ solution.result | resultMessage }}</p>
           <button @click="onSelectedPlay">{{solution.button}}</button>
           <router-link :to="{name: 'home'}">
             <button>Home!</button>
           </router-link>
+=======
+            <p>{{ solution.result | resultMessage }}</p>
+            <img :src="solution.result | resultImage"></img>
+            <button @click="onSelectedPlay">{{solution.button}}</button>
+            <simple-button eventChannel="select-homepage" message="Go back"></simple-button>
+>>>>>>> master
         </div>
     </div>
 </template>
@@ -63,6 +70,10 @@ export default {
     filters: {
         resultMessage: function(value) {
             return value ? "NICELY DONE! YOU ARE RIGHT" : "ALMOST THERE!"
+
+        },
+        resultImage: function(value){
+            return value ? "quiz/clapping.gif": "#"
         }
     },
     components: {
@@ -76,14 +87,46 @@ export default {
 <style lang="css" scoped>
     .answer-area {
         display: flex;
-        margin: 20px 20px;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: center;
+        width: 100%;
+        max-width: 650px;
+        margin: 0 auto;
+        background-color: rgba(175, 220, 103, 0.81);
     }
     .solution-area {
-        margin: 100px;
+        padding: 20px;
+        background-color: #71d0e9;
+        font-size: 20px;
     }
-    button {
-        margin: 5px;
+    Button {
+      background-color: #44c767;
+      border-radius: 28px;
+      border: 1px solid #18ab29;
+      display: inline-block;
+      cursor: pointer;
+      color: #ffffff;
+      /* font-family: Arial; */
+      font-size: 20px;
+      padding: 16px 31px;
+      text-decoration: none;
+      text-shadow: 0px 1px 0px #2f6627;
+      margin: 10px;
     }
+    Button:hover {
+    	background-color:#5cbf2a;
+    }
+    Button:active {
+    	position:relative;
+    	top:1px;
+    }
+<<<<<<< HEAD
+=======
+    img {
+      display: flex;
+      margin: auto;
+    }
+
+
+>>>>>>> master
 </style>
