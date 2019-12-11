@@ -18,30 +18,9 @@ export default {
         setTimeout(this.map, 500);
       });
     },
-    // data() {
-    //   return {
-    //   earth: null
-    //   }
-    // },
     props: {
       wonders : Array,
     },
-
-    // watch: {
-    //   wonders: function(x, y) {
-    //     if (x.length > 0) {
-    //       this.map();
-    //     }
-    //   }
-    // },
-    mounted() {
-      if (this.wonders.length > 0) {
-        this.map();
-      }
-    },
-    //   beforeDestroy() {
-    //     earth = null;
-    // },
     methods: {
         map: function() {
         let options = {sky: true};
