@@ -9,9 +9,11 @@
             </graphic-quiz-answer>
         </div>
         <div class="solution-area" v-if="showSolution">
-            <p>{{ solution.result | resultMessage }}</p>
-            <button @click="onSelectedPlay">{{solution.button}}</button>
-            <simple-button eventChannel="select-homepage" message="Go back"></simple-button>
+          <p>{{ solution.result | resultMessage }}</p>
+          <button @click="onSelectedPlay">{{solution.button}}</button>
+          <router-link :to="{name: 'home'}">
+            <button>Home!</button>
+          </router-link>
         </div>
     </div>
 </template>
