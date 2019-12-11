@@ -4,11 +4,20 @@
 </template>
 
 <script>
-
-import {eventBus} from '../main.js'
+import {eventBus} from '../main.js';
 
 export default {
     name: "world-map",
+    head: {
+      script: [
+        { src: 'http://www.webglearth.com/v2/api.js' }
+      ],
+    },
+    created: function () {
+      this.$on('okHead', function () {
+        setTimeout(this.map, 200);
+      });
+    },
     data() {
       return {
       earth: null
@@ -16,9 +25,6 @@ export default {
     },
     props: {
       wonders : Array,
-    },
-    mounted() {
-        this.map();
     },
     beforeDestroy() {
       this.earth = null;
