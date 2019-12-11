@@ -1,6 +1,6 @@
 <template>
     <div class="question">
-        <h2>{{question}}</h2>
+        <h2><img id="earth" src="quiz/earth_spining.gif">{{question}}</h2>
     </div>
 </template>
 
@@ -15,6 +15,18 @@ export default {
 
 <style lang="css" scoped>
     .question {
-        margin: 50px 20px 10px 20px;
+    padding-top: 50px;
+    display: inline-block;
+    max-width: 650px;
+    margin: 0 auto;
+    background-color: rgba(175, 220, 103, 0.81)
+   }
+
+
+    img#earth {
+      width: 10%;
+      height: auto;
+      margin-right: 20px;
     }
+
 </style>

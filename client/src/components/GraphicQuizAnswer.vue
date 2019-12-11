@@ -20,13 +20,24 @@ export default {
 
 <style lang="css" scoped>
     .answer {
-        margin: 30px;
-        width: 250px;
-        height: 250px;
+        margin: 20px;
+        width: 40%;
+
     }
+
     img {
-        object-fit: cover;
-        width: 250px;
-        height: 250px;
+      width: 260px;
+      height: 180px;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-transition: .3s ease-in-out;
+      transition: .3s ease-in-out;
+      background-color: white;
+      padding: 5px;
+    }
+
+    img:hover{
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
     }
 </style>
