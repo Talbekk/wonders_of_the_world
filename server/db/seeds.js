@@ -20,7 +20,7 @@ db.wonders.insertMany([
 },
 conversations: [
   {
-    host: "Welcome to Egypt! The home of the great pyramids of Giza. My name is Anubis.",
+    host: "Hello $USERNAME, welcome to Egypt! The home of the great pyramids of Giza. My name is Anubis.",
     hotstImage: "conversation/host.png",
     traveller: "Hi Anubis!",
     travellerImage: "conversation/traveller.png"
@@ -68,7 +68,7 @@ conversations: [
   },
   conversations: [
     {
-      host: "Welcome to Egypt! The home of the great pyramids of Giza. My name is Anubis.",
+      host: "Hello $USERNAME, welcome to Egypt! The home of the great pyramids of Giza. My name is Anubis.",
       hostImage: "conversation/host.png",
       traveller: "Hi Anubis!",
       travellerImage: "conversation/traveller.png"
@@ -116,7 +116,7 @@ conversations: [
   },
   conversations: [
     {
-      host: "Welcome to Brazil! The home of the Christ the Redeemer. My name is Julio.",
+      host: "Hello $USERNAME, welcome to Brazil! The home of the Christ the Redeemer. My name is Julio.",
       hostImage: "conversation/host.png",
       traveller: "Hi Julio!",
       travellerImage: "conversation/traveller.png"
@@ -164,7 +164,7 @@ conversations: [
   },
   conversations: [
     {
-      host: "Welcome to Brazil! The home of the Christ the Redeemer. My name is Julio.",
+      host: "Hello $USERNAME, welcome to Brazil! The home of the Christ the Redeemer. My name is Julio.",
       hostImage: "conversation/host.png",
       traveller: "Hi Julio!",
       travellerImage: "conversation/traveller.png"
@@ -212,7 +212,7 @@ conversations: [
   },
   conversations: [
     {
-      host: "Welcome to Brazil! The home of the Christ the Redeemer. My name is Julio.",
+      host: "Hello $USERNAME, welcome to Brazil! The home of the Christ the Redeemer. My name is Julio.",
       hostImage: "conversation/host.png",
       traveller: "Hi Julio!",
       travellerImage: "conversation/traveller.png"
@@ -260,7 +260,7 @@ conversations: [
   },
   conversations: [
     {
-      host: "Welcome to Brazil! The home of the Christ the Redeemer. My name is Julio.",
+      host: "Hello $USERNAME, welcome to Brazil! The home of the Christ the Redeemer. My name is Julio.",
       hostImage: "conversation/host.png",
       traveller: "Hi Julio!",
       travellerImage: "conversation/traveller.png"
@@ -308,7 +308,11 @@ conversations: [
   },
   conversations: [
     {
+<<<<<<< HEAD
       host: "Hola! Welcome to Mexico! The home of the Chichen Itza. My name is Eduardo.",
+=======
+      host: "Hello $USERNAME, welcome to Brazil! The home of the Christ the Redeemer. My name is Julio.",
+>>>>>>> 65e74f7c27835ecc3a030feb352ec732251ee677
       hostImage: "conversation/host.png",
       traveller: "Hi Eduardo!",
       travellerImage: "conversation/traveller.png"
@@ -354,13 +358,34 @@ db.quiz.insertMany([
         correct: true
       },
       {
-        image: "https://aws-tiqets-cdn.imgix.net/images/content/b3a66adfc33a4c1f9d8480800ee981c9.jpg?auto=format&fit=crop&ixlib=python-1.1.2&q=25&s=4abba25e2d648ad83e1a22d7f34af5a4&w=400&h=320&dpr=2.625",
+        image: "https://nationalpostcom.files.wordpress.com/2018/02/gettyimages-540409466.jpg?quality=80&strip=all&w=780",
         correct: false
       },
       {
-        image: "https://aws-tiqets-cdn.imgix.net/images/content/b3a66adfc33a4c1f9d8480800ee981c9.jpg?auto=format&fit=crop&ixlib=python-1.1.2&q=25&s=4abba25e2d648ad83e1a22d7f34af5a4&w=400&h=320&dpr=2.625",
+        image: "https://cdn.britannica.com/88/189788-050-9B5DB3A4/Al-Dayr-Petra-Jordan.jpg",
         correct: false
       }
+    ]
+  },
+  {
+    question: "Near which wonder you can eat a local pizza?",
+    answers: [
+      {
+        image: "https://cdn.britannica.com/88/189788-050-9B5DB3A4/Al-Dayr-Petra-Jordan.jpg",
+        correct: false
+      },
+      {
+        image: "https://www.planetware.com/wpimages/2019/05/italy-rome-colosseum-visiting-highlights-tips-tours.jpg",
+        correct: true
+      },
+      {
+        image: "https://nationalpostcom.files.wordpress.com/2018/02/gettyimages-540409466.jpg?quality=80&strip=all&w=780",
+        correct: false
+      },
+      {
+        image: "https://classicalwisdom.com/wp-content/uploads/2019/05/02_Seven-Wonders-Giza_GIF.gif",
+        correct: false
+      },
     ]
   },
   {
@@ -379,7 +404,196 @@ db.quiz.insertMany([
         correct: true
       },
       {
+        image: "https://cdn.britannica.com/88/189788-050-9B5DB3A4/Al-Dayr-Petra-Jordan.jpg",
+        correct: false
+      }
+    ]
+  },
+  {
+    question: "Which wonder can be found in Jordan?",
+    answers: [
+      {
+        image: "https://cdn.britannica.com/88/189788-050-9B5DB3A4/Al-Dayr-Petra-Jordan.jpg",
+        correct: true
+      },
+      {
+        image: "https://www.bionic-ads.com/wp-content/uploads/2015/11/chinese-wall.jpg",
+        correct: false
+      },
+      {
+        image: "https://classicalwisdom.com/wp-content/uploads/2019/05/02_Seven-Wonders-Giza_GIF.gif",
+        correct: false
+      },
+      {
         image: "https://aws-tiqets-cdn.imgix.net/images/content/b3a66adfc33a4c1f9d8480800ee981c9.jpg?auto=format&fit=crop&ixlib=python-1.1.2&q=25&s=4abba25e2d648ad83e1a22d7f34af5a4&w=400&h=320&dpr=2.625",
+        correct: false
+      }
+    ]
+  },
+  {
+    question: "Which wonder can be found in the highest altitude?",
+    answers: [
+      {
+        image: "https://cdn.britannica.com/88/189788-050-9B5DB3A4/Al-Dayr-Petra-Jordan.jpg",
+        correct: false
+      },
+      {
+        image: "https://nationalpostcom.files.wordpress.com/2018/02/gettyimages-540409466.jpg?quality=80&strip=all&w=780",
+        correct: true
+      },
+      {
+        image: "https://classicalwisdom.com/wp-content/uploads/2019/05/02_Seven-Wonders-Giza_GIF.gif",
+        correct: false
+      },
+      {
+        image: "https://aws-tiqets-cdn.imgix.net/images/content/b3a66adfc33a4c1f9d8480800ee981c9.jpg?auto=format&fit=crop&ixlib=python-1.1.2&q=25&s=4abba25e2d648ad83e1a22d7f34af5a4&w=400&h=320&dpr=2.625",
+        correct: false
+      }
+    ]
+  },
+  {
+    question: "Which wonder was used as an arena for gladiators?",
+    answers: [
+      {
+        image: "https://cdn.britannica.com/88/189788-050-9B5DB3A4/Al-Dayr-Petra-Jordan.jpg",
+        correct: false
+      },
+      {
+        image: "https://nationalpostcom.files.wordpress.com/2018/02/gettyimages-540409466.jpg?quality=80&strip=all&w=780",
+        correct: false
+      },
+      {
+        image: "https://classicalwisdom.com/wp-content/uploads/2019/05/02_Seven-Wonders-Giza_GIF.gif",
+        correct: false
+      },
+      {
+        image: "https://www.planetware.com/wpimages/2019/05/italy-rome-colosseum-visiting-highlights-tips-tours.jpg",
+        correct: true
+      }
+    ]
+  },
+  {
+    question: "Which wonder took several empires over 2000 years to complete?",
+    answers: [
+      {
+        image: "https://cdn.britannica.com/88/189788-050-9B5DB3A4/Al-Dayr-Petra-Jordan.jpg",
+        correct: false
+      },
+      {
+        image: "https://cdn.cnn.com/cnnnext/dam/assets/170305125355-christ-the-redeemer-rio-vr-exlarge-169.jpg",
+        correct: false
+      },
+      {
+        image: "https://www.snopes.com/tachyon/2018/07/great_wall_of_china.jpg?resize=865,452",
+        correct: true
+      },
+      {
+        image: "https://www.planetware.com/wpimages/2019/05/italy-rome-colosseum-visiting-highlights-tips-tours.jpg",
+        correct: false
+      }
+    ]
+  },
+  {
+    question: "Which wonder is also called the Rose City",
+    answers: [
+      {
+        image: "https://i2-prod.mirror.co.uk/incoming/article14254709.ece/ALTERNATES/s615/0_Al-Khazneh-The-Treasury-Petra-Jordan.jpg",
+        correct: true
+      },
+      {
+        image: "https://cdn.cnn.com/cnnnext/dam/assets/170305125355-christ-the-redeemer-rio-vr-exlarge-169.jpg",
+        correct: false
+      },
+      {
+        image: "https://www.snopes.com/tachyon/2018/07/great_wall_of_china.jpg?resize=865,452",
+        correct: false
+      },
+      {
+        image: "https://www.planetware.com/wpimages/2019/05/italy-rome-colosseum-visiting-highlights-tips-tours.jpg",
+        correct: false
+      }
+    ]
+  },
+  {
+    question: "Which wonder was destroyed partly when lightning struck it during a major thunderstorm in 2008, and then restored?",
+    answers: [
+      {
+        image: "https://cdn.britannica.com/86/170586-050-AB7FEFAE/Taj-Mahal-Agra-India.jpg",
+        correct: false
+      },
+      {
+        image: "https://nowinrio.com/wp-content/uploads/2017/04/Design-sem-nome-20.jpg",
+        correct: true
+      },
+      {
+        image: "https://www.snopes.com/tachyon/2018/07/great_wall_of_china.jpg?resize=865,452",
+        correct: false
+      },
+      {
+        image: "https://image.insider.com/5d23699621a86135cf770125?width=1100&format=jpeg&auto=webp",
+        correct: false
+      }
+    ]
+  },
+  {
+    question: "Which wonder has an area of approximately 353 square kilometers?",
+    answers: [
+      {
+        image: "https://www.discoverchina.com/upload/pics/thumbs/089021e1ea7024febfce5d34ef544e5b.jpg",
+        correct: false
+      },
+      {
+        image: "https://www.nationalgeographic.com/content/dam/travel/photos/000/930/93080.ngsversion.1482510710570.adapt.1900.1.jpg",
+        correct: false
+      },
+      {
+        image: "https://cdn.britannica.com/30/178930-050-A9761BDF/El-Castillo-Chichen-Itza-Yucatan-Mexico.jpg",
+        correct: false
+      },
+      {
+        image: "https://cdn.getyourguide.com/img/location_img-1570-3285976407-148.jpg",
+        correct: true
+      }
+    ]
+  },
+  {
+    question: "Which wonder is believed to be the largest city ever built by the Mayan civilization?",
+    answers: [
+      {
+        image: "https://www.tripsavvy.com/thmb/zV-hETZ3tpf7M9-rYqt5-NDbiXo=/1414x1414/smart/filters:no_upscale()/colosseum-at-sunrise-5c29a35646e0fb00014aaba0.jpg",
+        correct: false
+      },
+      {
+        image: "https://www.secretoo.com/wp-content/uploads/2019/10/Chichen-Itza-At-Your-Own-Pace-1.jpg",
+        correct: true
+      },
+      {
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTReM79sN_Mbjquzo-K-YFRWZnaSHxHr-kgeRd_oMji8OoSF4sQ7Q&s",
+        correct: false
+      },
+      {
+        image: "https://cdn.getyourguide.com/img/location_img-1570-3285976407-148.jpg",
+        correct: false
+      }
+    ]
+  },
+  {
+    question: "Which wonder took over 20 years and 20,000 artisans to be completed?",
+    answers: [
+      {
+        image: "https://lp-cms-production.imgix.net/news/2019/06/taj-mahal.jpg?q=25",
+        correct: true
+      },
+      {
+        image: "https://humansofdata.atlan.com/wp-content/uploads/2019/08/Giza_pyramids.png",
+        correct: false
+      },
+      {
+        image: "https://d1hbkx7j13ujdz.cloudfront.net/wp-content/uploads/2018/10/The-Colosseum-Rome-1024x695.jpg",
+        correct: false
+      },
+      {
+        image: "https://www.ancient.eu/img/r/p/500x600/3048.jpg?v=1485680877",
         correct: false
       }
     ]
