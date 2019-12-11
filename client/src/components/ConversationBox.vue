@@ -34,8 +34,7 @@ export default {
         right:0;
         font-size: 20px;
         width: 300px;
-        /* height: 100px; */
-        /* padding: 50px; */
+        margin-right: 10px;
     }
     /* speech bubble */
   .right_speech_bubble {
@@ -63,8 +62,7 @@ export default {
         left:0;
         font-size: 20px;
         width: 300px;
-        /* height: 100px; */
-        /* padding: 50px; */
+        margin-left: 10px;
     }
     .left_speech_bubble {
       position: relative;
@@ -89,7 +87,7 @@ export default {
       height: auto;
       width: 50%;
       display: inline;
-      padding-top: 30px;
+      padding-top: 10px;
       bottom: 0;
       position: sticky;
     }
