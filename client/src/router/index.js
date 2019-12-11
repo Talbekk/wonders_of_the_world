@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '../views/Home'
+import Wonder from '../views/Wonder'
 
 Vue.use(Router)
 
@@ -9,6 +10,11 @@ const routes = [
     path: '/',
     name: 'home',
     component: Home
+  },
+  {
+    path: '/wonder',
+    name: 'wonder',
+    component: Wonder
   }
   // {
   //   path: '/about',

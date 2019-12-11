@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view :wonders='wonders'/>
+    <router-view :wonders='wonders' :selectedWonder='selectedWonder'/>
     <!-- <world-map v-if="homepage" :wonders='wonders'></world-map>
     <user-form v-if="!username"></user-form>
     <wonder-selection-form id="right-form" v-if="homepage" :wonders ='wonders'></wonder-selection-form>

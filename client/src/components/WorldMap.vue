@@ -22,9 +22,14 @@ export default {
     },
     watch: {
       wonders: function(x, y) {
-        if (x.length) {
+        if (x.length > 0) {
           this.map();
         }
+      }
+    },
+    mounted() {
+      if (this.wonders.length > 0) {
+        this.map();
       }
     },
     methods: {

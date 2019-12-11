@@ -14,6 +14,7 @@
 
 <script>
 
+import Wonder from './Wonder';
 import GlobeService from '../services/GlobeService.js';
 import GraphicQuiz from "../components/GraphicQuiz";
 import MoreDetail from "../components/MoreDetail";
@@ -38,7 +39,8 @@ export default {
     "wonder-page": WonderPage,
     "more-detail": MoreDetail,
     "conversation-box": ConversationBox,
-    "app": App
+    "app": App,
+    "wonder": Wonder
   },
   computed: {
     hostMessage: function() {
