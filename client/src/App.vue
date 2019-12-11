@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <world-map v-if="homepage" :wonders='wonders'></world-map>
+    <router-view/>
+    <!-- <world-map v-if="homepage" :wonders='wonders'></world-map>
     <user-form v-if="!username"></user-form>
     <wonder-selection-form id="right-form" v-if="homepage" :wonders ='wonders'></wonder-selection-form>
     <wonder-page v-if="map" :wonders="[selectedWonder]" :username="username"></wonder-page>
@@ -8,20 +9,21 @@
     <graphic-quiz :questions="questions" v-if="quiz"></graphic-quiz>
     <more-detail :wonder="selectedWonder" v-if="details"></more-detail>
     <conversation-box v-if="homepage" :message="hostMessage" position="right" speech="right_speech_bubble"
-    image="conversation/host.png" :username="username" id="homepage-box"></conversation-box>
+    image="conversation/host.png" :username="username" id="homepage-box"></conversation-box> -->
   </div>
 </template>
 
 <script>
+import GlobeService from './services/GlobeService.js';
+import GraphicQuiz from "./components/GraphicQuiz";
+import MoreDetail from "./components/MoreDetail";
+import ConversationBox from "./components/ConversationBox";
 import WorldMap from './components/WorldMap';
 import WonderPage from './components/WonderPage';
 import UserForm from './components/UserForm';
 import WonderSelectionForm from './components/WonderSelectionForm';
 import {eventBus} from './main.js';
-import GlobeService from './services/GlobeService.js';
-import GraphicQuiz from "./components/GraphicQuiz";
-import MoreDetail from "./components/MoreDetail";
-import ConversationBox from "./components/ConversationBox";
+
 export default {
   name: 'app',
   data() {
@@ -74,16 +76,16 @@ export default {
           this.$data[variableName] = true;
       }
     }
-  },
-  components: {
-    "world-map":WorldMap,
-    "user-form":UserForm,
-    "wonder-selection-form": WonderSelectionForm,
-    "graphic-quiz": GraphicQuiz,
-    "wonder-page": WonderPage,
-    "more-detail": MoreDetail,
-    "conversation-box": ConversationBox,
   }
+  // components: {
+  //   "world-map":WorldMap,
+  //   "user-form":UserForm,
+  //   "wonder-selection-form": WonderSelectionForm,
+  //   "graphic-quiz": GraphicQuiz,
+  //   "wonder-page": WonderPage,
+  //   "more-detail": MoreDetail,
+  //   "conversation-box": ConversationBox,
+  // }
 }
 </script>
 
