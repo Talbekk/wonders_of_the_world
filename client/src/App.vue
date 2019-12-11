@@ -99,16 +99,10 @@ export default {
 }
 
 #right-form {
-<<<<<<< HEAD
   transition: 0.3s ease-in-out;
   position: relative;
   top: 20%;
   left: 115%;
-=======
-  position: absolute;
-  top: 20%;
-  left: 85%;
->>>>>>> 3b69c84b4976de2392e295ce513bccd311fdbd1e
   font-size: 15px;
   color: white;
   -webkit-transform: translate(-50%,-50%);
