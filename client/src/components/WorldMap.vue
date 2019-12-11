@@ -9,19 +9,27 @@ import {eventBus} from '../main.js'
 
 export default {
     name: "world-map",
+    data() {
+      return {
+      earth: null
+      }
+    },
     props: {
-      wonders : Array
+      wonders : Array,
     },
     mounted() {
         this.map();
     },
+    beforeDestroy() {
+      this.earth = null;
+    },
     methods: {
         map: function() {
         let options = {sky: true};
-        let earth = new WE.map('earth_div', options);
-        WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(earth);
+        this.earth = new WE.map('earth_div', options);
+        WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(this.earth);
           this.wonders.forEach( (wonder) => {
-           let marker = WE.marker([wonder.details.latitude, wonder.details.longitude]).addTo(earth);
+           let marker = WE.marker([wonder.details.latitude, wonder.details.longitude]).addTo(this.earth);
           marker.bindPopup(`<img src="${wonder.details.image}" class="img-fluid"/>
           <p class="popup-information-text"> Name: ${wonder.details.name}</p>
           <p class="popup-information-text"> Location: ${wonder.details.location}</p>
@@ -29,16 +37,17 @@ export default {
           {maxWidth: 175, maxHeight: 175, closeButton: true})
           .closePopup();
 
-        earth.setView([50 , 0], 2);
+        this.earth.setView([50 , 0], 2);
 
         if (this.wonders.length === 1) {
-          earth.setView([wonder.details.latitude + 20 , wonder.details.longitude + 3], 2.5);
+          this.earth.setView([wonder.details.latitude + 20 , wonder.details.longitude + 3], 2.5);
           marker.openPopup();
         }
         })
       },
       moreDetailButton: function (){
-        eventBus.$emit('selected-details', this.wonders[0].details.name)
+        eventBus.$emit('selected-details', this.wonders[0].details.name);
+        this.earth = null;
       },
     }
 }

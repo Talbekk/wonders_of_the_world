@@ -133,7 +133,4 @@ export default {
   border: 2px solid #669999;
   border-radius: 30%;
 }
-#homepage-box img {
-  padding-top: 30px !important;
-}
 </style>
