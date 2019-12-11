@@ -22,7 +22,7 @@ export default {
     },
     watch: {
       wonders: function(x, y) {
-        if (x.length === 7) {
+        if (x.length) {
           this.map();
         }
       }
