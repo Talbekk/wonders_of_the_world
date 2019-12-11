@@ -22,6 +22,7 @@ import WorldMap from '../components/WorldMap';
 import WonderPage from '../components/WonderPage';
 import UserForm from '../components/UserForm';
 import WonderSelectionForm from '../components/WonderSelectionForm';
+import App from '../App.vue';
 
 export default {
   name: 'home',
@@ -36,7 +37,8 @@ export default {
     "graphic-quiz": GraphicQuiz,
     "wonder-page": WonderPage,
     "more-detail": MoreDetail,
-    "conversation-box": ConversationBox
+    "conversation-box": ConversationBox,
+    "app": App
   },
   computed: {
     hostMessage: function() {

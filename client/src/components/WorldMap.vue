@@ -5,22 +5,36 @@
 
 <script>
 
-import {eventBus} from '../main.js'
+import {eventBus} from '../main.js';
+import GlobeService from '../services/GlobeService.js';
 
 export default {
     name: "world-map",
+    data() { return {
+      newWonders: []
+    }
+    },
     props: {
       wonders : Array
     },
-    mounted() {
-        this.map();
+    components: {
+      "globe-service": GlobeService
+    },
+    watch: {
+      wonders: function(x, y) {
+        if (x.length === 7) {
+          this.map();
+        }
+      }
     },
     methods: {
         map: function() {
         let options = {sky: true};
         let earth = new WE.map('earth_div', options);
         WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(earth);
-          this.wonders.forEach( (wonder) => {
+        console.log("yo");
+        this.wonders.forEach( (wonder) => {
+            console.log("hi");
            let marker = WE.marker([wonder.details.latitude, wonder.details.longitude]).addTo(earth);
           marker.bindPopup(`<img src="${wonder.details.image}" class="img-fluid"/>
           <p class="popup-information-text"> Name: ${wonder.details.name}</p>
