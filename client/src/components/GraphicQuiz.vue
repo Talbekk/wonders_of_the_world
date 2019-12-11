@@ -32,7 +32,7 @@ export default {
             showAnswer: true,
             showSolution: false,
             solution: {
-                button: "Play Again",
+                button: "Next",
                 result: false
             }
         }
@@ -63,7 +63,7 @@ export default {
     },
     filters: {
         resultMessage: function(value) {
-            return value ? "NICELY DONE! YOU ARE RIGHT" : "ALMOST THERE!"
+            return value ? "Nicely done! You are right" : "Almost there!"
 
         },
         resultImage: function(value){
