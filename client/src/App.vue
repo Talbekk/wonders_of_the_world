@@ -94,9 +94,9 @@ export default {
   height: 650px;
 }
 #right-form {
-  position: relative;
+  position: absolute;
   top: 20%;
-  left: 80%;
+  left: 85%;
   font-size: 15px;
   color: white;
   -webkit-transform: translate(-50%,-50%);
