@@ -1,10 +1,6 @@
 <template>
   <div id="app">
-<<<<<<< HEAD
-    <router-view :wonders='wonders' :selectedWonder='selectedWonder'/>
-=======
-    <router-view :wonders='wonders' :questions="questions"/>
->>>>>>> develop
+    <router-view :wonders='wonders' :selectedWonder='selectedWonder' :questions="questions"/>
     <!-- <world-map v-if="homepage" :wonders='wonders'></world-map>
     <user-form v-if="!username"></user-form>
     <wonder-selection-form id="right-form" v-if="homepage" :wonders ='wonders'></wonder-selection-form>

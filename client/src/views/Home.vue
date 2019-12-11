@@ -3,8 +3,6 @@
     <world-map :wonders='wonders'></world-map>
     <!-- <user-form v-if="!username"></user-form> -->
     <wonder-selection-form id="right-form" :wonders ='wonders'></wonder-selection-form>
-<<<<<<< HEAD
-=======
     <!-- <wonder-page v-if="map" :wonders="[selectedWonder]" :username="username"></wonder-page> -->
     <div class="quiz-button">
       <router-link to="/quiz">Test Your knowledge</router-link>
@@ -12,7 +10,6 @@
     <!-- <button id="left-form" v-if="homepage" @click="onPlayQuizClick">Test your knowledge</button> -->
     <!-- <graphic-quiz :questions="questions" v-if="quiz"></graphic-quiz> -->
     <!-- <more-detail :wonder="selectedWonder" v-if="details"></more-detail> -->
->>>>>>> develop
     <conversation-box :message="hostMessage" position="right" speech="right_speech_bubble"
     image="conversation/host.png" :username="username" id="homepage-box"></conversation-box>
   </div>
