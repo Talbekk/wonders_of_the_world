@@ -308,11 +308,7 @@ conversations: [
   },
   conversations: [
     {
-<<<<<<< HEAD
-      host: "Hola! Welcome to Mexico! The home of the Chichen Itza. My name is Eduardo.",
-=======
       host: "Hello $USERNAME, welcome to Brazil! The home of the Christ the Redeemer. My name is Julio.",
->>>>>>> 65e74f7c27835ecc3a030feb352ec732251ee677
       hostImage: "conversation/host.png",
       traveller: "Hi Eduardo!",
       travellerImage: "conversation/traveller.png"
