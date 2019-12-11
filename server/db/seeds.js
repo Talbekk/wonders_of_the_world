@@ -68,33 +68,33 @@ conversations: [
   },
   conversations: [
     {
-      host: "Hello $USERNAME, welcome to Egypt! The home of the great pyramids of Giza. My name is Anubis.",
+      host: "Hello $USERNAME, welcome to Jordan! The home of the great city of Petra. My name is Jack.",
       hostImage: "conversation/host.png",
-      traveller: "Hi Anubis!",
+      traveller: "Hi Jack!",
       travellerImage: "conversation/traveller.png"
     },
     {
-      host: "As you can see the pyramids are huge, they are over 450ft tall.",
+      host: "As you can see not much is left of the great city of Petra.",
       hostImage: "conversation/host.png",
-      traveller: "Wow! Why are they so tall?",
+      traveller: "Wow! What happened?",
       travellerImage: "conversation/traveller.png"
     },
     {
-      host: "The pyramids were built 3,800 years ago. They were created to allow the kings of Egypt to succeed in the afterlife.",
+      host: "An earthquake destroyed many of the buildings and most people left the city a long time ago.",
       hostImage: "conversation/host.png",
-      traveller: "Awesome, what's inside the pyramid?",
+      traveller: "Aww, why did they leave?",
       travellerImage: "conversation/traveller_heart_eye.png"
     },
     {
-      host: "Treasures and items for Pharaoh's to use in the afterlife.",
+      host: "Petra used be a popular place for buying spices and other goods. But after a while, boats were a faster way of getting the same things.",
       hostImage: "conversation/host.png",
-      traveller: "Wowza, the afterlife in Egypt must have been really interesting!",
+      traveller: "Woah, this place is like a ghost town!",
       travellerImage: "conversation/traveller.png"
     },
     {
-      host: "Have fun on your journey!",
+      host: "It is, let's get out of here!",
       hostImage: "conversation/host_smile.png",
-      traveller: "See you later!",
+      traveller: "Ok, goodbye!",
       travellerImage: "conversation/traveller.png"
     }
   ]
