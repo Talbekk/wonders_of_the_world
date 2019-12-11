@@ -18,37 +18,37 @@ export default {
         setTimeout(this.map, 500);
       });
     },
-    data() {
-      return {
-      earth: null
-      }
-    },
+    // data() {
+    //   return {
+    //   earth: null
+    //   }
+    // },
     props: {
       wonders : Array,
     },
-  
-    watch: {
-      wonders: function(x, y) {
-        if (x.length > 0) {
-          this.map();
-        }
-      }
-    },
+
+    // watch: {
+    //   wonders: function(x, y) {
+    //     if (x.length > 0) {
+    //       this.map();
+    //     }
+    //   }
+    // },
     mounted() {
       if (this.wonders.length > 0) {
         this.map();
       }
     },
-      beforeDestroy() {
-        this.earth = null;
-    },
+    //   beforeDestroy() {
+    //     earth = null;
+    // },
     methods: {
         map: function() {
         let options = {sky: true};
-        this.earth = new WE.map('earth_div', options);
-        WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(this.earth);
+        let earth = new WE.map('earth_div', options);
+        WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(earth);
           this.wonders.forEach( (wonder) => {
-           let marker = WE.marker([wonder.details.latitude, wonder.details.longitude]).addTo(this.earth);
+           let marker = WE.marker([wonder.details.latitude, wonder.details.longitude]).addTo(earth);
           marker.bindPopup(`<img src="${wonder.details.image}" class="img-fluid"/>
           <p class="popup-information-text"> Name: ${wonder.details.name}</p>
           <p class="popup-information-text"> Location: ${wonder.details.location}</p>
@@ -56,17 +56,17 @@ export default {
           {maxWidth: 175, maxHeight: 175, closeButton: true})
           .closePopup();
 
-        this.earth.setView([50 , 0], 2);
+        earth.setView([50 , 0], 2);
 
         if (this.wonders.length === 1) {
-          this.earth.setView([wonder.details.latitude + 20 , wonder.details.longitude + 3], 2.5);
+          earth.setView([wonder.details.latitude + 20 , wonder.details.longitude + 3], 2.5);
           marker.openPopup();
         }
         })
       },
       moreDetailButton: function (){
         eventBus.$emit('selected-details', this.wonders[0].details.name);
-        this.earth = null;
+        // earth = null;
       },
     }
 }
