@@ -15,7 +15,7 @@ export default {
     },
     created: function () {
       this.$on('okHead', function () {
-        setTimeout(this.map, 200);
+        setTimeout(this.map, 500);
       });
     },
     data() {
