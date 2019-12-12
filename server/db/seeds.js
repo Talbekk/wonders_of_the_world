@@ -20,32 +20,32 @@ db.wonders.insertMany([
 },
 conversations: [
   {
-    host: "Ciao $USERNAME, welcome to Italia! The home of the Colosseum. My name is Paolo.",
-    hotstImage: "conversation/host.png",
-    traveller: "Hi Paolo!",
+    host: "Ciao, welcome to Italia! The home of the Colosseum. My name is Laura.",
+    hostImage: "conversation/host_italian.png",
+    traveller: "Hi Laura!",
     travellerImage: "conversation/traveller.png"
   },
   {
     host: "Do you see how the building doesn't look finished? That's because an earthquake damaged it a long time ago",
-    hotstImage: "conversation/host.png",
+    hostImage: "conversation/host_italian.png",
     traveller: "Wow! It still looks so cool! How old is it?",
     travellerImage: "conversation/traveller.png"
   },
    {
      host: "The Colosseum was built by the Romans in 80 A.D, almost 2000 years ago.",
-     hotstImage: "conversation/host.png",
+     hostImage: "conversation/host_italian.png",
      traveller: "Incredible, what was it used for?",
      travellerImage: "conversation/traveller_heart_eye.png"
    },
    {
      host: "Many things, but it is most famous for gladiator fights",
-     hotstImage: "conversation/host.png",
+     hostImage: "conversation/host_italian.png",
      traveller: "Cool, the Romans must have been very smart!",
      travellerImage: "conversation/traveller.png"
    },
    {
      host: "Enjoy the rest of your trip! Ciao!",
-     hotstImage: "conversation/host_smile.png",
+     hostImage: "conversation/host_italian.png",
      traveller: "Catch you later!",
      travellerImage: "conversation/traveller.png"
    }
@@ -165,31 +165,31 @@ conversations: [
   conversations: [
     {
       host: "Nǐ hǎo $USERNAME, welcome to China! The home of the Great Wall of China. My name is Sophia.",
-      hostImage: "conversation/host.png",
+      hostImage: "conversation/host_chinese.png",
       traveller: "Hi Sophia!",
       travellerImage: "conversation/traveller.png"
     },
     {
       host: "As you can see the Great Wall is very long, it's over 21,196 kilometres long.",
-      hostImage: "conversation/host.png",
+      hostImage: "conversation/host_chinese.png",
       traveller: "Wow! Why is it so long?",
       travellerImage: "conversation/traveller.png"
     },
     {
       host: "The wall was made to keep out attacks from the north from the Mongols, Huns and other tribes.",
-      hostImage: "conversation/host.png",
+      hostImage: "conversation/host_chinese.png",
       traveller: "Awesome, it must have taken a long time to build!",
       travellerImage: "conversation/traveller_heart_eye.png"
     },
     {
-      host: "You're right! The Mind Dynasty took well over 200 years to finish the wall.",
-      hostImage: "conversation/host.png",
+      host: "You're right! The Ming Dynasty took well over 200 years to finish the wall.",
+      hostImage: "conversation/host_chinese.png",
       traveller: "Oh my goodness! That's such a long time. I would get very bored...",
       travellerImage: "conversation/traveller.png"
     },
     {
       host: "Don't worry, I think we all would have! Enjoy the rest of your trip!",
-      hostImage: "conversation/host_smile.png",
+      hostImage: "conversation/host_chinese.png",
       traveller: "Thanks for the tour, bye!",
       travellerImage: "conversation/traveller.png"
     }

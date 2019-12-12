@@ -1,15 +1,10 @@
 <template lang="">
   <div>
     <world-map :wonders='wonders'></world-map>
-    <!-- <user-form v-if="!username"></user-form> -->
     <wonder-selection-form id="right-form" :wonders ='wonders'></wonder-selection-form>
-    <!-- <wonder-page v-if="map" :wonders="[selectedWonder]" :username="username"></wonder-page> -->
     <div class="quiz">
       <router-link to="/quiz">Test Your knowledge</router-link>
     </div>
-    <!-- <button id="left-form" v-if="homepage" @click="onPlayQuizClick">Test your knowledge</button> -->
-    <!-- <graphic-quiz :questions="questions" v-if="quiz"></graphic-quiz> -->
-    <!-- <more-detail :wonder="selectedWonder" v-if="details"></more-detail> -->
     <conversation-box :message="hostMessage" position="left" speech="right_speech_bubble"
     image="conversation/host.png" :username="username" id="homepage-box"></conversation-box>
 
@@ -17,17 +12,10 @@
 </template>
 
 <script>
-
-import Wonder from './Wonder';
 import GlobeService from '../services/GlobeService.js';
-import GraphicQuiz from "../components/GraphicQuiz";
-// import MoreDetail from "../components/MoreDetail";
 import ConversationBox from "../components/ConversationBox";
 import WorldMap from '../components/WorldMap';
-import WonderPage from '../components/WonderPage';
-import UserForm from '../components/UserForm';
 import WonderSelectionForm from '../components/WonderSelectionForm';
-import App from '../App.vue';
 
 export default {
   name: 'home',
@@ -35,26 +23,21 @@ export default {
       wonders: Array,
       username: String
   },
-  components: {
-    "world-map": WorldMap,
-    "user-form": UserForm,
-    "wonder-selection-form": WonderSelectionForm,
-    "graphic-quiz": GraphicQuiz,
-    "wonder-page": WonderPage,
-    "conversation-box": ConversationBox,
-    "app": App,
-    "wonder": Wonder
-  },
   computed: {
     hostMessage: function() {
-      return `Hello ${this.username}, welcome to wonder of the worlds, what do you prefer to do?`
+      return `Hello, welcome to wonder of the worlds, what do you prefer to do?`
     }
   },
   methods: {
     onPlayQuizClick: function() {
       this.enableSection("quiz")
     },
-}
+  },
+  components: {
+    "world-map": WorldMap,
+    "wonder-selection-form": WonderSelectionForm,
+    "conversation-box": ConversationBox,
+  },
 }
 </script>
 

@@ -43,10 +43,6 @@ export default {
         }
         })
       },
-      moreDetailButton: function (){
-        eventBus.$emit('selected-details', this.wonders[0].details.name);
-        // earth = null;
-      },
     }
 }
 </script>

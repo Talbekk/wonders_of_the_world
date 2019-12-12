@@ -1,6 +1,10 @@
 <template>
     <div class="question">
-        <h2><img id="earth" src="quiz/earth_spining.gif">{{question}}</h2>
+        <h2>
+            <router-link :to="{name: 'home'}">
+              <img id="earth" src="quiz/earth_spining.gif">{{question}}
+            </router-link>
+        </h2>
     </div>
 </template>
 

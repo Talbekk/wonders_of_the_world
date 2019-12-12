@@ -4,10 +4,8 @@
       <conversation-box :message="conversation.host" position="left" speech="right_speech_bubble" :image="conversation.hostImage" :username="username"></conversation-box>
       <conversation-box :message="conversation.traveller" position="right" speech="left_speech_bubble" :image="conversation.travellerImage"></conversation-box>
     </div>
-      <!-- <div id="conversation-closure" class="conversation-popup" v-if="!conversation && conversationIndex > 0"> -->
-      <!-- <p>What do you prefer to do now?</p> -->
-      <router-link class="top-right" v-if="!conversation && conversationIndex > 0" to="/details">Get Details</router-link>
-      <router-link class="top-left" v-if="!conversation && conversationIndex > 0" to="/">Go Home</router-link>
+      <router-link class="top-right" to="/details" tag="button">Get Details</router-link>
+      <router-link class="top-left" to="/" tag="button">Go Home</router-link>
   </div>
 </template>
 

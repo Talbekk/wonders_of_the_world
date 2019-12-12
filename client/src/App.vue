@@ -1,27 +1,11 @@
 <template>
   <div id="app">
     <router-view :wonders='wonders' :selectedWonder='selectedWonder' :questions="questions"/>
-    <!-- <world-map v-if="homepage" :wonders='wonders'></world-map>
-    <user-form v-if="!username"></user-form>
-    <wonder-selection-form id="right-form" v-if="homepage" :wonders ='wonders'></wonder-selection-form>
-    <wonder-page v-if="map" :wonders="[selectedWonder]" :username="username"></wonder-page>
-    <button id="quiz" v-if="homepage" @click="onPlayQuizClick">Test your knowledge</button>
-    <graphic-quiz :questions="questions" v-if="quiz"></graphic-quiz>
-    <more-detail :wonder="selectedWonder" v-if="details"></more-detail>
-    <conversation-box v-if="homepage" :message="hostMessage" position="right" speech="right_speech_bubble"
-    image="conversation/host.png" :username="username" id="homepage-box"></conversation-box> -->
   </div>
 </template>
 
 <script>
 import GlobeService from './services/GlobeService.js';
-import GraphicQuiz from "./components/GraphicQuiz";
-// import MoreDetail from "../components/MoreDetail";
-import ConversationBox from "./components/ConversationBox";
-import WorldMap from './components/WorldMap';
-import WonderPage from './components/WonderPage';
-import UserForm from './components/UserForm';
-import WonderSelectionForm from './components/WonderSelectionForm';
 import {eventBus} from './main.js';
 
 export default {
@@ -39,48 +23,14 @@ export default {
     }
   },
   mounted(){
-    eventBus.$on('username',(name) => {
-      this.username = name;
-      this.enableSection("homepage");
-    })
+    eventBus.$on('username',(name) => this.username = name);
     eventBus.$on('selected-wonder', (wonder) => {
       this.selectedWonder = wonder;
-      this.$router.push({name:'wonder'})
-    })
-    GlobeService.getWonders()
-    .then(data => this.wonders = data);
-    GlobeService.getQuiz()
-    .then(data => this.questions = data);
-    eventBus.$on('select-homepage', (wonder) => {
-      this.enableSection("homepage");
-    })
-    eventBus.$on('select-details', (wonder) => {
-      this.enableSection("details");
-    })
-  },
-  methods: {
-    onPlayQuizClick: function() {
-      this.enableSection("quiz")
-    },
-    enableSection: function(variableName) {
-      this.homepage = false;
-      this.quiz = false;
-      this.map = false;
-      this.details = false;
-      if (this.$data.hasOwnProperty(variableName)) {
-          this.$data[variableName] = true;
-      }
-    }
+      this.$router.push({ name: 'wonder' });
+    });
+    GlobeService.getWonders().then(data => this.wonders = data);
+    GlobeService.getQuiz().then(data => this.questions = data);
   }
-  // components: {
-  //   "world-map":WorldMap,
-  //   "user-form":UserForm,
-  //   "wonder-selection-form": WonderSelectionForm,
-  //   "graphic-quiz": GraphicQuiz,
-  //   "wonder-page": WonderPage,
-  //   "more-detail": MoreDetail,
-  //   "conversation-box": ConversationBox,
-  // }
 }
 </script>
 
