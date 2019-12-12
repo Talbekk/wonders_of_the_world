@@ -511,7 +511,7 @@ db.quiz.insertMany([
     ]
   },
   {
-    question: "Which wonder was destroyed partly when lightning struck it during a major thunderstorm in 2008, and then restored?",
+    question: "Which one is a statue?",
     answers: [
       {
         image: "https://cdn.britannica.com/86/170586-050-AB7FEFAE/Taj-Mahal-Agra-India.jpg",
@@ -553,7 +553,7 @@ db.quiz.insertMany([
     ]
   },
   {
-    question: "Which wonder is believed to be the largest city ever built by the Mayan civilization?",
+    question: "Which wonder was build by the Mayan civilization?",
     answers: [
       {
         image: "https://www.tripsavvy.com/thmb/zV-hETZ3tpf7M9-rYqt5-NDbiXo=/1414x1414/smart/filters:no_upscale()/colosseum-at-sunrise-5c29a35646e0fb00014aaba0.jpg",

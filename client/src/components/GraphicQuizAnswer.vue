@@ -19,10 +19,12 @@ export default {
 </script>
 
 <style lang="css" scoped>
+    h2 {
+        margin-bottom: 0px;
+    }
     .answer {
-        margin: 20px;
+        margin: 15px 25px;
         width: 40%;
-
     }
 
     img {

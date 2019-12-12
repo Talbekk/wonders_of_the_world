@@ -1,23 +1,26 @@
 <template>
     <div class="question-area">
-        <graphic-quiz-question :question="currentQuestion.question" v-if="!showScore"></graphic-quiz-question>
-        <div class="answer-area" v-if="showAnswer">
-            <graphic-quiz-answer
-            v-for="(answer, index) in currentQuestion.answers" :key="index"
-            @onSelectedImage="onSelectedImage"
-            :answer="answer">
-            </graphic-quiz-answer>
+        <div class="question-box" v-if="!showScore">
+            <graphic-quiz-question :question="currentQuestion.question" v-if="!showScore"></graphic-quiz-question>
+            <div class="answer-area" v-if="showAnswer">
+                <graphic-quiz-answer
+                v-for="(answer, index) in currentQuestion.answers" :key="index"
+                @onSelectedImage="onSelectedImage"
+                :answer="answer">
+                </graphic-quiz-answer>
+            </div>
+            <div class="solution-area" v-if="showSolution">
+                <img :src="solution.result | resultImage" />
+                <p>{{ solution.result | resultMessage }}</p>
+                <button @click="onSelectedPlay">{{solution.button}}</button>
+            </div>
         </div>
-        <div class="solution-area" v-if="showSolution">
-            <p>{{ solution.result | resultMessage }}</p>
-            <img :src="solution.result | resultImage" />
-            <button @click="onSelectedPlay">{{solution.button}}</button>
-        </div>
-        <div class="solution-area" v-if="showScore">
-            <p>Eih there, you managed to do {{correctQuestions}} on {{currentQuestionIndex}} questions</p>
-            <button @click="onSelectedPlayAgain">Play again</button>
-        </div>
+        <div class="score-area" v-if="showScore">
+                <p>Eih there, you managed to do {{correctQuestions}} on {{currentQuestionIndex}} questions</p>
+                <button @click="onSelectedPlayAgain">Play again</button>
                 <router-link class="top-left" to="/" tag="button">Go Home</router-link>
+            </div> 
+        <router-link class="top-left" to="/" tag="button" v-if="!showScore">Go Home</router-link>
     </div>
 </template>
 
@@ -93,29 +96,41 @@ export default {
 }
 </script>
 <style lang="css" scoped>
-.question-area{
-  height: 100%;
-  margin: 0px;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  padding-bottom: 50px;
-  background-image:url('https://trello-attachments.s3.amazonaws.com/5dea1c900b9ca67698a18706/5dee73eaf5e5d8673bc77d63/72d1a1731fb360707078f2f5c7cc2fd4/wallpaper.png');
-}
-.answer-area {
+    .question-area{
+        height: 100vh;
+        background-image:url('https://trello-attachments.s3.amazonaws.com/5dea1c900b9ca67698a18706/5dee73eaf5e5d8673bc77d63/72d1a1731fb360707078f2f5c7cc2fd4/wallpaper.png');
+        padding-top: 30px;
+    }
+    .question-box {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px 5px 15px 5px;
+        max-width: 650px;
+        background-color: rgba(175, 220, 103, 0.81);
+    }
+    .answer-area {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         width: 100%;
         max-width: 650px;
         margin: 0 auto;
-        background-color: rgba(175, 220, 103, 0.81);
     }
     .solution-area {
         padding: 20px;
-        background-color: #71d0e9;
+        background-color: rgba(113, 208, 233, 0.81);
         font-size: 20px;
+        margin: 20px 20px 0px 20px;
+        max-width: 650px;
+    }
+    .score-area {
+        padding: 20px;
+        background-color: rgba(113, 208, 233, 0.91);
+        font-size: 20px;
+        margin: 20vh auto auto auto;
+        max-width: 650px;
+        font-weight: 700;
+        font-size: 1.5rem;
     }
     Button {
       background-color: #44c767;
