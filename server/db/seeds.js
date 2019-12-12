@@ -254,39 +254,39 @@ conversations: [
     height: "73m",
     yearBuilt: "1632",
     purpose: " tomb of the emperor and his wife",
-    description: "The Taj Mahal is a tomb built in the 17th century by the Mughal king Shah Jahan in memory of his wife, Mumtaz Mahal. She was his 3rd wife. Eventually, Shah Jahan was entombed in the Taj Mahal with his wife.",
-    description2: "The building is in the city of Agra, Uttar Pradesh. Widely thought of as one of the most beautiful buildings in the world, it is one of India's biggest tourist attractions.",
-    description3: "The Taj Mahal was constructed with materials from all over the world, and over 20,000 people were used to move building materials. It is generally thought that Ustad Ahmad Lahauri was in charge of the construction. The construction was finished in 1653.",
+    description: "The Taj Mahal is a tomb built in the 1600s by the Mughal king Shah Jahan in memory of his wife, Mumtaz Mahal. She was his 3rd wife.",
+    description2: "The building is in the city of Agra, Uttar Pradesh. It is thought of as one of the most beautiful buildings in the world, it is one of India's biggest tourist attractions.",
+    description3: "The Taj Mahal was built with materials from all over the world Over 20,000 people were used to move the materials. It is thought that Ustad Ahmad Lahauri was in charge of building. It was finished in 1653.",
   },
   conversations: [
     {
-      host: "Hello $USERNAME, welcome to Brazil! The home of the Christ the Redeemer. My name is Julio.",
+      host: "Namaste $USERNAME, welcome to India! The home of the Taj Mahal. My name is Rajesh.",
       hostImage: "conversation/host.png",
-      traveller: "Hi Julio!",
+      traveller: "Hi Rajesh!",
       travellerImage: "conversation/traveller.png"
     },
     {
-      host: "As you can see the Christ the Redeemer is huge, they are over 450ft tall.",
+      host: "The Taj Mahal is very beautiful, many people think it's one of the best looking buuldings in the world.",
       hostImage: "conversation/host.png",
-      traveller: "Wow! Why are they so tall?",
+      traveller: "Wow! Why was it built?",
       travellerImage: "conversation/traveller.png"
     },
     {
-      host: "The pyramids were built 3,800 years ago. They were created to allow the kings of Egypt to succeed in the afterlife.",
+      host: "It was built by a Mughal king in memory of his third wife.",
       hostImage: "conversation/host.png",
-      traveller: "Awesome, what's inside the pyramid?",
+      traveller: "Awesome, how long did it take to build?",
       travellerImage: "conversation/traveller_heart_eye.png"
     },
     {
-      host: "Treasures and items for Pharaoh's to use in the afterlife.",
+      host: "It took over 20 years to finish with more than 20,000 people helping.",
       hostImage: "conversation/host.png",
-      traveller: "Wowza, the afterlife in Egypt must have been really interesting!",
+      traveller: "Incredible, that's a lot of people!",
       travellerImage: "conversation/traveller.png"
     },
     {
-      host: "Have fun on your journey!",
+      host: "It is indeed! Now good luck on the rest of your tour!",
       hostImage: "conversation/host_smile.png",
-      traveller: "See you later!",
+      traveller: "I'm excited to see what is next!",
       travellerImage: "conversation/traveller.png"
     }
   ]
