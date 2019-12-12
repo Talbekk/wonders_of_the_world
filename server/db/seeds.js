@@ -205,40 +205,40 @@ conversations: [
     imageGallery: ["https://www.fodors.com/wp-content/uploads/2018/09/HERo_MachuPicchu101_Hero_4_MachuPicchu101_WhereCanIGetBestPhoto_dreamstime_xxl_110067560_2_1.jpg","https://i.ytimg.com/vi/lNIEZ61PyG0/maxresdefault.jpg","https://www.nationalgeographic.com/content/dam/travel/2017-digital/family-travel/machu-picchu-family-travel.jpg"],
     height: "2430m",
     yearBuilt: "1450",
-    purpose: "built as a country estate for the Inca emperor Pachacuti",
-    description: "Machu Picchu is a pre-Columbian 15th-century Inca site in Peru, in South America. The Incas built the city on a mountain ridge, 2430m above sea level. They lived there between 1200 and 1450 AD. Other people lived there before about 650 AD.",
-    description2: "The Incas built houses, fields and temples by cutting the rock on the mountain so it was flat. They built an Observatory to look at the stars.",
-    description3: "When the Spanish invaded Peru, the Incas left Machu Picchu. Nobody knows for sure why they did that, but some think it was because of diseases from Europe. The city was left unfinished, most likely due to the Spanish invasion and/or a civil war between the ruling rival Inca brothers named Huascar and Atahualpa. The Spanish never found Machu Picchu or the lost city during their occupation."
+    purpose: "A country estate for the Incan Emperor Pachacuti",
+    description: "Machu Picchu is a pre-Columbian 15th-century Inca site in Peru, in South America. The Incas built the city over mountains, 2430m above sea level. They lived there between 1200 and 1450 AD. Other people lived there before about 650 AD.",
+    description2: "The Incas built houses, fields and temples by cutting the rock on the mountain so it was flat. They built an observatory to look at the stars.",
+    description3: "When the Spanish came to Peru, the Incas left Machu Picchu. Nobody knows why they did that, but some people think it was because of diseases from Europe. The city was never finished, because of the Spanish and/or a civil war between the rival Inca brothers named Huascar and Atahualpa. The Spanish never found Machu Picchu or the lost city during their time there."
   },
   conversations: [
     {
-      host: "Hello $USERNAME, welcome to Brazil! The home of the Christ the Redeemer. My name is Julio.",
+      host: "Hola $USERNAME, welcome to Peru! The home of Machu Picchu. My name is Jose.",
       hostImage: "conversation/host.png",
-      traveller: "Hi Julio!",
+      traveller: "Hi Jose!",
       travellerImage: "conversation/traveller.png"
     },
     {
-      host: "As you can see the Christ the Redeemer is huge, they are over 450ft tall.",
+      host: "As you can see Machu Picchu is very high up in the mountains.",
       hostImage: "conversation/host.png",
-      traveller: "Wow! Why are they so tall?",
+      traveller: "Wow! How high are we right now?",
       travellerImage: "conversation/traveller.png"
     },
     {
-      host: "The pyramids were built 3,800 years ago. They were created to allow the kings of Egypt to succeed in the afterlife.",
+      host: "We are about 2430 metres above the ground",
       hostImage: "conversation/host.png",
-      traveller: "Awesome, what's inside the pyramid?",
+      traveller: "Awesome, why did they build it here?",
       travellerImage: "conversation/traveller_heart_eye.png"
     },
     {
-      host: "Treasures and items for Pharaoh's to use in the afterlife.",
+      host: "The Incan Emperor wanted a private garden for himself out of the way of the busy life of the town.",
       hostImage: "conversation/host.png",
-      traveller: "Wowza, the afterlife in Egypt must have been really interesting!",
+      traveller: "Cool! I wish I had a garden this big!",
       travellerImage: "conversation/traveller.png"
     },
     {
-      host: "Have fun on your journey!",
+      host: "Maybe someday you will!",
       hostImage: "conversation/host_smile.png",
-      traveller: "See you later!",
+      traveller: "Ok, how do I get down now?",
       travellerImage: "conversation/traveller.png"
     }
   ]
