@@ -1,7 +1,7 @@
 <template>
-    <div class="question-area" v-if="currentQuestion">
-    <router-link class="top-left" to="/" tag="button">Go Home</router-link>
-      <graphic-quiz-question :question="currentQuestion.question"></graphic-quiz-question>
+    <div class="question-area">
+        <router-link class="top-left" to="/" tag="button">Go Home</router-link>
+        <graphic-quiz-question :question="currentQuestion.question" v-if="!showScore"></graphic-quiz-question>
         <div class="answer-area" v-if="showAnswer">
             <graphic-quiz-answer
             v-for="(answer, index) in currentQuestion.answers" :key="index"
@@ -11,15 +11,16 @@
         </div>
         <div class="solution-area" v-if="showSolution">
             <p>{{ solution.result | resultMessage }}</p>
-            <img :src="solution.result | resultImage"></img>
-            <router-link :to="{name: 'home'}">
-              <button>Home</button>
-            </router-link>
+            <img :src="solution.result | resultImage" />
             <button @click="onSelectedPlay">{{solution.button}}</button>
-
+        </div>
+        <div class="solution-area" v-if="showScore">
+            <p>Eih there, you managed to do {{correctQuestions}} on {{currentQuestionIndex}} questions</p>
+            <button @click="onSelectedPlayAgain">Play again</button>
         </div>
     </div>
 </template>
+
 <script>
 import GraphicQuizAnswer from "../components/GraphicQuizAnswer";
 import GraphicQuizQuestion from "../components/GraphicQuizQuestion";
@@ -36,10 +37,12 @@ export default {
             currentQuestionIndex: 0,
             showAnswer: true,
             showSolution: false,
+            showScore: false,
             solution: {
                 button: "Next",
                 result: false
-            }
+            },
+            correctQuestions: 0,
         }
     },
     computed: {
@@ -50,17 +53,28 @@ export default {
     methods: {
         onSelectedImage: function(result) {
             this.solution.result = result;
-            this.showAnswer = false;
-            this.showSolution = true;
-        },
-        onSelectedPlay: function() {
+            if (result) {
+                this.correctQuestions++;
+            }
             this.currentQuestionIndex++;
             if (!this.questions[this.currentQuestionIndex]) {
-                this.currentQuestionIndex = 0;
+                this.showAnswer = false;
+                this.showScore = true;
+            } else {
+                this.showAnswer = false;
+                this.showSolution = true;
             }
+        },
+        onSelectedPlay: function() {
             this.showAnswer = true;
             this.showSolution = false;
         },
+        onSelectedPlayAgain: function() {
+            this.currentQuestionIndex = 0;
+            this.showAnswer = true;
+            this.showSolution = false;
+            this.showScore = false;
+        }
     },
     filters: {
         resultMessage: function(value) {
