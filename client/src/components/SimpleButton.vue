@@ -22,9 +22,9 @@ export default {
 <style lang="css" scoped>
 
 button {
-    width: 164px;
-    margin: 15px;
-    border-radius: 5px;
+      width: 164px;
+      margin: 15px 15px 15px 8px;
+      border-radius: 5px;
 }
 
 </style>

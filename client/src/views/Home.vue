@@ -56,7 +56,7 @@ export default {
 }
 
 .right-form:hover{
-  left: 85%;
+  left: 90%;
 }
 
 .right-form {
@@ -69,13 +69,15 @@ export default {
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50);
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-right: 40px;
+  padding: 50px;
+  padding-right: 20px;
   color: black;
   background-color: #227fd0eb;
   max-width: 40%;
   margin-top: 11em;
+  color: #212529;
+  text-align: left;
+
 }
 
 .quiz:hover{
@@ -86,18 +88,19 @@ export default {
   transition: 0.3s ease-in-out;
   position: relative;
   top: 60%;
-  left: 115%;
+  left: 95%;
   font-size: 15px;
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50);
   padding: 20px;
-  padding-right: 100px;
-  padding-left: 40px;
+  padding-left:50px;
   background-color: white;
-  max-width: 40%;
+  max-width: 35%;
   background-color:#ffa500d4;
   font-size: 20px;
+  text-align: left;
+
 }
 .router-link {
   text-decoration: none;
@@ -120,6 +123,7 @@ color: #227fd0;
   -ms-transform: translate(-50%,-50);
   padding: 20px;
   padding-left: 40px;
+  padding-right: 40px;
   color: black;
   background-color: #227fd0eb;
   max-width: 40%;
