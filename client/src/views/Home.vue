@@ -1,17 +1,19 @@
 <template lang="">
   <div>
     <world-map :wonders='wonders'></world-map>
-    <wonder-selection-form id="right-form" :wonders ='wonders'></wonder-selection-form>
+      <user-form class="left-form" v-if="!username"></user-form>
+      <wonder-selection-form class="right-form" v-if='username' :wonders ='wonders'></wonder-selection-form>
     <div class="quiz">
       <router-link to="/quiz">Test Your knowledge</router-link>
     </div>
-    <conversation-box :message="hostMessage" position="left" speech="right_speech_bubble"
+    <conversation-box v-if='username' :message="hostMessage" position="left" speech="right_speech_bubble"
     image="conversation/host.png" :username="username" id="homepage-box"></conversation-box>
 
   </div>
 </template>
 
 <script>
+import UserForm from '../components/UserForm.vue';
 import GlobeService from '../services/GlobeService.js';
 import ConversationBox from "../components/ConversationBox";
 import WorldMap from '../components/WorldMap';
@@ -25,7 +27,7 @@ export default {
   },
   computed: {
     hostMessage: function() {
-      return `Hello, welcome to wonder of the worlds, what do you prefer to do?`
+      return `Hello ${this.username}! welcome to the 7 Wonders of the World, where would you like to go?`
     }
   },
   methods: {
@@ -37,6 +39,7 @@ export default {
     "world-map": WorldMap,
     "wonder-selection-form": WonderSelectionForm,
     "conversation-box": ConversationBox,
+    "user-form": UserForm
   },
 }
 </script>
@@ -52,11 +55,11 @@ export default {
 
 }
 
-#right-form:hover{
+.right-form:hover{
   left: 85%;
 }
 
-#right-form {
+.right-form {
   transition: 0.3s ease-in-out;
   position: relative;
   top: 20%;
@@ -96,8 +99,24 @@ export default {
   color:white;
   font-size: 20px;
   text-decoration: none;
-
-
 }
+
+.left-form {
+  transition: 0.3s ease-in-out;
+  position: relative;
+  top: 50%;
+  left: 25%;
+  font-size: 15px;
+  color: white;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50);
+  padding: 20px;
+  padding-left: 40px;
+  color: black;
+  background-color: #227fd0eb;
+  max-width: 40%;
+  margin-top: 11em;
+  }
 
 </style>

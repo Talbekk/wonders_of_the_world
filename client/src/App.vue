@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view :wonders='wonders' :selectedWonder='selectedWonder' :questions="questions"/>
+    <router-view :wonders='wonders' :selectedWonder='selectedWonder' :username='username' :questions="questions"/>
   </div>
 </template>
 

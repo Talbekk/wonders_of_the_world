@@ -1,7 +1,6 @@
 <template lang="html">
   <div class="user-form centered">
-    <p>Hello there, I know you are ready for this adventure, 
-      but first, how I should call you your majesty?</p>
+    <p>Please write your name:</p>
     <form class="user-name" v-on:submit.prevent="userFormSubmit">
         <input id="username" type="text"  name="username" v-model='username' required>
         <input id="submit" type="submit" name="" value="Submit">
