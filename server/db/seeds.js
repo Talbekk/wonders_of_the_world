@@ -320,7 +320,7 @@ conversations: [
       travellerImage: "conversation/traveller.png"
     },
     {
-      host: "The Mayans built this tall buildings for ",
+      host: "The Mayans built this tall buildings to celebrate their leaders. ",
       hostImage: "conversation/host.png",
       traveller: "Nice, can I climb it?",
       travellerImage: "conversation/traveller_heart_eye.png"
