@@ -56,7 +56,7 @@ export default {
 .center {
   display: flex;
   justify-content: center;
-  width: auto; 
+  width: auto;
   text-align: center;
 }
 
@@ -65,7 +65,7 @@ export default {
 }
 
 .container {
-  background-color: white;
+  background-color: #ffffffe6;
 }
 
 .details-head{

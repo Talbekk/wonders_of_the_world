@@ -41,7 +41,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background-image:url('https://trello-attachments.s3.amazonaws.com/5dea1c900b9ca67698a18706/5dee73eaf5e5d8673bc77d63/72d1a1731fb360707078f2f5c7cc2fd4/wallpaper.png');
 }
 
 #right-form:hover{
