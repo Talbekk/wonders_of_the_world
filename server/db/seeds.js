@@ -20,7 +20,7 @@ db.wonders.insertMany([
 },
 conversations: [
   {
-    host: "Ciao, welcome to Italia! The home of the Colosseum. My name is Laura.",
+    host: "Ciao $USERNAME, welcome to Italia! The home of the Colosseum. My name is Laura.",
     hostImage: "conversation/host_italian.png",
     traveller: "Hi Laura!",
     travellerImage: "conversation/traveller.png"
