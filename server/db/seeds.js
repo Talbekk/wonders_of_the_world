@@ -110,9 +110,9 @@ conversations: [
     height: "30m",
     yearBuilt: "1922",
     purpose: "Entertainment",
-    description: "Christ the Redeemer is an Art Deco statue of Jesus Christ in Rio de Janeiro, Brazil, created by French sculptor Paul Landowski and built by Brazilian engineer Heitor da Silva Costa, in collaboration with French engineer Albert Caquot. Romanian sculptor Gheorghe Leonida fashioned the face. Constructed between 1922 and 1931, the statue is 30 metres (98 ft) high, excluding its 8-metre (26 ft) pedestal. The arms stretch 28 metres (92 ft) wide.",
-    description2: "The statue weighs 635 metric tons (625 long, 700 short tons), and is located at the peak of the 700-metre (2,300 ft) Corcovado mountain in the Tijuca Forest National Park overlooking the city of Rio de Janeiro. A symbol of Christianity across the world, the statue has also become a cultural icon of both Rio de Janeiro and Brazil, and is listed as one of the New7Wonders of the World. It is made of reinforced concrete and soapstone.",
-    description3: "In 1990, several organizations, including the Archdiocese of Rio de Janeiro, media company Grupo Globo, oil company Shell do Brasil, environmental regulator IBAMA, National Institute of Historic and Artistic Heritage, and the city government of Rio de Janeiro entered an agreement to conduct restoration work."
+    description: "Christ the Redeemer is a statue of Jesus Christ in Rio de Janeiro, Brazil. It was made by French sculptor Paul Landowski, Brazilian engineer Heitor da Silva Costa and French engineer Albert Caquot. Romanian sculptor Gheorghe Leonida made the face. Built between 1922 and 1931, the statue is 30 metres (98 ft) high, take away the 8-metre (26 ft) stone. The arms stretch 28 metres (92 ft) wide.",
+    description2: "The statue weighs 635 metric tons (625 long, 700 short tons) and is at the top of the 700 metre (2,300 ft) Corcovado mountain which looks over Rio de Janeiro. A symbol of Christianity around the world, the statue has also become an icon of both Rio de Janeiro and Brazil. It is made with concrete and soapstone.",
+    description3: "In 1990, many Brazilian companies, including the Archdiocese of Rio de Janeiro, media company Grupo Globo, oil company Shell do Brasil, environmental regulator IBAMA, National Institute of Historic and Artistic Heritage, and the city government of Rio de Janeiro made a plan to start restoration work."
   },
   conversations: [
     {
@@ -134,15 +134,15 @@ conversations: [
       travellerImage: "conversation/traveller_heart_eye.png"
     },
     {
-      host: "Treasures and items for Pharaoh's to use in the afterlife.",
+      host: "The statue is a symbol of Christianity and is the newest member of the 7 Wonders of the World.",
       hostImage: "conversation/host.png",
-      traveller: "Wowza, the afterlife in Egypt must have been really interesting!",
+      traveller: "That's so cool, I want to go to Brazil someday!",
       travellerImage: "conversation/traveller.png"
     },
     {
-      host: "Have fun on your journey!",
+      host: "Tchau! All the best on your journey!",
       hostImage: "conversation/host_smile.png",
-      traveller: "See you later!",
+      traveller: "See you next time!",
       travellerImage: "conversation/traveller.png"
     }
   ]
