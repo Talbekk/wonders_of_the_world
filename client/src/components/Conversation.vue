@@ -6,8 +6,8 @@
     </div>
       <!-- <div id="conversation-closure" class="conversation-popup" v-if="!conversation && conversationIndex > 0"> -->
       <!-- <p>What do you prefer to do now?</p> -->
-      <router-link class="top-right" to="/details">Get Details</router-link>
-      <router-link class="top-left" to="/">Go Home</router-link>
+      <router-link class="top-right" to="/details" tag="button">Get Details</router-link>
+      <router-link class="top-left" to="/" tag="button">Go Home</router-link>
   </div>
 </template>
 
