@@ -1,5 +1,6 @@
 <template>
     <div class="question-area" v-if="currentQuestion">
+    <router-link class="top-left" to="/" tag="button">Go Home</router-link>
       <graphic-quiz-question :question="currentQuestion.question"></graphic-quiz-question>
         <div class="answer-area" v-if="showAnswer">
             <graphic-quiz-answer
