@@ -11,7 +11,6 @@
         </div>
       </div>
       <div class="row separation center area">
-        <!-- <div class="col-sm-6"> -->
           <img  class="img-fluid full-cover" :src="selectedWonder.details.image">
       </div>
       <div class="row separation center area">
@@ -40,22 +39,12 @@
 </template>
 
 <script>
-import SimpleButton from '../components/SimpleButton';
-
 export default {
 
   name: "more-detail",
   props: {
     selectedWonder : Object
   },
-  methods: {
-      onButtonClick: function() {
-          eventBus.$emit(this.eventChannel);
-      }
-  },
-  components: {
-      "simple-button": SimpleButton
-  }
 }
 </script>
 
