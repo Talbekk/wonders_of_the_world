@@ -27,5 +27,10 @@ export default {
 </script>
 
 <style lang="css" scoped>
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+}
 
 </style>

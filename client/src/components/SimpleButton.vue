@@ -20,5 +20,11 @@ export default {
 </script>
 
 <style lang="css" scoped>
-    
+
+button {
+    width: 164px;
+    margin: 15px;
+    border-radius: 5px;
+}
+
 </style>

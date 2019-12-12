@@ -3,7 +3,7 @@
     <world-map :wonders='wonders'></world-map>
     <wonder-selection-form id="right-form" :wonders ='wonders'></wonder-selection-form>
     <div class="quiz">
-      <router-link to="/quiz">Test Your knowledge</router-link>
+      <router-link to="/quiz" class="router-link">Test Your knowledge</router-link>
     </div>
     <conversation-box :message="hostMessage" position="left" speech="right_speech_bubble"
     image="conversation/host.png" :username="username" id="homepage-box"></conversation-box>
@@ -93,11 +93,16 @@ export default {
   background-color: white;
   max-width: 40%;
   background-color:#ffa500d4;
-  color:white;
   font-size: 20px;
-  text-decoration: none;
-
-
 }
+.router-link {
+  text-decoration: none;
+  color: black;
+}
+
+.router-link:hover {
+  color: #227fd0;
+}
+
 
 </style>
