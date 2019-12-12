@@ -79,6 +79,16 @@ export default {
 }
 </script>
 <style lang="css" scoped>
+.question-area{
+  height: 100%;
+  margin: 0px;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  padding-bottom: 50px;
+  background-image:url('https://trello-attachments.s3.amazonaws.com/5dea1c900b9ca67698a18706/5dee73eaf5e5d8673bc77d63/72d1a1731fb360707078f2f5c7cc2fd4/wallpaper.png');
+}
 .answer-area {
         display: flex;
         flex-wrap: wrap;
