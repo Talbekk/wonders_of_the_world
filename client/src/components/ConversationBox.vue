@@ -32,7 +32,7 @@ export default {
         bottom:0;
         right:0;
         font-size: 20px;
-        width: 300px;
+        width: 400px;
         margin-right: 10px;
     }
     /* speech bubble */
@@ -60,7 +60,7 @@ export default {
         bottom:0;
         left:0;
         font-size: 20px;
-        width: 300px;
+        width: 400px;
         margin-left: 10px;
     }
     .left_speech_bubble {
