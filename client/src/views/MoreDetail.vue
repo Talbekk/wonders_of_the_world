@@ -118,6 +118,13 @@ export default {
   margin-top: 30px;
 }
 
+.row.separation.center.area {
+    text-align: left;
+    padding-right: 100px;
+    padding-left: 100px;
+
+}
+
 #last-image img:last-child {
   margin-bottom: 50px;
 }
