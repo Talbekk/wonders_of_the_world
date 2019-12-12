@@ -20,32 +20,32 @@ db.wonders.insertMany([
 },
 conversations: [
   {
-    host: "Bonjourno $USERNAME, welcome to Italia! The home of the Colosseum. My name is Paolo.",
-    hotstImage: "conversation/host_italian.png",
+    host: "Bonjourno $USERNAME, welcome to Italia! The home of the Colosseum. My name is Laula.",
+    hostImage: "conversation/host_italian.png",
     traveller: "Hi Laula!",
     travellerImage: "conversation/traveller.png"
   },
   {
     host: "Do you see how the building doesn't look finished? That's because an earthquake damaged a lot of the top",
-    hotstImage: "conversation/host_italian.png",
+    hostImage: "conversation/host_italian.png",
     traveller: "Wow! It still looks so cool! How old is it?",
     travellerImage: "conversation/traveller.png"
   },
    {
      host: "The Colosseum was built by the Romans in 80 A.D, almost 2000 years ago.",
-     hotstImage: "conversation/host_italian.png",
+     hostImage: "conversation/host_italian.png",
      traveller: "Incredible, what was it used for?",
      travellerImage: "conversation/traveller_heart_eye.png"
    },
    {
      host: "Many things, but it is famous for being used for gladiator fights",
-     hotstImage: "conversation/host_italian.png",
+     hostImage: "conversation/host_italian.png",
      traveller: "Cool, the Romans must have been very smart!",
      travellerImage: "conversation/traveller.png"
    },
    {
      host: "Enjoy the rest of your trip! Ciao!",
-     hotstImage: "conversation/host_italian.png",
+     hostImage: "conversation/host_italian.png",
      traveller: "Catch you later!",
      travellerImage: "conversation/traveller.png"
    }
