@@ -16,10 +16,10 @@
             </div>
         </div>
         <div class="score-area" v-if="showScore">
-                <p>Eih there, you managed to do {{correctQuestions}} on {{currentQuestionIndex}} questions</p>
+                <p>Nice, you got {{correctQuestions}} out of {{currentQuestionIndex}}!</p>
                 <button @click="onSelectedPlayAgain">Play again</button>
                 <router-link class="top-left" to="/" tag="button">Go Home</router-link>
-            </div> 
+            </div>
         <router-link class="top-left" to="/" tag="button" v-if="!showScore">Go Home</router-link>
     </div>
 </template>

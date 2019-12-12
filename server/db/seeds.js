@@ -164,7 +164,7 @@ conversations: [
   },
   conversations: [
     {
-      host: "Nǐ hǎo $USERNAME, welcome to China! The home of the Great Wall of China. My name is Yuli.",
+      host: "Nǐ hǎo $USERNAME, welcome to China! The home of the Great Wall. My name is Yuli.",
       hostImage: "conversation/host_chinese.png",
       traveller: "Hi Yuli!",
       travellerImage: "conversation/traveller.png"
@@ -260,13 +260,13 @@ conversations: [
   },
   conversations: [
     {
-      host: "Namaste $USERNAME, welcome to India! The home of the Taj Mahal. My name is Rajesh.",
+      host: "Namaste $USERNAME, welcome to India! The home of the Taj Mahal. My name is Isha.",
       hostImage: "conversation/host.png",
-      traveller: "Hi Rajesh!",
+      traveller: "Hi Isha!",
       travellerImage: "conversation/traveller.png"
     },
     {
-      host: "The Taj Mahal is very beautiful, many people think it's one of the best looking buuldings in the world.",
+      host: "The Taj Mahal is very beautiful, many people think it's one of the best looking buildings in the world.",
       hostImage: "conversation/host.png",
       traveller: "Wow! Why was it built?",
       travellerImage: "conversation/traveller.png"
@@ -308,9 +308,9 @@ conversations: [
   },
   conversations: [
     {
-      host: "Hello $USERNAME, welcome to Mexico! The home of the Chichen Itza. My name is Julio.",
+      host: "Hola $USERNAME, welcome to Mexico! The home of the Chichen Itza. My name is Julia.",
       hostImage: "conversation/host.png",
-      traveller: "Hi Julio!",
+      traveller: "Hola Julia!",
       travellerImage: "conversation/traveller.png"
     },
     {
@@ -320,7 +320,7 @@ conversations: [
       travellerImage: "conversation/traveller.png"
     },
     {
-      host: "The Mayans built this tall buildings to celebrate their leaders. ",
+      host: "The Mayans built these tall buildings to celebrate their leaders. ",
       hostImage: "conversation/host.png",
       traveller: "Nice, can I climb it?",
       travellerImage: "conversation/traveller_heart_eye.png"
@@ -334,7 +334,7 @@ conversations: [
     {
       host: "Hasta la vista!",
       hostImage: "conversation/host_smile.png",
-      traveller: "Ciao!",
+      traveller: "Adios!",
       travellerImage: "conversation/traveller.png"
     }
   ]
@@ -574,7 +574,7 @@ db.quiz.insertMany([
     ]
   },
   {
-    question: "Which wonder took over 20 years and 20,000 artisans to be completed?",
+    question: "Which wonder took over 20 years and 20,000 people to be completed?",
     answers: [
       {
         image: "https://lp-cms-production.imgix.net/news/2019/06/taj-mahal.jpg?q=25",
