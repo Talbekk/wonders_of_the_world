@@ -14,19 +14,19 @@ db.wonders.insertMany([
   height: "48m",
   yearBuilt: "70AD",
   purpose: "Entertainment",
-  description: "The Colosseum, originally known as the Flavian Amphitheatre, is a large amphitheatre in the city of Rome. The construction of the Colosseum started around 70–72 AD and was finished in 80 AD. Emperor Vespasian started the works, and Emperor Titus completed them. Emperor Domitian made some changes to the building between 81–96 AD. It had seating for 50,000 people. It was 156 metres wide, 189 metres long and 57 metres tall. It is the biggest amphitheatre built by the Roman Empire.",
-  description2: "The Colosseum was first called the Flavian Amphitheatre or in Latin, the Amphitheatrum Flavium. This was after Vespasian and Titus who had the family name of Flavius. It was used for gladiatorial contests, and other shows like animal hunts, in which animals would hunt and eat prisoners; or in which gladiators would fight against animals. There were also executions of prisoners, plays, and battle scenes; sometimes it was filled with water to fight sea battles. The people of Rome could go into the Colosseum without any costs; it was free.",
-  description3: "In the Middle Ages it was no longer used for performances. It was then used as housing, workshops, a Christian shrine, and as a supply of building stones. It is now a ruin because of earthquakes. The Colosseum is a symbol of the Roman Empire. It is one of Rome's most popular tourist attractions. On Good Fridays, the Pope leads a torch lit Way of the Cross procession around the various levels of the amphitheatre."
+  description: "The Colosseum is a large amphitheatre in the city of Rome. Building of the Colosseum started around 70–72 AD and finished in 80 AD. Emperor Vespasian started the job, and Emperor Titus completed it. Emperor Domitian made some changes to the building between 81–96 AD. It had seating for 50,000 people. It was 156 metres wide, 189 metres long and 57 metres tall. It is the biggest amphitheatre built by the Roman Empire.",
+  description2: "The Colosseum was first called the Flavian Amphitheatre or in Latin, the Amphitheatrum Flavium. This was after Vespasian and Titus who had the family name of Flavius. It was used for gladiator contests, and other shows like animal hunts, in which animals would hunt and eat prisoners, or in which gladiators would fight against animals. There were also plays and battle scenes. Sometimes it was filled with water to fight sea battles. The people of Rome could go into the Colosseum for free.",
+  description3: "In the Middle Ages the performances stopped. It was then used as housing, workshops, a Christian shrine, and as a supply of building stones. It is now a ruin because of earthquakes. The Colosseum is a symbol of the Roman Empire. It is one of Rome's most popular tourist spots. On Good Fridays, the Pope leads a torch lit Way of the Cross walk around the building."
 },
 conversations: [
   {
-    host: "Bonjourno $USERNAME, welcome to Italia! The home of the Colosseum. My name is Paolo.",
+    host: "Ciao $USERNAME, welcome to Italia! The home of the Colosseum. My name is Paolo.",
     hotstImage: "conversation/host.png",
     traveller: "Hi Paolo!",
     travellerImage: "conversation/traveller.png"
   },
   {
-    host: "Do you see how the building doesn't look finished? That's because an earthquake damaged a lot of the top",
+    host: "Do you see how the building doesn't look finished? That's because an earthquake damaged it a long time ago",
     hotstImage: "conversation/host.png",
     traveller: "Wow! It still looks so cool! How old is it?",
     travellerImage: "conversation/traveller.png"
@@ -38,7 +38,7 @@ conversations: [
      travellerImage: "conversation/traveller_heart_eye.png"
    },
    {
-     host: "Many things, but it is famous for being used for gladiator fights",
+     host: "Many things, but it is most famous for gladiator fights",
      hotstImage: "conversation/host.png",
      traveller: "Cool, the Romans must have been very smart!",
      travellerImage: "conversation/traveller.png"
