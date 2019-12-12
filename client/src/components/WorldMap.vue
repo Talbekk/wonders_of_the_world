@@ -29,16 +29,17 @@ export default {
           this.wonders.forEach( (wonder) => {
            let marker = WE.marker([wonder.details.latitude, wonder.details.longitude]).addTo(earth);
           marker.bindPopup(`<img src="${wonder.details.image}" class="img-fluid"/>
-          <p class="popup-information-text"> Name: ${wonder.details.name}</p>
-          <p class="popup-information-text"> Location: ${wonder.details.location}</p>
-          <p class="popup-information-text"> Year Built: ${wonder.details.yearBuilt}<p>`,
-          {maxWidth: 175, maxHeight: 175, closeButton: true})
+          <p class="popup-information-text"><strong>Name:</strong> ${wonder.details.name}</p>
+          <p class="popup-information-text"><strong>Location:</strong> ${wonder.details.location}</p>
+          <p class="popup-information-text"><strong>Year Built:</strong> ${wonder.details.yearBuilt}<p>`,
+          {maxWidth: 300, maxHeight: 300, closeButton: true})
           .closePopup();
 
         earth.setView([50 , 0], 2);
 
         if (this.wonders.length === 1) {
-          earth.setView([wonder.details.latitude + 20 , wonder.details.longitude + 3], 2.5);
+          // earth.setView([wonder.details.latitude + 20 , wonder.details.longitude + 3], 2.5);
+          earth.setView([wonder.details.latitude + 10, wonder.details.longitude], 2.5);
           marker.openPopup();
         }
         })
@@ -56,13 +57,14 @@ export default {
 
 .img-fluid {
   max-width: 25em;
-  max-height: 25em;
+}
+img.img-fluid {
+    max-height: 300px;
 }
 
 .popup-information-text {
-  font-weight: bold;
   align-items: center;
-  font-size: 11.5px;
+  font-size: 16px;
   margin: 3px !important;
   margin-block-start: 0px;
   margin-block-end: 0px;
@@ -72,5 +74,13 @@ export default {
 .we-pp-content{
   margin: 5px;
   margin-bottom: 0px;
+}
+.we-pp-wrapper {
+  text-align: center;
+}
+
+.we-pp-content p {
+    margin: 18px 0;
+    text-align: center !important;
 }
 </style>

@@ -105,7 +105,7 @@ conversations: [
     location: "Rio de Janeiro, Brazil",
     longitude: -42.2436,
     latitude: -22.2212,
-    image: "https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_1920,f_auto/A-Corbis-42-24002457_sbfkds.jpg",
+    image: "https://estonianworld.com/wp-content/uploads/2018/02/Christ-the-Redeemer-I-1024x640.jpg",
     imageGallery: ["https://www.stpetertravel.com/travels/7072_big.jpg","https://media.tacdn.com/media/attractions-splice-spp-674x446/07/12/29/8f.jpg","https://www.checkoutsam.com/wp-content/uploads/2018/02/coliseum-seats-levels.jpg  "],
     height: "30m",
     yearBuilt: "1922",
