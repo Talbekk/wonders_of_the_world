@@ -15,7 +15,7 @@ import WorldMap from '../components/WorldMap';
 export default {
   name: "wonder-page",
   props: {
-    selectedWonder : Array,
+    selectedWonder : Object,
     username: String
   },
   components: {
@@ -26,18 +26,6 @@ export default {
 </script>
 
 <style lang="css" scoped>
-/* #overlay {
-  position: absolute;
-  bottom: 0;
-  top: 50%;
-  left: 50%;
-  font-size: 15px;
-  /* color: white; */
-  /* -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50);
-  padding-top: 100px;
-} */
 .popup-information-text {
   margin: 0px !important;
   margin-block-start: 0;
