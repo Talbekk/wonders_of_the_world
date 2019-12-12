@@ -1,6 +1,5 @@
 <template>
     <div class="question-area">
-        <router-link class="top-left" to="/" tag="button">Go Home</router-link>
         <graphic-quiz-question :question="currentQuestion.question" v-if="!showScore"></graphic-quiz-question>
         <div class="answer-area" v-if="showAnswer">
             <graphic-quiz-answer
@@ -18,6 +17,7 @@
             <p>Eih there, you managed to do {{correctQuestions}} on {{currentQuestionIndex}} questions</p>
             <button @click="onSelectedPlayAgain">Play again</button>
         </div>
+                <router-link class="top-left" to="/" tag="button">Go Home</router-link>
     </div>
 </template>
 
