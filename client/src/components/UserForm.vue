@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="user-form centered">
-    <p>Please write your name:</p>
+    <p>What is your name?</p>
     <form class="user-name" v-on:submit.prevent="userFormSubmit">
         <input id="username" type="text"  name="username" v-model='username' required>
         <input id="submit" type="submit" name="" value="Submit">
@@ -36,6 +36,7 @@ export default {
     margin-left: -150px;
 }
 input {
-    margin: 0px 4px;
+    margin: 10px 4px;
 }
+
 </style>
