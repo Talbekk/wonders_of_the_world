@@ -85,7 +85,7 @@ export default {
   top: 200px;
   transition: 0.3s ease-in-out;
   position: relative;
-  left: 70%;
+  left: 60%;
   font-size: 15px;
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
@@ -100,7 +100,7 @@ export default {
   border: 0px;
 }
 .home-button:hover{
-  left: 60%;
+  left: 50%;
   position: relative;
 }
 
