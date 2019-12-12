@@ -27,7 +27,7 @@ export default {
   },
   computed: {
     hostMessage: function() {
-      return `Hello ${this.username}! welcome to the 7 Wonders of the World, where would you like to go?`
+      return `Hello ${this.username}! Welcome to the 7 Wonders of the World, where would you like to go?`
     }
   },
   methods: {
@@ -63,14 +63,15 @@ export default {
   transition: 0.3s ease-in-out;
   position: relative;
   top: 20%;
-  left: 115%;
+  left: 95%;
   font-size: 15px;
   color: white;
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50);
-  padding: 20px;
-  padding-left: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 40px;
   color: black;
   background-color: #227fd0eb;
   max-width: 40%;
@@ -112,7 +113,7 @@ color: #227fd0;
   position: relative;
   top: 50%;
   left: 25%;
-  font-size: 15px;
+  font-size: 20px;
   color: white;
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
@@ -124,5 +125,6 @@ color: #227fd0;
   max-width: 40%;
   margin-top: 11em;
 }
+
 
 </style>
