@@ -72,7 +72,7 @@ export default {
   padding: 50px;
   padding-right: 20px;
   color: black;
-  background-color: #227fd0eb;
+  background-color: #227fd0cc;
   max-width: 40%;
   margin-top: 11em;
   color: #212529;
@@ -125,7 +125,7 @@ color: #227fd0;
   padding-left: 40px;
   padding-right: 40px;
   color: black;
-  background-color: #227fd0eb;
+  background-color: #227fd0cc;
   max-width: 40%;
   margin-top: 11em;
 }

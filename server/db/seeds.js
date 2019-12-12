@@ -68,9 +68,9 @@ conversations: [
   },
   conversations: [
     {
-      host: "As-salam alaykom $USERNAME, welcome to Jordan! The home of the great city of Petra. My name is Jack.",
+      host: "As-salam alaykom $USERNAME, welcome to Jordan! The home of the great city of Petra. My name is Maria.",
       hostImage: "conversation/host.png",
-      traveller: "Hi Jack!",
+      traveller: "Hi Maria!",
       travellerImage: "conversation/traveller.png"
     },
     {
@@ -116,9 +116,9 @@ conversations: [
   },
   conversations: [
     {
-      host: "Olá $USERNAME, welcome to Brazil! The home of the Christ the Redeemer. My name is Julio.",
+      host: "Olá $USERNAME, welcome to Brazil! The home of the Christ the Redeemer. My name is Julia.",
       hostImage: "conversation/host.png",
-      traveller: "Hi Julio!",
+      traveller: "Hi Julia!",
       travellerImage: "conversation/traveller.png"
     },
     {
@@ -164,9 +164,9 @@ conversations: [
   },
   conversations: [
     {
-      host: "Nǐ hǎo $USERNAME, welcome to China! The home of the Great Wall of China. My name is Sophia.",
+      host: "Nǐ hǎo $USERNAME, welcome to China! The home of the Great Wall of China. My name is Yuli.",
       hostImage: "conversation/host_chinese.png",
-      traveller: "Hi Sophia!",
+      traveller: "Hi Yuli!",
       travellerImage: "conversation/traveller.png"
     },
     {
@@ -185,7 +185,7 @@ conversations: [
       host: "You're right! The Ming Dynasty took well over 200 years to finish the wall.",
       hostImage: "conversation/host_chinese.png",
       traveller: "Oh my goodness! That's such a long time. I would get very bored...",
-      travellerImage: "conversation/traveller.png"
+      travellerImage: "conversation/traveller_cringe_eye.png"
     },
     {
       host: "Don't worry, I think we all would have! Enjoy the rest of your trip!",
