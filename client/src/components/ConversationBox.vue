@@ -2,7 +2,6 @@
     <div :class="position" >
         <p :class="speech">{{msg}}</p>
         <img :src="image" />
-
     </div>
 </template>
 
