@@ -61,14 +61,14 @@ conversations: [
     imageGallery: ["https://img.etimg.com/thumb/msid-63249335,width-643,imgsize-63886,resizemode-4/jordans-petra-a-keeper-of-secrets.jpg","https://www.fodors.com/wp-content/uploads/2018/08/Hero-Petra-101-dreamstime_xl_45315552.jpg","https://s3.amazonaws.com/images.gearjunkie.com/uploads/2019/01/Five-adventures-in-jordan-PETRA.jpg"],
     height: "23m",
     yearBuilt: "400bc",
-    purpose: "rocks",
-    description: "Petra is a historical and archaeological city in southern Jordan. It is in a basin among the mountains that run from the Dead Sea to the Gulf of Aqaba. Petra is believed to have been settled as early as 9,000 BC. It became the capital city of the Nabataean Kingdom. The Nabataeans were nomadic Arabs who used Petra because it was near the spice trade routes.",
-    description2: "The Nabataean Kingdom became a client state of the Roman Empire in the first century BC. iIn 106 AD they lost their independence. Petra's importance declined as sea trade routes developed. Also, the 363 earthquake destroyed many structures.",
-    description3: "The Byzantine Era led to the construction of several Christian churches, but the city continued to decline. By the early Islamic era only a handful of nomads lived in Petra. It stayed unknown to the world until it was rediscovered in 1812 by Johann Ludwig Burckhardt."
+    purpose: "Trading city",
+    description: "Petra is a very old city in southern Jordan. It is a city among the mountains that run from the Dead Sea to the Gulf of Aqaba. Petra is believed to have been built as early as 9,000 BC. It became the capital city of the Nabataean Kingdom. The Nabataeans were nomadic Arabs who used Petra because it was near the spice trade roads.",
+    description2: "The Nabataean Kingdom was taken over by the Roman Empire in the 100 BC. In 106 AD they lost their independence. Petra's importance fell as sea trade routes developed. Also, the earthquake in 363 AD destroyed many structures.",
+    description3: "The Byzantine Empire led to the building of many Christian churches, but the city soon disappeared. By the early Islamic Empire only a handful of nomads lived in Petra. It stayed unknown to the world until it was rediscovered in 1812 by Johann Ludwig Burckhardt."
   },
   conversations: [
     {
-      host: "Hello $USERNAME, welcome to Jordan! The home of the great city of Petra. My name is Jack.",
+      host: "As-salam alaykom $USERNAME, welcome to Jordan! The home of the great city of Petra. My name is Jack.",
       hostImage: "conversation/host.png",
       traveller: "Hi Jack!",
       travellerImage: "conversation/traveller.png"
@@ -76,7 +76,7 @@ conversations: [
     {
       host: "As you can see not much is left of the great city of Petra.",
       hostImage: "conversation/host.png",
-      traveller: "Wow! What happened?",
+      traveller: "Wow! What happened here?",
       travellerImage: "conversation/traveller.png"
     },
     {
@@ -86,7 +86,7 @@ conversations: [
       travellerImage: "conversation/traveller_heart_eye.png"
     },
     {
-      host: "Petra used be a popular place for buying spices and other goods. But after a while, boats were a faster way of getting the same things.",
+      host: "Petra used be a busy place for buying spices and other goods. But after a while, boats became a faster way of getting the same things.",
       hostImage: "conversation/host.png",
       traveller: "Woah, this place is like a ghost town!",
       travellerImage: "conversation/traveller.png"
@@ -116,21 +116,21 @@ conversations: [
   },
   conversations: [
     {
-      host: "Hello $USERNAME, welcome to Brazil! The home of the Christ the Redeemer. My name is Julio.",
+      host: "Olá $USERNAME, welcome to Brazil! The home of the Christ the Redeemer. My name is Julio.",
       hostImage: "conversation/host.png",
       traveller: "Hi Julio!",
       travellerImage: "conversation/traveller.png"
     },
     {
-      host: "As you can see the Christ the Redeemer is huge, they are over 450ft tall.",
+      host: "Did you know that the statue was made by a French and Brazialian engineer. Then the head was made by a Romanian sculptor.",
       hostImage: "conversation/host.png",
-      traveller: "Wow! Why are they so tall?",
+      traveller: "Wow! How tall is it?",
       travellerImage: "conversation/traveller.png"
     },
     {
-      host: "The pyramids were built 3,800 years ago. They were created to allow the kings of Egypt to succeed in the afterlife.",
+      host: "It's 30 metres high with a wingspan of 28 metres.",
       hostImage: "conversation/host.png",
-      traveller: "Awesome, what's inside the pyramid?",
+      traveller: "Awesome, he would be a great swimmer!",
       travellerImage: "conversation/traveller_heart_eye.png"
     },
     {
