@@ -116,7 +116,7 @@ conversations: [
   },
   conversations: [
     {
-      host: "Olá $USERNAME, welcome to Brazil! The home of the Christ the Redeemer. My name is Julia.",
+      host: "Olá $USERNAME, welcome to Brazil! The home of Christ the Redeemer. My name is Julia.",
       hostImage: "conversation/host.png",
       traveller: "Hi Julia!",
       travellerImage: "conversation/traveller.png"
@@ -308,9 +308,9 @@ conversations: [
   },
   conversations: [
     {
-      host: "Hello $USERNAME, welcome to Brazil! The home of the Christ the Redeemer. My name is Julio.",
+      host: "Hello $USERNAME, welcome to Mexico! The home of the Chichen Itza. My name is Julio.",
       hostImage: "conversation/host.png",
-      traveller: "Hi Eduardo!",
+      traveller: "Hi Julio!",
       travellerImage: "conversation/traveller.png"
     },
     {
