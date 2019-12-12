@@ -3,7 +3,7 @@
     <world-map :wonders='wonders'></world-map>
       <user-form class="left-form" v-if="!username"></user-form>
       <wonder-selection-form class="right-form" v-if='username' :wonders ='wonders'></wonder-selection-form>
-    <div class="quiz">
+    <div class="quiz" v-if='username'>
       <router-link to="/quiz" class="router-link">Test Your knowledge</router-link>
     </div>
     <conversation-box v-if='username' :message="hostMessage" position="left" speech="right_speech_bubble"
