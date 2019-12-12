@@ -64,7 +64,7 @@ export default {
     },
     filters: {
         resultMessage: function(value) {
-            return value ? "Nicely done! You are right" : "Almost there!"
+            return value ? "Nicely done! You are right" : "Wrong answer!"
 
         },
         resultImage: function(value){

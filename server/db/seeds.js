@@ -21,31 +21,31 @@ db.wonders.insertMany([
 conversations: [
   {
     host: "Bonjourno $USERNAME, welcome to Italia! The home of the Colosseum. My name is Paolo.",
-    hotstImage: "conversation/host.png",
-    traveller: "Hi Paolo!",
+    hotstImage: "conversation/host_italian.png",
+    traveller: "Hi Laula!",
     travellerImage: "conversation/traveller.png"
   },
   {
     host: "Do you see how the building doesn't look finished? That's because an earthquake damaged a lot of the top",
-    hotstImage: "conversation/host.png",
+    hotstImage: "conversation/host_italian.png",
     traveller: "Wow! It still looks so cool! How old is it?",
     travellerImage: "conversation/traveller.png"
   },
    {
      host: "The Colosseum was built by the Romans in 80 A.D, almost 2000 years ago.",
-     hotstImage: "conversation/host.png",
+     hotstImage: "conversation/host_italian.png",
      traveller: "Incredible, what was it used for?",
      travellerImage: "conversation/traveller_heart_eye.png"
    },
    {
      host: "Many things, but it is famous for being used for gladiator fights",
-     hotstImage: "conversation/host.png",
+     hotstImage: "conversation/host_italian.png",
      traveller: "Cool, the Romans must have been very smart!",
      travellerImage: "conversation/traveller.png"
    },
    {
      host: "Enjoy the rest of your trip! Ciao!",
-     hotstImage: "conversation/host_smile.png",
+     hotstImage: "conversation/host_italian.png",
      traveller: "Catch you later!",
      travellerImage: "conversation/traveller.png"
    }
@@ -165,31 +165,31 @@ conversations: [
   conversations: [
     {
       host: "Hello $USERNAME, welcome to Brazil! The home of the Christ the Redeemer. My name is Julio.",
-      hostImage: "conversation/host.png",
+      hostImage: "conversation/host_chinese.png",
       traveller: "Hi Julio!",
       travellerImage: "conversation/traveller.png"
     },
     {
       host: "As you can see the Christ the Redeemer is huge, they are over 450ft tall.",
-      hostImage: "conversation/host.png",
+      hostImage: "conversation/host_chinese.png",
       traveller: "Wow! Why are they so tall?",
       travellerImage: "conversation/traveller.png"
     },
     {
       host: "The pyramids were built 3,800 years ago. They were created to allow the kings of Egypt to succeed in the afterlife.",
-      hostImage: "conversation/host.png",
+      hostImage: "conversation/host_chinese.png",
       traveller: "Awesome, what's inside the pyramid?",
       travellerImage: "conversation/traveller_heart_eye.png"
     },
     {
       host: "Treasures and items for Pharaoh's to use in the afterlife.",
-      hostImage: "conversation/host.png",
+      hostImage: "conversation/host_chinese.png",
       traveller: "Wowza, the afterlife in Egypt must have been really interesting!",
       travellerImage: "conversation/traveller.png"
     },
     {
       host: "Have fun on your journey!",
-      hostImage: "conversation/host_smile.png",
+      hostImage: "conversation/host_chinese.png",
       traveller: "See you later!",
       travellerImage: "conversation/traveller.png"
     }
