@@ -158,39 +158,39 @@ conversations: [
     height: "21,196 km",
     yearBuilt: "1368–1644",
     purpose: "Defensive wall",
-    description: "The Great Wall of China is an ancient wall in China. The wall is made of cement, rocks and powdered dirt. It was built to protect the north of the empire of China from enemy attacks. It is the longest structure humans have ever built. It is about 21,196 kilometres (13,171 miles) long, 9.1 metres (30 feet) wide and 15 metres (50 feet) high.",
-    description2: "The earlier sections on the wall are made of compacted dirt and stone. Later in the Ming Dynasty they used bricks. There are 7,000 watch towers, block houses for soldiers and beacons to send smoke signals.",
-    description3: "Nineteen walls have been built that were called the Great Wall of China. The first was built in the 7th century BC. The most famous wall was built between 226–200 BC by the first Emperor of Imperial China, Qin Shai Hong. Not much of this wall will remain as people have been stealing from it. It was much farther north than the current wall. The current wall was built during the Ming Dynasty.",
+    description: "The Great Wall of China is a huge wall in China. It is made of cement, rocks and powdered dirt. It was built to protect the empire of China from enemy attacks. It is the longest structure humans have ever built. It is about 21,196 kilometres (13,171 miles) long, 9.1 metres (30 feet) wide and 15 metres (50 feet) high.",
+    description2: "In the early days the wall was made of compacted dirt and stone. Later in the Ming Dynasty they used bricks. There are 7,000 watch towers, houses for soldiers and fire-pits to send smoke signals.",
+    description3: "Nineteen walls have been built that were called the Great Wall of China. The first was built in the 7th century BC. The most famous wall was built between 226–200 BC by the first Emperor of Imperial China, Qin Shai Hong. Not much of this wall is left as people have been stealing from it. It was much farther north than the current wall. The current wall was built during the Ming Dynasty.",
   },
   conversations: [
     {
-      host: "Hello $USERNAME, welcome to Brazil! The home of the Christ the Redeemer. My name is Julio.",
+      host: "Nǐ hǎo $USERNAME, welcome to China! The home of the Great Wall of China. My name is Sophia.",
       hostImage: "conversation/host.png",
-      traveller: "Hi Julio!",
+      traveller: "Hi Sophia!",
       travellerImage: "conversation/traveller.png"
     },
     {
-      host: "As you can see the Christ the Redeemer is huge, they are over 450ft tall.",
+      host: "As you can see the Great Wall is very long, it's over 21,196 kilometres long.",
       hostImage: "conversation/host.png",
-      traveller: "Wow! Why are they so tall?",
+      traveller: "Wow! Why is it so long?",
       travellerImage: "conversation/traveller.png"
     },
     {
-      host: "The pyramids were built 3,800 years ago. They were created to allow the kings of Egypt to succeed in the afterlife.",
+      host: "The wall was made to keep out attacks from the north from the Mongols, Huns and other tribes.",
       hostImage: "conversation/host.png",
-      traveller: "Awesome, what's inside the pyramid?",
+      traveller: "Awesome, it must have taken a long time to build!",
       travellerImage: "conversation/traveller_heart_eye.png"
     },
     {
-      host: "Treasures and items for Pharaoh's to use in the afterlife.",
+      host: "You're right! The Mind Dynasty took well over 200 years to finish the wall.",
       hostImage: "conversation/host.png",
-      traveller: "Wowza, the afterlife in Egypt must have been really interesting!",
+      traveller: "Oh my goodness! That's such a long time. I would get very bored...",
       travellerImage: "conversation/traveller.png"
     },
     {
-      host: "Have fun on your journey!",
+      host: "Don't worry, I think we all would have! Enjoy the rest of your trip!",
       hostImage: "conversation/host_smile.png",
-      traveller: "See you later!",
+      traveller: "Thanks for the tour, bye!",
       travellerImage: "conversation/traveller.png"
     }
   ]
