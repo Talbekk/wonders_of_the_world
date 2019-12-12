@@ -4,14 +4,15 @@
     <!-- <user-form v-if="!username"></user-form> -->
     <wonder-selection-form id="right-form" :wonders ='wonders'></wonder-selection-form>
     <!-- <wonder-page v-if="map" :wonders="[selectedWonder]" :username="username"></wonder-page> -->
-    <div class="quiz-button">
+    <div class="quiz">
       <router-link to="/quiz">Test Your knowledge</router-link>
     </div>
     <!-- <button id="left-form" v-if="homepage" @click="onPlayQuizClick">Test your knowledge</button> -->
     <!-- <graphic-quiz :questions="questions" v-if="quiz"></graphic-quiz> -->
     <!-- <more-detail :wonder="selectedWonder" v-if="details"></more-detail> -->
-    <conversation-box :message="hostMessage" position="right" speech="right_speech_bubble"
+    <conversation-box :message="hostMessage" position="left" speech="right_speech_bubble"
     image="conversation/host.png" :username="username" id="homepage-box"></conversation-box>
+
   </div>
 </template>
 
@@ -58,26 +59,62 @@ export default {
 </script>
 
 <style lang="css" scoped>
- .quiz-button{
-   height: 200px;
-   width: 200px;
-   z-index: 100000;
-   position: absolute;
-   top: 20%;
-   left: 10%;
-   font-size: 15px;
-   color: white;
-   -webkit-transform: translate(-50%,-50%);
-   transform: translate(-50%,-50%);
-   -ms-transform: translate(-50%,-50);
-   padding-top: 100px;
-   color: black;
-   background-color: white;
-   margin: 1em;
-   padding: 2em;
-   max-width: 20%;
-   border: 2px solid #669999;
-   border-radius: 30%;
-   text-decoration: none;
- }
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  /* background-image:url('quiz/wallpaper.png');  */
+
+}
+
+#right-form:hover{
+  left: 85%;
+}
+
+#right-form {
+  transition: 0.3s ease-in-out;
+  position: relative;
+  top: 20%;
+  left: 115%;
+  font-size: 15px;
+  color: white;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50);
+  padding: 20px;
+  padding-left: 40px;
+  color: black;
+  background-color: #227fd0eb;
+  max-width: 40%;
+  margin-top: 11em;
+}
+
+.quiz:hover{
+  left: 90%;
+  position: relative;
+}
+.quiz {
+  transition: 0.3s ease-in-out;
+  position: relative;
+  top: 60%;
+  left: 115%;
+  font-size: 15px;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50);
+  padding: 20px;
+  padding-right: 100px;
+  padding-left: 40px;
+  background-color: white;
+  max-width: 40%;
+  background-color:#ffa500d4;
+  color:white;
+  font-size: 20px;
+  text-decoration: none;
+
+
+}
+
 </style>

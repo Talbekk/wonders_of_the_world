@@ -5,7 +5,7 @@
     <user-form v-if="!username"></user-form>
     <wonder-selection-form id="right-form" v-if="homepage" :wonders ='wonders'></wonder-selection-form>
     <wonder-page v-if="map" :wonders="[selectedWonder]" :username="username"></wonder-page>
-    <button id="left-form" v-if="homepage" @click="onPlayQuizClick">Test your knowledge</button>
+    <button id="quiz" v-if="homepage" @click="onPlayQuizClick">Test your knowledge</button>
     <graphic-quiz :questions="questions" v-if="quiz"></graphic-quiz>
     <more-detail :wonder="selectedWonder" v-if="details"></more-detail>
     <conversation-box v-if="homepage" :message="hostMessage" position="right" speech="right_speech_bubble"
@@ -91,43 +91,50 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  height: 650px;
-  background-image: url("https://image.freepik.com/free-vector/travel-pattern-with-elements-dash-lines_23-2148039482.jpg");
+  background-image:url('https://trello-attachments.s3.amazonaws.com/5dea1c900b9ca67698a18706/5dee73eaf5e5d8673bc77d63/72d1a1731fb360707078f2f5c7cc2fd4/wallpaper.png');
 }
-#right-form {
-  position: absolute;
-  top: 20%;
+
+#right-form:hover{
   left: 85%;
-  font-size: 15px;
-  color: white;
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50);
-  padding-top: 100px;
-  color: black;
-  background-color: white;
-  margin: 1em;
-  padding: 2em;
-  max-width: 20%;
-  border: 2px solid #669999;
-  border-radius: 30%;
 }
-#left-form {
+
+#right-form {
+  transition: 0.3s ease-in-out;
   position: relative;
   top: 20%;
-  right: 25%;
+  left: 115%;
   font-size: 15px;
   color: white;
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50);
-  padding-top: 100px;
+  padding: 20px;
+  padding-left: 40px;
   color: black;
   background-color: white;
-  margin: 1em;
-  padding: 2em;
-  max-width: 20%;
-  border: 2px solid #669999;
-  border-radius: 30%;
+  max-width: 40%;
+  margin-top: 11em;
 }
+
+#quiz:hover{
+  left: 50%;
+  position: relative;
+}
+#quiz {
+  transition: 0.3s ease-in-out;
+  position: relative;
+  top: 60%;
+  left: 63%;
+  font-size: 15px;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50);
+  padding: 20px;
+  padding-right: 50px;
+  padding-left: 50px;
+  background-color: white;
+  max-width: 40%;
+}
+
+
 </style>

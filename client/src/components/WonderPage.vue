@@ -39,15 +39,15 @@ export default {
   padding-top: 100px;
 } */
 .popup-information-text {
-margin: 0px !important;
-margin-block-start: 0;
-margin-block-end: 0;
-margin-inline-start: 0;
-margin-inline-end: 0;
-font-size: 14px;
-color: #000;
-text-align: left;
-}
+  margin: 0px !important;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  font-size: 14px;
+  color: #000;
+  text-align: left;
+  }
 .img-fluid {
   margin-bottom: 5px;
 }

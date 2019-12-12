@@ -9,18 +9,13 @@
             </graphic-quiz-answer>
         </div>
         <div class="solution-area" v-if="showSolution">
-<<<<<<< HEAD
-          <p>{{ solution.result | resultMessage }}</p>
-          <button @click="onSelectedPlay">{{solution.button}}</button>
-          <router-link :to="{name: 'home'}">
-            <button>Home!</button>
-          </router-link>
-=======
             <p>{{ solution.result | resultMessage }}</p>
             <img :src="solution.result | resultImage"></img>
+            <router-link :to="{name: 'home'}">
+              <button>Home</button>
+            </router-link>
             <button @click="onSelectedPlay">{{solution.button}}</button>
-            <simple-button eventChannel="select-homepage" message="Go back"></simple-button>
->>>>>>> master
+
         </div>
     </div>
 </template>
@@ -38,7 +33,7 @@ export default {
             showAnswer: true,
             showSolution: false,
             solution: {
-                button: "Play Again",
+                button: "Next",
                 result: false
             }
         }
@@ -69,11 +64,11 @@ export default {
     },
     filters: {
         resultMessage: function(value) {
-            return value ? "NICELY DONE! YOU ARE RIGHT" : "ALMOST THERE!"
+            return value ? "Nicely done! You are right" : "Almost there!"
 
         },
         resultImage: function(value){
-            return value ? "quiz/clapping.gif": "#"
+            return value ? "quiz/clapping.gif": "quiz/crying_bear.gif"
         }
     },
     components: {
@@ -120,13 +115,12 @@ export default {
     	position:relative;
     	top:1px;
     }
-<<<<<<< HEAD
-=======
     img {
       display: flex;
       margin: auto;
+      height: 150px;
+      width: auto;
     }
 
 
->>>>>>> master
 </style>

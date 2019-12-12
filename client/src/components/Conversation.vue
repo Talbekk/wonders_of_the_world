@@ -1,13 +1,13 @@
 <template lang="html">
   <div id="conversation">
     <div id="conversation-box" @click="onConversationClick" v-if="conversation">
-      <conversation-box :message="conversation.host" position="right" speech="right_speech_bubble" :image="conversation.hostImage" :username="username"></conversation-box>
-      <conversation-box :message="conversation.traveller" position="left" speech="left_speech_bubble" :image="conversation.travellerImage"></conversation-box>
+      <conversation-box :message="conversation.host" position="left" speech="right_speech_bubble" :image="conversation.hostImage" :username="username"></conversation-box>
+      <conversation-box :message="conversation.traveller" position="right" speech="left_speech_bubble" :image="conversation.travellerImage"></conversation-box>
     </div>
       <!-- <div id="conversation-closure" class="conversation-popup" v-if="!conversation && conversationIndex > 0"> -->
       <!-- <p>What do you prefer to do now?</p> -->
-      <router-link id="right-form" v-if="!conversation && conversationIndex > 0" to="/details">Get Details</router-link>
-      <router-link id="left-form" v-if="!conversation && conversationIndex > 0" to="/">Go Home</router-link>
+      <router-link class="top-right" v-if="!conversation && conversationIndex > 0" to="/details">Get Details</router-link>
+      <router-link class="top-left" v-if="!conversation && conversationIndex > 0" to="/">Go Home</router-link>
   </div>
 </template>
 
@@ -49,18 +49,18 @@ export default {
   background-color: white; */
   /* position: relative;} */
 }
-#left-button {
+.top-left {
   position: absolute;
   /* bottom: 280px; */
   /* left: 580px; */
-  top: 0px;
-  left: 0px;
+  top: 10%;
+  left: 80%;
   margin: 1em;
   padding: 2em;
   border: 2px solid #669999;
   border-radius: 30%;
 }
-#right-button {
+.top-right {
   position: absolute;
   /* bottom: 280px; */
   /* right: 700px; */
