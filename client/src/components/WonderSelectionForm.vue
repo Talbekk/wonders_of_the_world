@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2>Select your wonder</h2>
+        <h2> Select your wonder</h2>
         <router-link to="/wonder"><simple-button message="Get random wonder" eventChannel="select-random-wonder"></simple-button></router-link>
         <simple-select message="Select a wonder" eventChannel="select-wonder" :data="wonders"></simple-select>
     </div>

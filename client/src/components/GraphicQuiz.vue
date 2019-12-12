@@ -11,10 +11,11 @@
         <div class="solution-area" v-if="showSolution">
             <p>{{ solution.result | resultMessage }}</p>
             <img :src="solution.result | resultImage"></img>
-            <button @click="onSelectedPlay">{{solution.button}}</button>
             <router-link :to="{name: 'home'}">
-              <button>Home!</button>
+              <button>Home</button>
             </router-link>
+            <button @click="onSelectedPlay">{{solution.button}}</button>
+
         </div>
     </div>
 </template>
@@ -67,7 +68,7 @@ export default {
 
         },
         resultImage: function(value){
-            return value ? "quiz/clapping.gif": "#"
+            return value ? "quiz/clapping.gif": "quiz/crying_bear.gif"
         }
     },
     components: {
@@ -117,6 +118,8 @@ export default {
     img {
       display: flex;
       margin: auto;
+      height: 150px;
+      width: auto;
     }
 
 
