@@ -4,7 +4,7 @@
 
 ## Installation
 
-Using the node package manager, follow the instructions below to get the application up and running:
+Using the [node package manager](https://www.npmjs.com/get-npm), follow the instructions below to get the application up and running:
 
 ## Server
 
