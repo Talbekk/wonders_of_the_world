@@ -58,7 +58,7 @@ We used trello to manage the group's progress through the week.
 
 ![Image](/images/trelloBoard.png)
 
-# Outcomes
+# Conclusions
 
 ## Positive Outcomes
 
