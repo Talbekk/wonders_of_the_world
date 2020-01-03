@@ -56,7 +56,7 @@ The BBC are looking to improve their online offering of educational content by d
 
 We used trello to manage the group's progress through the week.
 
-![Image](/images/trelloBoard.png "icon")
+![Image](/images/trelloBoard.png)
 
 # Outcomes
 
