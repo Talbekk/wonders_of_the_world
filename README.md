@@ -4,6 +4,8 @@ Wonders of the world is an educational app for children about the modern wonders
 
 This app was made as a group project for CodeClan course using Vue for front-end, Express for back-end and MongoDB for data persistency.
 
+---
+
 ## Installation
 
 Using the [node package manager](https://www.npmjs.com/get-npm), follow the instructions below to get the application up and running:
@@ -38,6 +40,8 @@ npm install
 npm run serve
 ```
 
+---
+
 # Brief
 
 The BBC are looking to improve their online offering of educational content by developing some interactive browser applications that display information in a fun and interesting way. Your task is to make an a Minimum Viable Product or prototype to put forward to them - this may only be for a small set of information, and may only showcase some of the features to be included in the final app.
@@ -52,11 +56,15 @@ The BBC are looking to improve their online offering of educational content by d
 
 * User should be able to take a quiz on the wonders to test their knowledge.
 
+---
+
 # Planning
 
 We used trello to manage the group's progress through the week.
 
 ![Image](/images/trelloBoard.png)
+
+---
 
 # Conclusions
 
