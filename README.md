@@ -51,3 +51,21 @@ The BBC are looking to improve their online offering of educational content by d
 ## Extensions
 
 * User should be able to take a quiz on the wonders to test their knowledge.
+
+# Planning
+
+# Outcomes
+
+## Positive Outcomes
+
+* We made good use of Trello and Slack to maintain a consistent workflow. Everyone knew what they were doing and there was always something to when you had finished what you were working on.
+
+* Strong team morale and communication led to a successful finished product. We were honest with each other and were not afraid to ask for help when stuck.
+
+* We were able to develop our teamwork skills as this was our first group project. It was our first taste of using agile methodologies within a team environment and we found the continual review and rethink process very useful throughout the sprint.
+
+## Things To Improve
+
+* Lots of merge conflicts slowed down the process and led to a lot of frustration especially at the end of the day. In future projects we will look to make better use of the branching network.
+
+* We found out that we were using a depracated library that was causing some serious performance issues, even causing some of our computers to crash. If we had been aware of this in the beginning then we would have chosen another library so we will be sure to carry out thorough tests at the beginning to make sure that the libraries we use are up to scratch.
