@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === 'production'){
   
 }
 
-MongoClient.connect('mongodb+srv://mike123:Thejacket2@seven-wonders-2wizi.mongodb.net/test?retryWrites=true&w=majority')
+MongoClient.connect('mongodb://mike123:Thejacket2@seven-wonders-shard-00-00-2wizi.mongodb.net:27017,seven-wonders-shard-00-01-2wizi.mongodb.net:27017,seven-wonders-shard-00-02-2wizi.mongodb.net:27017/test?ssl=true&replicaSet=seven-wonders-shard-0&authSource=admin&retryWrites=true&w=majority')
 .then((client) => {
   const db = client.db('wonders_of_the_world');
   const wondersCollection = db.collection('wonders');
