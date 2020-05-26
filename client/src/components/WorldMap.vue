@@ -10,7 +10,7 @@ export default {
     name: "world-map",
     head: {
       script: [
-        { src: 'http://www.webglearth.com/v2/api.js' }
+        { src: 'https://www.webglearth.com/v2/api.js' }
       ],
     },
     created: function () {
