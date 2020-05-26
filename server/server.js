@@ -21,6 +21,17 @@ MongoClient.connect('mongodb://localhost:27017')
 })
 .catch(console.err);
 
+//Handle Production 
+if (process.env.NODE_ENV === 'production'){
+
+  //Static Folder
+  app.use(express.static(__dirname + '/public'));
+
+  //Handle single page application
+  app.get(/.*/, (req, res) => res.sendFile(__dirname + '/public/index.html'));
+  
+}
+
 app.listen(3000, function(){
   console.log(`app running on port ${this.address().port}`);
 })
