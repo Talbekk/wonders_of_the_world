@@ -4,7 +4,9 @@
   "description": "Wonders of the world is an educational app for children about the modern wonders of the world. Children can read some details, see their location and undertake a quiz.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,14 @@
   "bugs": {
     "url": "https://github.com/Talbekk/wonders_of_the_world/issues"
   },
-  "homepage": "https://github.com/Talbekk/wonders_of_the_world#readme"
+  "homepage": "https://github.com/Talbekk/wonders_of_the_world#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
 }
