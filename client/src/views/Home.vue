@@ -3,7 +3,7 @@
     <world-map :wonders='wonders'></world-map>
       <user-form class="left-form" v-if="!username"></user-form>
       <wonder-selection-form class="right-form" v-if='username' :wonders ='wonders'></wonder-selection-form>
-    <div class="quiz">
+    <div class="quiz" v-if='username'>
       <router-link to="/quiz" class="router-link">Test Your knowledge</router-link>
     </div>
     <conversation-box v-if='username' :message="hostMessage" position="left" speech="right_speech_bubble"
@@ -27,7 +27,7 @@ export default {
   },
   computed: {
     hostMessage: function() {
-      return `Hello ${this.username}! welcome to the 7 Wonders of the World, where would you like to go?`
+      return `Hello ${this.username}! Welcome to the 7 Wonders of the World, where would you like to go?`
     }
   },
   methods: {
@@ -56,25 +56,28 @@ export default {
 }
 
 .right-form:hover{
-  left: 85%;
+  left: 90%;
 }
 
 .right-form {
   transition: 0.3s ease-in-out;
   position: relative;
   top: 20%;
-  left: 115%;
+  left: 95%;
   font-size: 15px;
   color: white;
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50);
-  padding: 20px;
-  padding-left: 40px;
+  padding: 50px;
+  padding-right: 20px;
   color: black;
-  background-color: #227fd0eb;
+  background-color: #227fd0cc;
   max-width: 40%;
   margin-top: 11em;
+  color: #212529;
+  text-align: left;
+
 }
 
 .quiz:hover{
@@ -85,18 +88,19 @@ export default {
   transition: 0.3s ease-in-out;
   position: relative;
   top: 60%;
-  left: 115%;
+  left: 95%;
   font-size: 15px;
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50);
   padding: 20px;
-  padding-right: 100px;
-  padding-left: 40px;
+  padding-left:50px;
   background-color: white;
-  max-width: 40%;
+  max-width: 35%;
   background-color:#ffa500d4;
   font-size: 20px;
+  text-align: left;
+
 }
 .router-link {
   text-decoration: none;
@@ -112,17 +116,19 @@ color: #227fd0;
   position: relative;
   top: 50%;
   left: 25%;
-  font-size: 15px;
+  font-size: 20px;
   color: white;
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50);
   padding: 20px;
   padding-left: 40px;
+  padding-right: 40px;
   color: black;
-  background-color: #227fd0eb;
+  background-color: #227fd0cc;
   max-width: 40%;
   margin-top: 11em;
 }
+
 
 </style>

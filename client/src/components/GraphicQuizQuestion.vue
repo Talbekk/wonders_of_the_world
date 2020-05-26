@@ -18,13 +18,15 @@ export default {
 </script>
 
 <style lang="css" scoped>
-    .question {
-    padding-top: 50px;
-    display: inline-block;
-    max-width: 650px;
-    margin: 0 auto;
-    background-color: rgba(175, 220, 103, 0.81)
-   }
+    /* .question {
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        display: inline-block;
+        padding: 20px 5px 0px 5px;
+        max-width: 650px;
+        background-color: rgba(175, 220, 103, 0.81);
+    } */
 
 
     img#earth {

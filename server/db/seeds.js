@@ -20,7 +20,7 @@ db.wonders.insertMany([
 },
 conversations: [
   {
-    host: "Ciao, welcome to Italia! The home of the Colosseum. My name is Laura.",
+    host: "Ciao $USERNAME, welcome to Italia! The home of the Colosseum. My name is Laura.",
     hostImage: "conversation/host_italian.png",
     traveller: "Hi Laura!",
     travellerImage: "conversation/traveller.png"
@@ -68,9 +68,9 @@ conversations: [
   },
   conversations: [
     {
-      host: "As-salam alaykom $USERNAME, welcome to Jordan! The home of the great city of Petra. My name is Jack.",
+      host: "As-salam alaykom $USERNAME, welcome to Jordan! The home of the great city of Petra. My name is Maria.",
       hostImage: "conversation/host.png",
-      traveller: "Hi Jack!",
+      traveller: "Hi Maria!",
       travellerImage: "conversation/traveller.png"
     },
     {
@@ -105,7 +105,7 @@ conversations: [
     location: "Rio de Janeiro, Brazil",
     longitude: -42.2436,
     latitude: -22.2212,
-    image: "https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_1920,f_auto/A-Corbis-42-24002457_sbfkds.jpg",
+    image: "https://estonianworld.com/wp-content/uploads/2018/02/Christ-the-Redeemer-I-1024x640.jpg",
     imageGallery: ["https://www.stpetertravel.com/travels/7072_big.jpg","https://media.tacdn.com/media/attractions-splice-spp-674x446/07/12/29/8f.jpg","https://www.checkoutsam.com/wp-content/uploads/2018/02/coliseum-seats-levels.jpg  "],
     height: "30m",
     yearBuilt: "1922",
@@ -116,9 +116,9 @@ conversations: [
   },
   conversations: [
     {
-      host: "Olá $USERNAME, welcome to Brazil! The home of the Christ the Redeemer. My name is Julio.",
+      host: "Olá $USERNAME, welcome to Brazil! The home of Christ the Redeemer. My name is Julia.",
       hostImage: "conversation/host.png",
-      traveller: "Hi Julio!",
+      traveller: "Hi Julia!",
       travellerImage: "conversation/traveller.png"
     },
     {
@@ -164,9 +164,9 @@ conversations: [
   },
   conversations: [
     {
-      host: "Nǐ hǎo $USERNAME, welcome to China! The home of the Great Wall of China. My name is Sophia.",
+      host: "Nǐ hǎo $USERNAME, welcome to China! The home of the Great Wall. My name is Yuli.",
       hostImage: "conversation/host_chinese.png",
-      traveller: "Hi Sophia!",
+      traveller: "Hi Yuli!",
       travellerImage: "conversation/traveller.png"
     },
     {
@@ -185,7 +185,7 @@ conversations: [
       host: "You're right! The Ming Dynasty took well over 200 years to finish the wall.",
       hostImage: "conversation/host_chinese.png",
       traveller: "Oh my goodness! That's such a long time. I would get very bored...",
-      travellerImage: "conversation/traveller.png"
+      travellerImage: "conversation/traveller_cringe_eye.png"
     },
     {
       host: "Don't worry, I think we all would have! Enjoy the rest of your trip!",
@@ -260,13 +260,13 @@ conversations: [
   },
   conversations: [
     {
-      host: "Namaste $USERNAME, welcome to India! The home of the Taj Mahal. My name is Rajesh.",
+      host: "Namaste $USERNAME, welcome to India! The home of the Taj Mahal. My name is Isha.",
       hostImage: "conversation/host.png",
-      traveller: "Hi Rajesh!",
+      traveller: "Hi Isha!",
       travellerImage: "conversation/traveller.png"
     },
     {
-      host: "The Taj Mahal is very beautiful, many people think it's one of the best looking buuldings in the world.",
+      host: "The Taj Mahal is very beautiful, many people think it's one of the best looking buildings in the world.",
       hostImage: "conversation/host.png",
       traveller: "Wow! Why was it built?",
       travellerImage: "conversation/traveller.png"
@@ -308,9 +308,9 @@ conversations: [
   },
   conversations: [
     {
-      host: "Hello $USERNAME, welcome to Brazil! The home of the Christ the Redeemer. My name is Julio.",
+      host: "Hola $USERNAME, welcome to Mexico! The home of the Chichen Itza. My name is Julia.",
       hostImage: "conversation/host.png",
-      traveller: "Hi Eduardo!",
+      traveller: "Hola Julia!",
       travellerImage: "conversation/traveller.png"
     },
     {
@@ -320,7 +320,7 @@ conversations: [
       travellerImage: "conversation/traveller.png"
     },
     {
-      host: "The Mayans built this tall buildings to celebrate their leaders. ",
+      host: "The Mayans built these tall buildings to celebrate their leaders. ",
       hostImage: "conversation/host.png",
       traveller: "Nice, can I climb it?",
       travellerImage: "conversation/traveller_heart_eye.png"
@@ -334,7 +334,7 @@ conversations: [
     {
       host: "Hasta la vista!",
       hostImage: "conversation/host_smile.png",
-      traveller: "Ciao!",
+      traveller: "Adios!",
       travellerImage: "conversation/traveller.png"
     }
   ]
@@ -511,7 +511,7 @@ db.quiz.insertMany([
     ]
   },
   {
-    question: "Which wonder was destroyed partly when lightning struck it during a major thunderstorm in 2008, and then restored?",
+    question: "Which one is a statue?",
     answers: [
       {
         image: "https://cdn.britannica.com/86/170586-050-AB7FEFAE/Taj-Mahal-Agra-India.jpg",
@@ -553,7 +553,7 @@ db.quiz.insertMany([
     ]
   },
   {
-    question: "Which wonder is believed to be the largest city ever built by the Mayan civilization?",
+    question: "Which wonder was build by the Mayan civilization?",
     answers: [
       {
         image: "https://www.tripsavvy.com/thmb/zV-hETZ3tpf7M9-rYqt5-NDbiXo=/1414x1414/smart/filters:no_upscale()/colosseum-at-sunrise-5c29a35646e0fb00014aaba0.jpg",
@@ -574,7 +574,7 @@ db.quiz.insertMany([
     ]
   },
   {
-    question: "Which wonder took over 20 years and 20,000 artisans to be completed?",
+    question: "Which wonder took over 20 years and 20,000 people to be completed?",
     answers: [
       {
         image: "https://lp-cms-production.imgix.net/news/2019/06/taj-mahal.jpg?q=25",
