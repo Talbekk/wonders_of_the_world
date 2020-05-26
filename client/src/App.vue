@@ -28,7 +28,10 @@ export default {
       this.selectedWonder = wonder;
       this.$router.push({ name: 'wonder' });
     });
-    GlobeService.getWonders().then(data => this.wonders = data);
+    GlobeService.getWonders().then((data) => {
+      this.wonders = data
+      console.log("result", data);
+      });
     GlobeService.getQuiz().then(data => this.questions = data);
   }
 }
