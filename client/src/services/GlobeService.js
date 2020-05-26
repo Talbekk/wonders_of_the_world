@@ -1,5 +1,5 @@
-const wonderURL = "/api/wonders/"
-const quizURL = "/api/quiz/"
+const wonderURL = "/api/wonders"
+const quizURL = "/api/quiz"
 
 export default {
   getWonders(){
