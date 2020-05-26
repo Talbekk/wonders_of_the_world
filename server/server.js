@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === 'production'){
   
 }
 
-MongoClient.connect('mongodb://localhost:27017')
+MongoClient.connect('mongodb+srv://mike123:<Thejacket2>@seven-wonders-2wizi.mongodb.net/test?retryWrites=true&w=majority')
 .then((client) => {
   const db = client.db('wonders_of_the_world');
   const wondersCollection = db.collection('wonders');
