@@ -8,6 +8,17 @@ const MongoClient = require('mongodb').MongoClient;
 app.use(bodyParser.json());
 app.use(cors());
 
+//Handle Production 
+if (process.env.NODE_ENV === 'production'){
+
+  //Static Folder
+  app.use(express.static(__dirname + '/public'));
+
+  //Handle single page application
+  app.get(/.*/, (req, res) => res.sendFile(__dirname + '/public/index.html'));
+  
+}
+
 MongoClient.connect('mongodb://localhost:27017')
 .then((client) => {
   const db = client.db('wonders_of_the_world');
@@ -19,18 +30,9 @@ MongoClient.connect('mongodb://localhost:27017')
   const quizRouter = createRouter(quizCollection);
   app.use('/api/quiz', quizRouter);
 })
-.catch(console.err);
-
-//Handle Production 
-if (process.env.NODE_ENV === 'production'){
-
-  //Static Folder
-  app.use(express.static(__dirname + '/public'));
-
-  //Handle single page application
-  app.get(/.*/, (req, res) => res.sendFile(__dirname + '/public/index.html'));
-  
-}
+.catch((err) => {
+  console.error(err);
+})
 
 app.listen(3000, function(){
   console.log(`app running on port ${this.address().port}`);
