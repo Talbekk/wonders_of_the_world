@@ -23,7 +23,7 @@ class GlobeService {
   static getWonders(){
     return new Promise( async (resolve, reject) => {
       try {
-        const res = await axios.get(url);
+        const res = await axios.get(wonderURL);
         const data = res.data;
         resolve(
           data.map(wonder => ({
@@ -39,7 +39,7 @@ class GlobeService {
   static getQuiz(){
     return new Promise( async (resolve, reject) => {
       try {
-        const res = await axios.get(url);
+        const res = await axios.get(quizURL);
         const data = res.data;
         resolve(
           data.map(quiz => ({

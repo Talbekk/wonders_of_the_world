@@ -30,7 +30,8 @@ async function loadWondersCollection() {
   const client = await mongodb.MongoClient.connect(
     'mongodb://mike123:Thejacket2@seven-wonders-shard-00-00-2wizi.mongodb.net:27017,seven-wonders-shard-00-01-2wizi.mongodb.net:27017,seven-wonders-shard-00-02-2wizi.mongodb.net:27017/test?ssl=true&replicaSet=seven-wonders-shard-0&authSource=admin&retryWrites=true&w=majority',
     {
-      useNewUrlParser: true
+      useNewUrlParser: true, 
+      useUnifiedTopology: true 
     }
   );
 
