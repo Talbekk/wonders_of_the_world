@@ -15,8 +15,8 @@
 
 import axios from 'axios';
 
-const wonderURL = 'http://localhost:5000/api/wonders/';
-const quizURL = 'http://localhost:5000/api/quiz/';
+const wonderURL = 'api/wonders/';
+const quizURL = 'api/quiz/';
 
 class GlobeService {
   // GET POSTS 
