@@ -13,7 +13,7 @@
 //   },
 // }
 
-import axios from axios;
+import axios from 'axios';
 
 const wonderURL = 'http://localhost:5000/api/wonders/';
 const quizURL = 'http://localhost:5000/api/quiz/';
