@@ -5,7 +5,7 @@ const createRouter = function(collection){
 
 const router = express.Router();
 
-router.get('/api', (req, res) => {
+router.get('/', (req, res) => {
   collection.find()
   .toArray()
   .then((wonders) => res.json(wonders))
@@ -17,7 +17,7 @@ router.get('/api', (req, res) => {
 });
 
 
-router.get('/api/:id',(req, res) => {
+router.get('/:id',(req, res) => {
   const id = req.params.id;
   collection.findOne({ _id: ObjectId(id)})
   .then((wonder) => res.json(wonder))

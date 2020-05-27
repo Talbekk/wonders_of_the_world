@@ -10,7 +10,7 @@ app.use(cors());
 
 // 'mongodb://mike123:Thejacket2@seven-wonders-shard-00-00-2wizi.mongodb.net:27017,seven-wonders-shard-00-01-2wizi.mongodb.net:27017,seven-wonders-shard-00-02-2wizi.mongodb.net:27017/test?ssl=true&replicaSet=seven-wonders-shard-0&authSource=admin&retryWrites=true&w=majority'
 
-MongoClient.connect('mongodb://mike123:Thejacket2@seven-wonders-shard-00-00-2wizi.mongodb.net:27017,seven-wonders-shard-00-01-2wizi.mongodb.net:27017,seven-wonders-shard-00-02-2wizi.mongodb.net:27017/test?ssl=true&replicaSet=seven-wonders-shard-0&authSource=admin&retryWrites=true&w=majority',
+MongoClient.connect('mongodb://mike123:db123@ds231307.mlab.com:31307/heroku_hk4kzz5j',
 { useNewUrlParser: true, useUnifiedTopology: true  })
 .then((client) => {
   console.log("inital connection", client); 
