@@ -9,12 +9,12 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // const posts = require('./helpers/create_router.js');
-const wonders = require('./routes/api/wonders');
-const quiz = require('./routes/api/quiz');
+const wonders = require('./routes/api/wonders.js');
+const quiz = require('./routes/api/quiz.js');
 
 // app.use('/api/posts', posts);
-app.use('api/wonders', wonders);
-app.use('apli/quiz', quiz);
+app.use('/api/wonders', wonders);
+app.use('/api/quiz', quiz);
 
 // Handle production
 if (process.env.NODE_ENV === 'production') {
