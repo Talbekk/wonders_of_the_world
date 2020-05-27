@@ -10,7 +10,7 @@ export default {
     name: "world-map",
     head: {
       script: [
-        { src: 'http://www.webglearth.com/v2/api.js' }
+        { src: 'https://www.webglearth.com/v2/api.js' }
       ],
     },
     created: function () {
@@ -25,7 +25,7 @@ export default {
         map: function() {
         let options = {sky: true};
         let earth = new WE.map('earth_div', options);
-        WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(earth);
+        WE.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(earth);
           this.wonders.forEach( (wonder) => {
            let marker = WE.marker([wonder.details.latitude, wonder.details.longitude]).addTo(earth);
           marker.bindPopup(`<img src="${wonder.details.image}" class="img-fluid"/>

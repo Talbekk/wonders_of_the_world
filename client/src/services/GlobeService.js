@@ -1,3 +1,4 @@
+
 // const wonderURL = '/api/wonders/'
 // const quizURL = '/api/quiz/'
 
@@ -50,6 +51,7 @@ class GlobeService {
       }
     })
   }
+
 }
 
 export default GlobeService;
