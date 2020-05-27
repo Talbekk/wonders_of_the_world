@@ -14,8 +14,8 @@ MongoClient.connect('mongodb://mike123:db123@ds231307.mlab.com:31307/heroku_hk4k
 { useNewUrlParser: true, useUnifiedTopology: true  })
 .then((client) => {
   console.log("inital connection", client); 
-  const db = client.db('wonders_of_the_world');
-  console.log("wonders", client.db('wonders_of_the_world'));
+  const db = client.db('heroku_hk4kzz5j');
+  console.log("wonders", client.db('heroku_hk4kzz5j'));
   const wondersCollection = db.collection('wonders');
   const wonderRouter = createRouter(wondersCollection);
   app.use('/api/wonders', wonderRouter);
