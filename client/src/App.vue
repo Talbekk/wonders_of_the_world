@@ -28,17 +28,17 @@ export default {
       this.selectedWonder = wonder;
       this.$router.push({ name: 'wonder' });
     });
-    // GlobeService.getWonders().then(data => this.wonders = data);
-    // GlobeService.getQuiz().then(data => this.questions = data);
-  },
-  async created() {
-    try {
-      this.wonders = await GlobeService.getWonders();
-      this.questions = await GlobeService.getQuiz();
-    } catch(err) {
-      this.error = err.message;
-    }
+    GlobeService.getWonders().then(data => this.wonders = data);
+    GlobeService.getQuiz().then(data => this.questions = data);
   }
+  // async created() {
+  //   try {
+  //     this.wonders = await GlobeService.getWonders();
+  //     this.questions = await GlobeService.getQuiz();
+  //   } catch(err) {
+  //     this.error = err.message;
+  //   }
+  // }
 }
 </script>
 
